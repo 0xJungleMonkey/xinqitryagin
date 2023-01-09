@@ -123,7 +123,7 @@ func GetBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerchecks [post]
-// echo '{"id": 99,"creator_id": 53,"query_id": 17,"state": "wwKgescyWCjfdHKKCcpqmpejY","schedule": "HaARSaiarvETMrbrLeMhOJEeu","emails": "yWWavaYRXeAUKFOEDFHKCpHNS","slack_channels": "soZYsVNRBZFJOKkdhxsbHbCIu","check_type": "YZJNCCpLeEwgTPwjHcRjOegmq","message": "RtJMtLNWiVOxhqdGAAXFoMjCg","last_run_at": "2217-06-25T02:46:34.191263694-04:00","created_at": "2307-09-19T05:32:03.068747278-04:00","updated_at": "2269-09-07T23:35:46.201912444-04:00"}' | http POST "https://xinqi.dev:8080/blazerchecks" X-Api-User:user123
+// echo '{"id": 59,"creator_id": 66,"query_id": 63,"state": "WmmlOsRppnFDjTXVvhrQTDFJu","schedule": "DgtUVKFrqWfKGkYaGsOAjceQk","emails": "lGAPpRNUgEOXLeiOWWWNNfmJi","slack_channels": "LShXGjYUymCceZVtaVJIqOHIK","check_type": "yIlrRHNFrYNrkcqYEycAhxkDV","message": "iJhTsSGnoZygJXiTwNUNYQhGd","last_run_at": "2205-08-17T20:42:51.8225817-04:00","created_at": "2178-12-14T14:32:25.656749927-05:00","updated_at": "2158-04-12T05:44:37.659343399-04:00"}' | http POST "https://xinqi.dev:8080/blazerchecks" X-Api-User:user123
 func AddBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerchecks := &model.BlazerChecks{}
@@ -171,7 +171,7 @@ func AddBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerchecks/{argID} [put]
-// echo '{"id": 99,"creator_id": 53,"query_id": 17,"state": "wwKgescyWCjfdHKKCcpqmpejY","schedule": "HaARSaiarvETMrbrLeMhOJEeu","emails": "yWWavaYRXeAUKFOEDFHKCpHNS","slack_channels": "soZYsVNRBZFJOKkdhxsbHbCIu","check_type": "YZJNCCpLeEwgTPwjHcRjOegmq","message": "RtJMtLNWiVOxhqdGAAXFoMjCg","last_run_at": "2217-06-25T02:46:34.191263694-04:00","created_at": "2307-09-19T05:32:03.068747278-04:00","updated_at": "2269-09-07T23:35:46.201912444-04:00"}' | http PUT "https://xinqi.dev:8080/blazerchecks/1"  X-Api-User:user123
+// echo '{"id": 59,"creator_id": 66,"query_id": 63,"state": "WmmlOsRppnFDjTXVvhrQTDFJu","schedule": "DgtUVKFrqWfKGkYaGsOAjceQk","emails": "lGAPpRNUgEOXLeiOWWWNNfmJi","slack_channels": "LShXGjYUymCceZVtaVJIqOHIK","check_type": "yIlrRHNFrYNrkcqYEycAhxkDV","message": "iJhTsSGnoZygJXiTwNUNYQhGd","last_run_at": "2205-08-17T20:42:51.8225817-04:00","created_at": "2178-12-14T14:32:25.656749927-05:00","updated_at": "2158-04-12T05:44:37.659343399-04:00"}' | http PUT "https://xinqi.dev:8080/blazerchecks/1"  X-Api-User:user123
 func UpdateBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

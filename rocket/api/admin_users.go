@@ -123,7 +123,7 @@ func GetAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers [post]
-// echo '{"id": 66,"email": "BQmquLocGtBDnerSeBWcSnKlS","encrypted_password": "yBOYkImesRodDHcTUPqxZTjEu","reset_password_token": "HVjJlLKlTmgJvBFIJeEPhGOiE","reset_password_sent_at": "2167-10-13T22:33:03.918074201-04:00","remember_created_at": "2116-07-29T02:38:36.571916355-04:00","created_at": "2109-03-15T19:10:34.863372646-04:00","updated_at": "2151-04-17T19:16:30.161084816-04:00"}' | http POST "https://xinqi.dev:8080/adminusers" X-Api-User:user123
+// echo '{"id": 86,"email": "BVQnbfiHSTpeEOtxVEkHIERLy","encrypted_password": "KPQmOarvsnlUaLYwRcNNDDGjy","reset_password_token": "mgXbKVkgAGTGKgZrXtntOXVEF","reset_password_sent_at": "2038-05-02T11:23:55.536181599-04:00","remember_created_at": "2229-05-31T09:04:56.845816304-04:00","created_at": "2184-02-17T03:07:59.872263255-05:00","updated_at": "2188-02-14T17:38:53.094712727-05:00"}' | http POST "https://xinqi.dev:8080/adminusers" X-Api-User:user123
 func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	adminusers := &model.AdminUsers{}
@@ -171,7 +171,7 @@ func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers/{argID} [put]
-// echo '{"id": 66,"email": "BQmquLocGtBDnerSeBWcSnKlS","encrypted_password": "yBOYkImesRodDHcTUPqxZTjEu","reset_password_token": "HVjJlLKlTmgJvBFIJeEPhGOiE","reset_password_sent_at": "2167-10-13T22:33:03.918074201-04:00","remember_created_at": "2116-07-29T02:38:36.571916355-04:00","created_at": "2109-03-15T19:10:34.863372646-04:00","updated_at": "2151-04-17T19:16:30.161084816-04:00"}' | http PUT "https://xinqi.dev:8080/adminusers/1"  X-Api-User:user123
+// echo '{"id": 86,"email": "BVQnbfiHSTpeEOtxVEkHIERLy","encrypted_password": "KPQmOarvsnlUaLYwRcNNDDGjy","reset_password_token": "mgXbKVkgAGTGKgZrXtntOXVEF","reset_password_sent_at": "2038-05-02T11:23:55.536181599-04:00","remember_created_at": "2229-05-31T09:04:56.845816304-04:00","created_at": "2184-02-17T03:07:59.872263255-05:00","updated_at": "2188-02-14T17:38:53.094712727-05:00"}' | http PUT "https://xinqi.dev:8080/adminusers/1"  X-Api-User:user123
 func UpdateAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

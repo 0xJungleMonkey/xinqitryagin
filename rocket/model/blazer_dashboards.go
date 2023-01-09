@@ -32,7 +32,7 @@ CREATE TABLE `blazer_dashboards` (
 
 JSON Sample
 -------------------------------------
-{    "id": 38,    "creator_id": 38,    "name": "OgojdGMXdedbPaVRdcpHdowCv",    "created_at": "2289-03-06T18:15:26.249760782-05:00",    "updated_at": "2218-02-10T15:31:13.805371291-05:00"}
+{    "id": 18,    "creator_id": 5,    "name": "SuwkaLbnTRAuGOGwmubxWGRrr",    "created_at": "2263-06-03T16:50:18.174617156-04:00",    "updated_at": "2275-10-13T20:07:31.263173109-04:00"}
 
 
 

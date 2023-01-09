@@ -123,7 +123,7 @@ func GetAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /addresses [post]
-// echo '{"id": 64,"address_type": "xTCMpbBNrIZFRyhiekJAbayuZ","status": "TMpeRYPAnLOGDCuRrbuepbylb","entity": "keBtQFksREUeJxsbNvvgLaFXf","number_and_street": "IyDTiLbBwsVyYIKvjIwxogLZg","suite_or_apartment": "MTFBjSOAYLXpSipmrQLQIeKXB","city": "gAdgxiHDxvadAJaBbtOdjENFq","postal_code": "QsNsQEkCCWvXSfrgeOXWomjcC","country": "gULjvGXZQXqWUvnPoXrmurhOg","notes": "RYnXqXEoyKBQLUwSqVVihVJnv","created_at": "2162-04-09T21:55:18.086245829-04:00","updated_at": "2159-08-05T10:43:49.732195121-04:00","latitude": 0.08564961,"longitude": 0.34970924}' | http POST "https://xinqi.dev:8080/addresses" X-Api-User:user123
+// echo '{"id": 22,"address_type": "lQeQwkUejSrsnTBCVlNIpUOYp","status": "cPyqErFmGxpDQeWHZcgpyCruO","entity": "hlrmhtySIrXuJIsHkWBZdNgJG","number_and_street": "NuOqLcvfIpyajbWgGUWKGxMvR","suite_or_apartment": "TiLyHJTWWWuPXZNKgbPdnhGvI","city": "wBWXAvqMopyfaqoWNEPuUGhkR","postal_code": "TbvHpsJbOuJeliqaQNmMDgFRJ","country": "PIZJQViroOyJVRjDshJYtOgmV","notes": "bNChjHABfLmLvARXQQkpUhbhb","created_at": "2180-07-28T09:10:25.217150908-04:00","updated_at": "2178-07-04T01:29:04.490206665-04:00","latitude": 0.1873465,"longitude": 0.011193146}' | http POST "https://xinqi.dev:8080/addresses" X-Api-User:user123
 func AddAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	addresses := &model.Addresses{}
@@ -171,7 +171,7 @@ func AddAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /addresses/{argID} [put]
-// echo '{"id": 64,"address_type": "xTCMpbBNrIZFRyhiekJAbayuZ","status": "TMpeRYPAnLOGDCuRrbuepbylb","entity": "keBtQFksREUeJxsbNvvgLaFXf","number_and_street": "IyDTiLbBwsVyYIKvjIwxogLZg","suite_or_apartment": "MTFBjSOAYLXpSipmrQLQIeKXB","city": "gAdgxiHDxvadAJaBbtOdjENFq","postal_code": "QsNsQEkCCWvXSfrgeOXWomjcC","country": "gULjvGXZQXqWUvnPoXrmurhOg","notes": "RYnXqXEoyKBQLUwSqVVihVJnv","created_at": "2162-04-09T21:55:18.086245829-04:00","updated_at": "2159-08-05T10:43:49.732195121-04:00","latitude": 0.08564961,"longitude": 0.34970924}' | http PUT "https://xinqi.dev:8080/addresses/1"  X-Api-User:user123
+// echo '{"id": 22,"address_type": "lQeQwkUejSrsnTBCVlNIpUOYp","status": "cPyqErFmGxpDQeWHZcgpyCruO","entity": "hlrmhtySIrXuJIsHkWBZdNgJG","number_and_street": "NuOqLcvfIpyajbWgGUWKGxMvR","suite_or_apartment": "TiLyHJTWWWuPXZNKgbPdnhGvI","city": "wBWXAvqMopyfaqoWNEPuUGhkR","postal_code": "TbvHpsJbOuJeliqaQNmMDgFRJ","country": "PIZJQViroOyJVRjDshJYtOgmV","notes": "bNChjHABfLmLvARXQQkpUhbhb","created_at": "2180-07-28T09:10:25.217150908-04:00","updated_at": "2178-07-04T01:29:04.490206665-04:00","latitude": 0.1873465,"longitude": 0.011193146}' | http PUT "https://xinqi.dev:8080/addresses/1"  X-Api-User:user123
 func UpdateAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

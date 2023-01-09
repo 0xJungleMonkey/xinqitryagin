@@ -34,7 +34,7 @@ CREATE TABLE `blazer_audits` (
 
 JSON Sample
 -------------------------------------
-{    "id": 67,    "user_id": 51,    "query_id": 23,    "statement": "LlkqkGIDEZYfRYFnPtdJAxiFn",    "data_source": "TAgRvBfTtuFOocTiUWBDygXRg",    "created_at": "2046-12-23T07:53:06.192184489-05:00"}
+{    "id": 73,    "user_id": 57,    "query_id": 13,    "statement": "jFlJjiojLxoKtIiYEjuXClwTJ",    "data_source": "JeBfgsNifdJjXAGgVIKvXYBvm",    "created_at": "2148-08-28T05:22:45.28806161-04:00"}
 
 
 

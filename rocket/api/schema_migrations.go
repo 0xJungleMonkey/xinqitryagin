@@ -123,7 +123,7 @@ func GetSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /schemamigrations [post]
-// echo '{"version": "OWoYKkIeNWwwItbnSwuMtbytI"}' | http POST "https://xinqi.dev:8080/schemamigrations" X-Api-User:user123
+// echo '{"version": "WcGkOEVBbHwGlJnyjBjTgXyqM"}' | http POST "https://xinqi.dev:8080/schemamigrations" X-Api-User:user123
 func AddSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	schemamigrations := &model.SchemaMigrations{}
@@ -171,7 +171,7 @@ func AddSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /schemamigrations/{argVersion} [put]
-// echo '{"version": "OWoYKkIeNWwwItbnSwuMtbytI"}' | http PUT "https://xinqi.dev:8080/schemamigrations/hello world"  X-Api-User:user123
+// echo '{"version": "WcGkOEVBbHwGlJnyjBjTgXyqM"}' | http PUT "https://xinqi.dev:8080/schemamigrations/hello world"  X-Api-User:user123
 func UpdateSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

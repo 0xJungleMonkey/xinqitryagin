@@ -95,7 +95,6 @@ gen \
     --server \
     --overwrite \
     --host=xinqi.dev \
-    --port=8080 \
     --rest \
     --listen=:8080 \
     --scheme=https \
@@ -107,7 +106,6 @@ gen \
     --swagger_path=/ \
     --swagger_tos= \
     --swagger_contact_name=Xinqi \
-    Davis \
     --swagger_contact_url=http://me.com/terms.html \
     --swagger_contact_email=xinqidavis@gmail.com
 ```

@@ -27,7 +27,7 @@ CREATE TABLE `schema_migrations` (
 
 JSON Sample
 -------------------------------------
-{    "version": "OWoYKkIeNWwwItbnSwuMtbytI"}
+{    "version": "WcGkOEVBbHwGlJnyjBjTgXyqM"}
 
 
 

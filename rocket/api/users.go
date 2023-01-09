@@ -123,7 +123,7 @@ func GetUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /users_ [post]
-// echo '{"id": 88,"email": "cVIiuETQSZLyZsXxukQonZfnJ","encrypted_password": "TydAJOOCpMruySLFruklPExYC","reset_password_token": "vVYkdSYLsvpfiUhQCtFLCEFHs","reset_password_sent_at": "2279-05-19T05:45:52.782788719-04:00","remember_created_at": "2293-02-05T08:09:08.404155924-05:00","created_at": "2077-01-01T15:51:20.745236225-05:00","updated_at": "2079-07-06T02:32:19.695402633-04:00"}' | http POST "https://xinqi.dev:8080/users_" X-Api-User:user123
+// echo '{"id": 48,"email": "IbfgvuraVkkSLoLBHKVmVCygS","encrypted_password": "oYqNlcdZcwfcYKcwoLFTZklCi","reset_password_token": "DEhVulLeIritWWxCTPCWPdkoe","reset_password_sent_at": "2205-10-27T05:50:08.07786279-04:00","remember_created_at": "2275-11-30T17:38:02.551033893-05:00","created_at": "2289-03-17T19:16:27.302020969-04:00","updated_at": "2297-05-09T00:56:01.746133916-04:00"}' | http POST "https://xinqi.dev:8080/users_" X-Api-User:user123
 func AddUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	users_ := &model.Users_{}
@@ -171,7 +171,7 @@ func AddUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /users_/{argID} [put]
-// echo '{"id": 88,"email": "cVIiuETQSZLyZsXxukQonZfnJ","encrypted_password": "TydAJOOCpMruySLFruklPExYC","reset_password_token": "vVYkdSYLsvpfiUhQCtFLCEFHs","reset_password_sent_at": "2279-05-19T05:45:52.782788719-04:00","remember_created_at": "2293-02-05T08:09:08.404155924-05:00","created_at": "2077-01-01T15:51:20.745236225-05:00","updated_at": "2079-07-06T02:32:19.695402633-04:00"}' | http PUT "https://xinqi.dev:8080/users_/1"  X-Api-User:user123
+// echo '{"id": 48,"email": "IbfgvuraVkkSLoLBHKVmVCygS","encrypted_password": "oYqNlcdZcwfcYKcwoLFTZklCi","reset_password_token": "DEhVulLeIritWWxCTPCWPdkoe","reset_password_sent_at": "2205-10-27T05:50:08.07786279-04:00","remember_created_at": "2275-11-30T17:38:02.551033893-05:00","created_at": "2289-03-17T19:16:27.302020969-04:00","updated_at": "2297-05-09T00:56:01.746133916-04:00"}' | http PUT "https://xinqi.dev:8080/users_/1"  X-Api-User:user123
 func UpdateUsers_(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

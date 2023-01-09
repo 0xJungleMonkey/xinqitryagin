@@ -123,7 +123,7 @@ func GetBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerqueries [post]
-// echo '{"id": 21,"creator_id": 28,"name": "UPhiPxtdZfofNqmitmkMLfeja","description": "ksBmRfvkNLDnmNMfCckuKUvFC","statement": "TKAjwAqOqWZuFmsZORlygFwwk","data_source": "WsFxIRVMkvZBdmICCTeLyRgee","status": "bQFpfcIhrGiEWpEapQrCURsEL","created_at": "2057-01-19T07:31:05.183286882-05:00","updated_at": "2199-03-24T05:10:07.977381229-04:00"}' | http POST "https://xinqi.dev:8080/blazerqueries" X-Api-User:user123
+// echo '{"id": 58,"creator_id": 39,"name": "EgDhAQtEqHFOlUjLXZMOLnCqG","description": "VOduigYMincWvFBrSRUHwPVNY","statement": "CZLHkdvRZgVlcKYFrcKcBaCTa","data_source": "BCZSlgKosRppSRWnbGYQvjpUb","status": "wqqcoPRbYIjDSdrDforSlXgFq","created_at": "2210-06-22T22:07:42.453983187-04:00","updated_at": "2032-12-24T21:12:56.961525869-05:00"}' | http POST "https://xinqi.dev:8080/blazerqueries" X-Api-User:user123
 func AddBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerqueries := &model.BlazerQueries{}
@@ -171,7 +171,7 @@ func AddBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerqueries/{argID} [put]
-// echo '{"id": 21,"creator_id": 28,"name": "UPhiPxtdZfofNqmitmkMLfeja","description": "ksBmRfvkNLDnmNMfCckuKUvFC","statement": "TKAjwAqOqWZuFmsZORlygFwwk","data_source": "WsFxIRVMkvZBdmICCTeLyRgee","status": "bQFpfcIhrGiEWpEapQrCURsEL","created_at": "2057-01-19T07:31:05.183286882-05:00","updated_at": "2199-03-24T05:10:07.977381229-04:00"}' | http PUT "https://xinqi.dev:8080/blazerqueries/1"  X-Api-User:user123
+// echo '{"id": 58,"creator_id": 39,"name": "EgDhAQtEqHFOlUjLXZMOLnCqG","description": "VOduigYMincWvFBrSRUHwPVNY","statement": "CZLHkdvRZgVlcKYFrcKcBaCTa","data_source": "BCZSlgKosRppSRWnbGYQvjpUb","status": "wqqcoPRbYIjDSdrDforSlXgFq","created_at": "2210-06-22T22:07:42.453983187-04:00","updated_at": "2032-12-24T21:12:56.961525869-05:00"}' | http PUT "https://xinqi.dev:8080/blazerqueries/1"  X-Api-User:user123
 func UpdateBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -123,7 +123,7 @@ func GetMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /maps [post]
-// echo '{"id": 18,"created_at": "2235-07-14T15:30:29.265661338-04:00","updated_at": "2155-07-03T14:33:12.234043928-04:00"}' | http POST "https://xinqi.dev:8080/maps" X-Api-User:user123
+// echo '{"id": 79,"created_at": "2275-02-03T04:19:21.852096439-05:00","updated_at": "2087-02-08T10:35:02.44201063-05:00"}' | http POST "https://xinqi.dev:8080/maps" X-Api-User:user123
 func AddMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	maps := &model.Maps{}
@@ -171,7 +171,7 @@ func AddMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /maps/{argID} [put]
-// echo '{"id": 18,"created_at": "2235-07-14T15:30:29.265661338-04:00","updated_at": "2155-07-03T14:33:12.234043928-04:00"}' | http PUT "https://xinqi.dev:8080/maps/1"  X-Api-User:user123
+// echo '{"id": 79,"created_at": "2275-02-03T04:19:21.852096439-05:00","updated_at": "2087-02-08T10:35:02.44201063-05:00"}' | http PUT "https://xinqi.dev:8080/maps/1"  X-Api-User:user123
 func UpdateMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
