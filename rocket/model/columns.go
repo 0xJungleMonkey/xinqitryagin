@@ -37,7 +37,7 @@ CREATE TABLE `columns` (
 
 JSON Sample
 -------------------------------------
-{    "battery_id": 61,    "id": 25,    "type": "jdGZunNbCjAUKaPpDLftkwoqk",    "num_of_floors_served": 94,    "status": "lZAMAPDmxoBsSSMucLKAFxmkH",    "information": "lHZFEYajeAhvFeyDJPTHbDJdk",    "notes": "ZJinxZZmgrkHFnctMxrDeoNON",    "created_at": "2290-03-12T07:10:34.454986671-04:00",    "updated_at": "2216-09-25T17:53:44.177769609-04:00"}
+{    "battery_id": 66,    "id": 4,    "type": "XdNPdafcFMZlccmIXXYwPYMdV",    "num_of_floors_served": 89,    "status": "wGXhThwINyBROdTmWEYAarvcL",    "information": "wjrgxpOrbagydsDODtSVkPrMI",    "notes": "WXrMaASEUJOjgRDaLFBeTsSHj",    "created_at": "2310-05-19T22:42:54.865454745-04:00",    "updated_at": "2240-05-08T23:33:13.777988347-04:00"}
 
 
 

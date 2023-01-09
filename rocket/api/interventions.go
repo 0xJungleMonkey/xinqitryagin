@@ -123,7 +123,7 @@ func GetInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /interventions [post]
-// echo '{"id": 12,"author": "ULXeAoeOWHaVQIcntLRAhNcqT","customer_id": 79,"building_id": 57,"battery_id": 22,"column_id": 22,"elevator_id": 91,"employee_id": 66,"start_datetime": "2214-02-19T15:08:08.150883615-05:00","end_datetime": "2075-07-06T00:41:23.667801662-04:00","result": "waesoTBRXtTJhAaixBbqPuONs","report": "BQFuKyFDyiswYQSdanEplLQsP","status": "ZUOMEQLWemSyWbgowWyIGRaGO","created_at": "2081-06-15T15:33:32.12739989-04:00","updated_at": "2209-02-01T03:47:35.324875894-05:00"}' | http POST "https://xinqi.dev:8080/interventions" X-Api-User:user123
+// echo '{"id": 55,"author": "gDpZGfTgwxUBMjwSoVjhEFLDo","customer_id": 42,"building_id": 89,"battery_id": 21,"column_id": 32,"elevator_id": 31,"employee_id": 27,"start_datetime": "2252-07-12T04:34:33.225167429-04:00","end_datetime": "2201-11-08T23:05:23.245450624-05:00","result": "xGLGvFEYwDXGYcdLspowhyrSZ","report": "KxWKFhcaKOZxtFgLGZsesobyl","status": "yqVRMKFALSmhRXFnRsEeFlTjb","created_at": "2193-08-30T22:53:32.62854925-04:00","updated_at": "2060-11-28T15:02:23.288821949-05:00"}' | http POST "https://xinqi.dev:8080/interventions" X-Api-User:user123
 func AddInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	interventions := &model.Interventions{}
@@ -171,7 +171,7 @@ func AddInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /interventions/{argID} [put]
-// echo '{"id": 12,"author": "ULXeAoeOWHaVQIcntLRAhNcqT","customer_id": 79,"building_id": 57,"battery_id": 22,"column_id": 22,"elevator_id": 91,"employee_id": 66,"start_datetime": "2214-02-19T15:08:08.150883615-05:00","end_datetime": "2075-07-06T00:41:23.667801662-04:00","result": "waesoTBRXtTJhAaixBbqPuONs","report": "BQFuKyFDyiswYQSdanEplLQsP","status": "ZUOMEQLWemSyWbgowWyIGRaGO","created_at": "2081-06-15T15:33:32.12739989-04:00","updated_at": "2209-02-01T03:47:35.324875894-05:00"}' | http PUT "https://xinqi.dev:8080/interventions/1"  X-Api-User:user123
+// echo '{"id": 55,"author": "gDpZGfTgwxUBMjwSoVjhEFLDo","customer_id": 42,"building_id": 89,"battery_id": 21,"column_id": 32,"elevator_id": 31,"employee_id": 27,"start_datetime": "2252-07-12T04:34:33.225167429-04:00","end_datetime": "2201-11-08T23:05:23.245450624-05:00","result": "xGLGvFEYwDXGYcdLspowhyrSZ","report": "KxWKFhcaKOZxtFgLGZsesobyl","status": "yqVRMKFALSmhRXFnRsEeFlTjb","created_at": "2193-08-30T22:53:32.62854925-04:00","updated_at": "2060-11-28T15:02:23.288821949-05:00"}' | http PUT "https://xinqi.dev:8080/interventions/1"  X-Api-User:user123
 func UpdateInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

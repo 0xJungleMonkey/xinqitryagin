@@ -41,7 +41,7 @@ CREATE TABLE `buildings` (
 
 JSON Sample
 -------------------------------------
-{    "customer_id": 96,    "address_id": 57,    "id": 2,    "full_name_of_building_admin": "WrLWIkccRCqWRRkdRBvQcnaOq",    "email_of_admin_of_building": "wnvBkgTLgWVumDOdDQytQtsyE",    "phone_num_of_building_admin": 28,    "full_name_of_tech_contact_for_building": "wxOjJBoNWmufBeDDOTlcBQInG",    "tech_contact_email_for_building": "NnDvGmFdJwAgptClQWtKSIxgJ",    "tech_contact_phone_for_building": 3,    "created_at": "2275-01-02T19:44:44.18228464-05:00",    "updated_at": "2086-10-28T20:20:01.535596637-04:00"}
+{    "customer_id": 3,    "address_id": 94,    "id": 16,    "full_name_of_building_admin": "XvgyoQRNmsTHWkBqTnaLjcobF",    "email_of_admin_of_building": "GyskUWUdMxrMqSujcopZZvkRw",    "phone_num_of_building_admin": 55,    "full_name_of_tech_contact_for_building": "LuCymWrftlRNdikaDStlneBav",    "tech_contact_email_for_building": "CDZBERVkqICnImgKXOVyrhCXv",    "tech_contact_phone_for_building": 57,    "created_at": "2229-08-01T00:41:09.140322238-04:00",    "updated_at": "2127-05-21T20:10:21.536520329-04:00"}
 
 
 

@@ -123,7 +123,7 @@ func GetElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators [post]
-// echo '{"column_id": 31,"id": 5,"serial_number": 91,"model": "DMLnSySgrviXLGqvxUERCaCvQ","type": "irngBbxEfvrJdKCHslHaTUqco","status": "PmsLbjAuLdipqBUxspAWutcui","commision_date": "2074-01-29T19:03:01.334400143-05:00","last_inspection_date": "2133-11-01T23:32:51.538903735-05:00","inspection_cert": "jkNJpkYkrlbbZDLClDlacYKqi","information": "jwxMSgQOOKrLgvHsCycfdgRpN","notes": "vtcNRsPJxMfvIOQxPVHoRWbIm","created_at": "2101-05-22T05:07:16.815824355-04:00","updated_at": "2207-09-03T04:31:16.017515193-04:00"}' | http POST "https://xinqi.dev:8080/elevators" X-Api-User:user123
+// echo '{"column_id": 30,"id": 45,"serial_number": 58,"model": "IKeegHIuvBoTUWkunJYeyTPwf","type": "TLlGeHVqPOQPjHouPoQTJFPEb","status": "GiigtMWNUudJhaihkAGIPPYbo","commision_date": "2146-01-14T15:28:09.265315357-05:00","last_inspection_date": "2106-10-12T16:30:03.220650278-04:00","inspection_cert": "vCuAIHJWUiihyrhbZXMKvOxTF","information": "giJMxGSmLyClPRQtRfpuipEAN","notes": "PwxYMjffUHsHoyJQsgxyYOmMM","created_at": "2123-10-22T17:09:06.165564197-04:00","updated_at": "2100-08-06T05:34:08.697236723-04:00"}' | http POST "https://xinqi.dev:8080/elevators" X-Api-User:user123
 func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	elevators := &model.Elevators{}
@@ -171,7 +171,7 @@ func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators/{argID} [put]
-// echo '{"column_id": 31,"id": 5,"serial_number": 91,"model": "DMLnSySgrviXLGqvxUERCaCvQ","type": "irngBbxEfvrJdKCHslHaTUqco","status": "PmsLbjAuLdipqBUxspAWutcui","commision_date": "2074-01-29T19:03:01.334400143-05:00","last_inspection_date": "2133-11-01T23:32:51.538903735-05:00","inspection_cert": "jkNJpkYkrlbbZDLClDlacYKqi","information": "jwxMSgQOOKrLgvHsCycfdgRpN","notes": "vtcNRsPJxMfvIOQxPVHoRWbIm","created_at": "2101-05-22T05:07:16.815824355-04:00","updated_at": "2207-09-03T04:31:16.017515193-04:00"}' | http PUT "https://xinqi.dev:8080/elevators/1"  X-Api-User:user123
+// echo '{"column_id": 30,"id": 45,"serial_number": 58,"model": "IKeegHIuvBoTUWkunJYeyTPwf","type": "TLlGeHVqPOQPjHouPoQTJFPEb","status": "GiigtMWNUudJhaihkAGIPPYbo","commision_date": "2146-01-14T15:28:09.265315357-05:00","last_inspection_date": "2106-10-12T16:30:03.220650278-04:00","inspection_cert": "vCuAIHJWUiihyrhbZXMKvOxTF","information": "giJMxGSmLyClPRQtRfpuipEAN","notes": "PwxYMjffUHsHoyJQsgxyYOmMM","created_at": "2123-10-22T17:09:06.165564197-04:00","updated_at": "2100-08-06T05:34:08.697236723-04:00"}' | http PUT "https://xinqi.dev:8080/elevators/1"  X-Api-User:user123
 func UpdateElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

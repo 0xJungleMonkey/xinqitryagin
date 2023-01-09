@@ -123,7 +123,7 @@ func GetEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /employees [post]
-// echo '{"user_id": 21,"id": 4,"first_name": "XvylgsZeYVBCCWnIkhOVarRFT","last_name": "bZstQdeJKpDZMntlbxkbjUycT","title": "ndamWbxuwSbegMWOHnqnfEQay","email": "MGauhckjGHUtCvBFwMXRsKpoD","created_at": "2114-06-01T08:48:46.373527695-04:00","updated_at": "2237-09-01T06:15:58.185862924-04:00"}' | http POST "https://xinqi.dev:8080/employees" X-Api-User:user123
+// echo '{"user_id": 8,"id": 78,"first_name": "WGpkdgnyiwQDmOXAXOXOndagj","last_name": "DtBLDSYLlCBiTaKPlOiHQVXkf","title": "biPWClmBbjvmEXTTYEroYUWyU","email": "AApJBlfQyXlrGrxgCCNHcaVqG","created_at": "2159-05-31T17:32:26.45940846-04:00","updated_at": "2310-06-14T00:43:01.669425712-04:00"}' | http POST "https://xinqi.dev:8080/employees" X-Api-User:user123
 func AddEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	employees := &model.Employees{}
@@ -171,7 +171,7 @@ func AddEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /employees/{argID} [put]
-// echo '{"user_id": 21,"id": 4,"first_name": "XvylgsZeYVBCCWnIkhOVarRFT","last_name": "bZstQdeJKpDZMntlbxkbjUycT","title": "ndamWbxuwSbegMWOHnqnfEQay","email": "MGauhckjGHUtCvBFwMXRsKpoD","created_at": "2114-06-01T08:48:46.373527695-04:00","updated_at": "2237-09-01T06:15:58.185862924-04:00"}' | http PUT "https://xinqi.dev:8080/employees/1"  X-Api-User:user123
+// echo '{"user_id": 8,"id": 78,"first_name": "WGpkdgnyiwQDmOXAXOXOndagj","last_name": "DtBLDSYLlCBiTaKPlOiHQVXkf","title": "biPWClmBbjvmEXTTYEroYUWyU","email": "AApJBlfQyXlrGrxgCCNHcaVqG","created_at": "2159-05-31T17:32:26.45940846-04:00","updated_at": "2310-06-14T00:43:01.669425712-04:00"}' | http PUT "https://xinqi.dev:8080/employees/1"  X-Api-User:user123
 func UpdateEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

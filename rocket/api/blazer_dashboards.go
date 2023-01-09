@@ -123,7 +123,7 @@ func GetBlazerDashboards(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboards [post]
-// echo '{"id": 18,"creator_id": 5,"name": "SuwkaLbnTRAuGOGwmubxWGRrr","created_at": "2263-06-03T16:50:18.174617156-04:00","updated_at": "2275-10-13T20:07:31.263173109-04:00"}' | http POST "https://xinqi.dev:8080/blazerdashboards" X-Api-User:user123
+// echo '{"id": 45,"creator_id": 31,"name": "SvUNqABgiDvKxMoOjamrEDNPW","created_at": "2226-04-23T16:26:38.487757247-04:00","updated_at": "2063-10-14T19:51:05.570973021-04:00"}' | http POST "https://xinqi.dev:8080/blazerdashboards" X-Api-User:user123
 func AddBlazerDashboards(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerdashboards := &model.BlazerDashboards{}
@@ -171,7 +171,7 @@ func AddBlazerDashboards(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboards/{argID} [put]
-// echo '{"id": 18,"creator_id": 5,"name": "SuwkaLbnTRAuGOGwmubxWGRrr","created_at": "2263-06-03T16:50:18.174617156-04:00","updated_at": "2275-10-13T20:07:31.263173109-04:00"}' | http PUT "https://xinqi.dev:8080/blazerdashboards/1"  X-Api-User:user123
+// echo '{"id": 45,"creator_id": 31,"name": "SvUNqABgiDvKxMoOjamrEDNPW","created_at": "2226-04-23T16:26:38.487757247-04:00","updated_at": "2063-10-14T19:51:05.570973021-04:00"}' | http PUT "https://xinqi.dev:8080/blazerdashboards/1"  X-Api-User:user123
 func UpdateBlazerDashboards(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

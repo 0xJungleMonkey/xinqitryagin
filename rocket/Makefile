@@ -167,9 +167,9 @@ regen: ## regenerate generated code
      --server \
      --overwrite \
      --host=xinqi.dev \
-     --port=8080 \
+     --port\
      --rest \
-     --listen=:8080 \
+     --listen \
      --scheme=https \
      --generate-dao \
      --generate-proj \

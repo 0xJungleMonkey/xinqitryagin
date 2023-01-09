@@ -46,7 +46,7 @@ CREATE TABLE `customers` (
 
 JSON Sample
 -------------------------------------
-{    "address_id": 79,    "user_id": 10,    "id": 71,    "customer_creation_date": "mkDuPfYUeCvXEVZMIocWkNoVv",    "date": "cunAynwnOYtFnDcgEQkNHjwSA",    "company_name": "gUerByiYeRVfLJKrcUiPgjtpJ",    "company_hq_adress": "IOCCmBYZPpOMoMpByuBiGBZqX",    "full_name_of_company_contact": "TZiCkMxxZdfFkfqvUjlaUEBVf",    "company_contact_phone": "xONwFmWlasQLcLvcsnwWNuvcV",    "company_contact_e_mail": "SNoqjXSEQAiJaMYmiinIgZSrB",    "company_desc": "kkoLiLbfLsYDaHexgtyabUqSY",    "full_name_service_tech_auth": "skWrpAbtIMSKeMxRmtYWAHdsq",    "tech_auth_phone_service": "ZbOXSLbBpyMBPUcGEAGVbqLbO",    "tech_manager_email_service": "ImfRFuYMnRPEkQfFOAlDaMjaG",    "created_at": "2276-06-23T16:32:04.080037288-04:00",    "updated_at": "2252-07-23T04:00:14.68445898-04:00"}
+{    "address_id": 57,    "user_id": 47,    "id": 63,    "customer_creation_date": "ECdKQORSTJjnjamVrZSrDeykL",    "date": "JLRvxXkebNxsvOjOMAoGjyXmA",    "company_name": "srYriNTciPbtvlmtlhPhyGFMH",    "company_hq_adress": "xxfLtgwPIsPkLpTbJrbWMoZck",    "full_name_of_company_contact": "LenoyyCFloMkyhceHBByWuHIV",    "company_contact_phone": "tjDmQtUNWlcLUwvgKdxQtuiWR",    "company_contact_e_mail": "JTUNvyAbFPgUyigOclpXtnvaK",    "company_desc": "ukkBGQUOucJkIWRbbfUSShugl",    "full_name_service_tech_auth": "WKBUNqFJQkpDQnUfZHGJjecOm",    "tech_auth_phone_service": "sjNbYheEmKsjVwHEArrYnqDfw",    "tech_manager_email_service": "oLHbYFBfVRFuctlAZmuSElmTI",    "created_at": "2108-06-15T03:46:49.633189344-04:00",    "updated_at": "2278-10-14T13:03:29.305006086-04:00"}
 
 
 

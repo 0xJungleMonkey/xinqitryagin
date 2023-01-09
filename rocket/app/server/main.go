@@ -50,7 +50,7 @@ var (
 
 // GinServer launch gin server
 func GinServer() (err error) {
-	url := ginSwagger.URL("https://xinqi.dev:8080/swagger/doc.json") // The url pointing to API definition
+	url := ginSwagger.URL("https://xinqi.dev/swagger/doc.json") // The url pointing to API definition
 
 	router := gin.Default()
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))

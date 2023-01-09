@@ -38,7 +38,7 @@ CREATE TABLE `active_admin_comments` (
 
 JSON Sample
 -------------------------------------
-{    "id": 54,    "namespace": "WDiVQTFelBMbcIMjKqnNmZDFh",    "body": "nadtXxwufKlGpFRYynvuXXyTX",    "resource_type": "BpQkZyoqqKOArIBWSrgnetXXo",    "resource_id": 18,    "author_type": "VdviQDLFOCmDvPeOSedYrICmd",    "author_id": 69,    "created_at": "2104-04-03T03:59:43.392173562-04:00",    "updated_at": "2108-04-29T07:25:19.229059937-04:00"}
+{    "id": 98,    "namespace": "WQlsJyAfVCOrUVNfUJpSWRjIq",    "body": "OxkhGRaVHFTDJUqQQCUQVLKLL",    "resource_type": "fqwymQRRYaydfCjtHGmOUgTYP",    "resource_id": 11,    "author_type": "CKLYnDrjuyWCikBbQGKqrZtYq",    "author_id": 16,    "created_at": "2221-02-16T10:22:27.81830752-05:00",    "updated_at": "2237-04-17T13:59:22.556384504-04:00"}
 
 
 

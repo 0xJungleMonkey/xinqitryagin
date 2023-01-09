@@ -36,7 +36,7 @@ CREATE TABLE `admin_users` (
 
 JSON Sample
 -------------------------------------
-{    "id": 86,    "email": "BVQnbfiHSTpeEOtxVEkHIERLy",    "encrypted_password": "KPQmOarvsnlUaLYwRcNNDDGjy",    "reset_password_token": "mgXbKVkgAGTGKgZrXtntOXVEF",    "reset_password_sent_at": "2038-05-02T11:23:55.536181599-04:00",    "remember_created_at": "2229-05-31T09:04:56.845816304-04:00",    "created_at": "2184-02-17T03:07:59.872263255-05:00",    "updated_at": "2188-02-14T17:38:53.094712727-05:00"}
+{    "id": 92,    "email": "wRVAqayKsblGxQoTFUhAWRmjS",    "encrypted_password": "GcNZkoAxxHPZLiGFWMVSWqqQx",    "reset_password_token": "CYiGYOuopPYAstTiErWKkEVTt",    "reset_password_sent_at": "2217-07-16T18:23:10.819739225-04:00",    "remember_created_at": "2089-05-12T14:35:55.175900641-04:00",    "created_at": "2024-11-11T20:43:10.438736162-05:00",    "updated_at": "2123-03-08T04:03:35.590322604-05:00"}
 
 
 

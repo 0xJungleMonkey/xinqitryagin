@@ -40,7 +40,7 @@ CREATE TABLE `blazer_checks` (
 
 JSON Sample
 -------------------------------------
-{    "id": 59,    "creator_id": 66,    "query_id": 63,    "state": "WmmlOsRppnFDjTXVvhrQTDFJu",    "schedule": "DgtUVKFrqWfKGkYaGsOAjceQk",    "emails": "lGAPpRNUgEOXLeiOWWWNNfmJi",    "slack_channels": "LShXGjYUymCceZVtaVJIqOHIK",    "check_type": "yIlrRHNFrYNrkcqYEycAhxkDV",    "message": "iJhTsSGnoZygJXiTwNUNYQhGd",    "last_run_at": "2205-08-17T20:42:51.8225817-04:00",    "created_at": "2178-12-14T14:32:25.656749927-05:00",    "updated_at": "2158-04-12T05:44:37.659343399-04:00"}
+{    "id": 93,    "creator_id": 67,    "query_id": 41,    "state": "NRtsAmUUOIVdqZDctKKJOxedB",    "schedule": "sKHumyriFOWpyVwLZbKwCTQJM",    "emails": "ABWemDyAsADqwNffUjxXkWOtp",    "slack_channels": "cDyWyIkTsfltphXOwBhvJwBgb",    "check_type": "PFjpEkWShpelMJvMVkVbCUhfP",    "message": "PHIXavaIMwBoOfMrHSgJutmZd",    "last_run_at": "2150-03-25T17:01:27.465368917-04:00",    "created_at": "2038-01-11T09:04:29.452009613-05:00",    "updated_at": "2248-05-31T05:21:41.470212697-04:00"}
 
 
 

@@ -96,7 +96,6 @@ gen \
     --overwrite \
     --host=xinqi.dev \
     --rest \
-    --listen=:8080 \
     --scheme=https \
     --generate-dao \
     --generate-proj \

@@ -123,7 +123,7 @@ func GetBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboardqueries [post]
-// echo '{"id": 76,"dashboard_id": 92,"query_id": 76,"position": 79,"created_at": "2241-02-01T19:37:42.512480854-05:00","updated_at": "2196-06-27T09:05:06.799663661-04:00"}' | http POST "https://xinqi.dev:8080/blazerdashboardqueries" X-Api-User:user123
+// echo '{"id": 0,"dashboard_id": 47,"query_id": 95,"position": 79,"created_at": "2304-09-10T23:34:25.740574979-04:00","updated_at": "2040-01-01T13:25:09.361126874-05:00"}' | http POST "https://xinqi.dev:8080/blazerdashboardqueries" X-Api-User:user123
 func AddBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerdashboardqueries := &model.BlazerDashboardQueries{}
@@ -171,7 +171,7 @@ func AddBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboardqueries/{argID} [put]
-// echo '{"id": 76,"dashboard_id": 92,"query_id": 76,"position": 79,"created_at": "2241-02-01T19:37:42.512480854-05:00","updated_at": "2196-06-27T09:05:06.799663661-04:00"}' | http PUT "https://xinqi.dev:8080/blazerdashboardqueries/1"  X-Api-User:user123
+// echo '{"id": 0,"dashboard_id": 47,"query_id": 95,"position": 79,"created_at": "2304-09-10T23:34:25.740574979-04:00","updated_at": "2040-01-01T13:25:09.361126874-05:00"}' | http PUT "https://xinqi.dev:8080/blazerdashboardqueries/1"  X-Api-User:user123
 func UpdateBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
