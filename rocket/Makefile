@@ -166,11 +166,11 @@ regen: ## regenerate generated code
      --makefile \
      --server \
      --overwrite \
-     --host=localhost \
+     --host=xinqi.dev \
      --port=8080 \
      --rest \
      --listen=:8080 \
-     --scheme=http \
+     --scheme=https \
      --generate-dao \
      --generate-proj \
      --file_naming='{{.}}' \
@@ -178,8 +178,8 @@ regen: ## regenerate generated code
      --swagger_version=1.0 \
      --swagger_path=/ \
      --swagger_tos= \
-     --swagger_contact_name=Me \
+     --swagger_contact_name=Xinqi \
      --swagger_contact_url=http://me.com/terms.html \
-     --swagger_contact_email=me@me.com
+     --swagger_contact_email=xinqidavis@gmail.com
 
 

@@ -44,7 +44,7 @@ func configGinBuildingDetailsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildingdetails [get]
-// http "http://localhost:8080/buildingdetails?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/buildingdetails?page=0&pagesize=20" X-Api-User:user123
 func GetAllBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /buildingdetails/{argID} [get]
-// http "http://localhost:8080/buildingdetails/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/buildingdetails/1" X-Api-User:user123
 func GetBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildingdetails [post]
-// echo '{"building_id": 78,"id": 40,"information_key": "vDyVFhbuuoscyyuvGHsxWuHpV","value": "EsErKjVpytOeEoyhmVhprfAAG","created_at": "2265-03-08T10:39:27.773812921-05:00","updated_at": "2309-01-31T10:58:44.985119194-05:00"}' | http POST "http://localhost:8080/buildingdetails" X-Api-User:user123
+// echo '{"building_id": 78,"id": 65,"information_key": "dXLuIYyDpNEGSiCpQlVerlRmL","value": "DWrnschjAycdolHlGDhWTtfHj","created_at": "2151-05-13T23:25:15.314438141-04:00","updated_at": "2269-07-22T19:22:00.151137566-04:00"}' | http POST "https://xinqi.dev:8080/buildingdetails" X-Api-User:user123
 func AddBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	buildingdetails := &model.BuildingDetails{}
@@ -171,7 +171,7 @@ func AddBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildingdetails/{argID} [put]
-// echo '{"building_id": 78,"id": 40,"information_key": "vDyVFhbuuoscyyuvGHsxWuHpV","value": "EsErKjVpytOeEoyhmVhprfAAG","created_at": "2265-03-08T10:39:27.773812921-05:00","updated_at": "2309-01-31T10:58:44.985119194-05:00"}' | http PUT "http://localhost:8080/buildingdetails/1"  X-Api-User:user123
+// echo '{"building_id": 78,"id": 65,"information_key": "dXLuIYyDpNEGSiCpQlVerlRmL","value": "DWrnschjAycdolHlGDhWTtfHj","created_at": "2151-05-13T23:25:15.314438141-04:00","updated_at": "2269-07-22T19:22:00.151137566-04:00"}' | http PUT "https://xinqi.dev:8080/buildingdetails/1"  X-Api-User:user123
 func UpdateBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /buildingdetails/{argID} [delete]
-// http DELETE "http://localhost:8080/buildingdetails/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/buildingdetails/1" X-Api-User:user123
 func DeleteBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

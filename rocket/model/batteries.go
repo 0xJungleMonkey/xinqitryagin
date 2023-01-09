@@ -42,7 +42,7 @@ CREATE TABLE `batteries` (
 
 JSON Sample
 -------------------------------------
-{    "employee_id": 47,    "building_id": 52,    "id": 85,    "type": "psWHseRwuqWBnqlZMixuTFGgG",    "status": "xrpBRHmrBmZYIjkPimblHuURA",    "commission_date": "2309-07-25T05:30:09.554624717-04:00",    "last_inspection_date": "2031-04-05T20:22:07.554888989-04:00",    "operations_cert": "qvAndllqtumLnJTinOYtZmEAr",    "information": "KhiaVoklJVXcTPMlmeLAeCXjR",    "notes": "DLmbqbJHjfOJyHDfwsOdaXxEY",    "created_at": "2137-06-24T19:14:55.093189018-04:00",    "updated_at": "2085-07-15T06:49:48.389975171-04:00"}
+{    "employee_id": 75,    "building_id": 42,    "id": 78,    "type": "aGANkrGIAaoUJhJtSWNHyskul",    "status": "jfQNBmVcAXrtxgHtGtIMYgkNp",    "commission_date": "2052-09-21T00:17:29.25745044-04:00",    "last_inspection_date": "2196-11-03T05:33:42.809382605-04:00",    "operations_cert": "YvLJfMnNfpqgMewuEtInUgNyZ",    "information": "CdbMFWBRGbmsMPouRAbcEbEfk",    "notes": "DbgLwnkqchmNYfYbdjLUfotIg",    "created_at": "2053-02-20T15:35:28.468211157-05:00",    "updated_at": "2100-12-11T06:06:00.223718468-05:00"}
 
 
 
@@ -51,25 +51,25 @@ JSON Sample
 // Batteries struct is a row record of the batteries table in the rocket_development database
 type Batteries struct {
 	//[ 0] employee_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	EmployeeID int64 `gorm:"column:employee_id;type:bigint;" json:"employee_id"`
+	EmployeeID null.Int `gorm:"column:employee_id;type:bigint;" json:"employee_id"`
 	//[ 1] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	BuildingID int64 `gorm:"column:building_id;type:bigint;" json:"building_id"`
+	BuildingID null.Int `gorm:"column:building_id;type:bigint;" json:"building_id"`
 	//[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 3] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Type string `gorm:"column:Type;type:varchar;size:255;" json:"type"`
+	Type null.String `gorm:"column:Type;type:varchar;size:255;" json:"type"`
 	//[ 4] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status string `gorm:"column:Status;type:varchar;size:255;" json:"status"`
+	Status null.String `gorm:"column:Status;type:varchar;size:255;" json:"status"`
 	//[ 5] CommissionDate                                 date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []
 	CommissionDate null.Time `gorm:"column:CommissionDate;type:date;" json:"commission_date"`
 	//[ 6] LastInspectionDate                             date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []
 	LastInspectionDate null.Time `gorm:"column:LastInspectionDate;type:date;" json:"last_inspection_date"`
 	//[ 7] OperationsCert                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	OperationsCert string `gorm:"column:OperationsCert;type:varchar;size:255;" json:"operations_cert"`
+	OperationsCert null.String `gorm:"column:OperationsCert;type:varchar;size:255;" json:"operations_cert"`
 	//[ 8] Information                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Information string `gorm:"column:Information;type:text;size:65535;" json:"information"`
+	Information null.String `gorm:"column:Information;type:text;size:65535;" json:"information"`
 	//[ 9] Notes                                          text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Notes string `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
+	Notes null.String `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
 	//[10] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[11] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -94,7 +94,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "EmployeeID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "employee_id",
 			ProtobufFieldName:  "employee_id",
 			ProtobufType:       "int64",
@@ -115,7 +115,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "BuildingID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "building_id",
 			ProtobufFieldName:  "building_id",
 			ProtobufType:       "int64",
@@ -157,7 +157,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Type",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "type",
 			ProtobufFieldName:  "type",
 			ProtobufType:       "string",
@@ -178,7 +178,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",
@@ -241,7 +241,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "OperationsCert",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "operations_cert",
 			ProtobufFieldName:  "operations_cert",
 			ProtobufType:       "string",
@@ -262,7 +262,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Information",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "information",
 			ProtobufFieldName:  "information",
 			ProtobufType:       "string",
@@ -283,7 +283,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Notes",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "notes",
 			ProtobufFieldName:  "notes",
 			ProtobufType:       "string",

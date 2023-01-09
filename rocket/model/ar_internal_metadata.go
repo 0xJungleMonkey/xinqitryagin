@@ -30,7 +30,7 @@ CREATE TABLE `ar_internal_metadata` (
 
 JSON Sample
 -------------------------------------
-{    "key": "OoKHHCgKJhQORaxGjunjUpqJo",    "value": "yXDNWVCasMOiQjAAXbxtlTJLe",    "created_at": "2202-12-28T05:30:42.09037911-05:00",    "updated_at": "2261-05-31T18:31:16.646908023-04:00"}
+{    "key": "nRZVsKQufstExEhlfPVxlmLXk",    "value": "GISvPrxXogtdcYaErTwkEVVJU",    "created_at": "2132-01-16T18:21:01.070836955-05:00",    "updated_at": "2024-03-05T08:43:52.802240903-05:00"}
 
 
 
@@ -41,7 +41,7 @@ type ArInternalMetadata struct {
 	//[ 0] key                                            varchar(255)         null: false  primary: true   isArray: false  auto: false  col: varchar         len: 255     default: []
 	Key string `gorm:"primary_key;column:key;type:varchar;size:255;" json:"key"`
 	//[ 1] value                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Value string `gorm:"column:value;type:varchar;size:255;" json:"value"`
+	Value null.String `gorm:"column:value;type:varchar;size:255;" json:"value"`
 	//[ 2] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 3] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -87,7 +87,7 @@ var ar_internal_metadataTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Value",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "value",
 			ProtobufFieldName:  "value",
 			ProtobufType:       "string",

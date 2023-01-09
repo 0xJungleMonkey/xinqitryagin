@@ -44,7 +44,7 @@ func configGinEmployeesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /employees [get]
-// http "http://localhost:8080/employees?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/employees?page=0&pagesize=20" X-Api-User:user123
 func GetAllEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /employees/{argID} [get]
-// http "http://localhost:8080/employees/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/employees/1" X-Api-User:user123
 func GetEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /employees [post]
-// echo '{"user_id": 15,"id": 75,"first_name": "KTkwQmHQiwhYqoqxBHHGUhvMU","last_name": "UNAZekVfTruOjSLgcbMYCkXaJ","title": "chfRnwUrlgBWcqUFJOPdBHgCy","email": "PEqHwALSrCxKksIKieyOMSDhj","created_at": "2097-03-06T18:07:47.637414849-05:00","updated_at": "2130-04-18T02:25:04.527929851-04:00"}' | http POST "http://localhost:8080/employees" X-Api-User:user123
+// echo '{"user_id": 53,"id": 64,"first_name": "yeuJOBfoCDJRIyCQAoToeUqAT","last_name": "iSipJHOuCjElabEmFcXqtlaHP","title": "xWwAALaPsJJvCTEuWbMCpwKtV","email": "iiPyRKAKGFTheWOxvQqWUpFNJ","created_at": "2275-08-02T20:05:44.858673729-04:00","updated_at": "2121-11-22T12:01:00.64442917-05:00"}' | http POST "https://xinqi.dev:8080/employees" X-Api-User:user123
 func AddEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	employees := &model.Employees{}
@@ -171,7 +171,7 @@ func AddEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /employees/{argID} [put]
-// echo '{"user_id": 15,"id": 75,"first_name": "KTkwQmHQiwhYqoqxBHHGUhvMU","last_name": "UNAZekVfTruOjSLgcbMYCkXaJ","title": "chfRnwUrlgBWcqUFJOPdBHgCy","email": "PEqHwALSrCxKksIKieyOMSDhj","created_at": "2097-03-06T18:07:47.637414849-05:00","updated_at": "2130-04-18T02:25:04.527929851-04:00"}' | http PUT "http://localhost:8080/employees/1"  X-Api-User:user123
+// echo '{"user_id": 53,"id": 64,"first_name": "yeuJOBfoCDJRIyCQAoToeUqAT","last_name": "iSipJHOuCjElabEmFcXqtlaHP","title": "xWwAALaPsJJvCTEuWbMCpwKtV","email": "iiPyRKAKGFTheWOxvQqWUpFNJ","created_at": "2275-08-02T20:05:44.858673729-04:00","updated_at": "2121-11-22T12:01:00.64442917-05:00"}' | http PUT "https://xinqi.dev:8080/employees/1"  X-Api-User:user123
 func UpdateEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /employees/{argID} [delete]
-// http DELETE "http://localhost:8080/employees/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/employees/1" X-Api-User:user123
 func DeleteEmployees(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

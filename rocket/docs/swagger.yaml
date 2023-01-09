@@ -46,7 +46,7 @@ definitions:
         description: '[ 6] author_id                                      bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       author_type:
         description: '[ 5] author_type                                    varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -76,7 +76,7 @@ definitions:
         description: '[ 4] resource_id                                    bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       resource_type:
         description: '[ 3] resource_type                                  varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -200,12 +200,12 @@ definitions:
         description: '[12] latitude                                       float                null:
           true   primary: false  isArray: false  auto: false  col: float           len:
           -1      default: []'
-        type: number
+        type: string
       longitude:
         description: '[13] longitude                                      float                null:
           true   primary: false  isArray: false  auto: false  col: float           len:
           -1      default: []'
-        type: number
+        type: string
       notes:
         description: '[ 9] notes                                          varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -309,7 +309,7 @@ definitions:
         description: '[ 1] building_id                                    bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       commission_date:
         description: '[ 5] CommissionDate                                 date                 null:
           true   primary: false  isArray: false  auto: false  col: date            len:
@@ -324,7 +324,7 @@ definitions:
         description: '[ 0] employee_id                                    bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       id:
         description: '[ 2] id                                             bigint               null:
           false  primary: true   isArray: false  auto: true   col: bigint          len:
@@ -387,7 +387,7 @@ definitions:
         description: '[ 2] query_id                                       bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       statement:
         description: '[ 3] statement                                      text(65535)          null:
           true   primary: false  isArray: false  auto: false  col: text            len:
@@ -397,7 +397,7 @@ definitions:
         description: '[ 1] user_id                                        bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
     type: object
   model.BlazerChecks:
     properties:
@@ -415,7 +415,7 @@ definitions:
         description: '[ 1] creator_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       emails:
         description: '[ 5] emails                                         text(65535)          null:
           true   primary: false  isArray: false  auto: false  col: text            len:
@@ -440,7 +440,7 @@ definitions:
         description: '[ 2] query_id                                       bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       schedule:
         description: '[ 4] schedule                                       varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -473,7 +473,7 @@ definitions:
         description: '[ 1] dashboard_id                                   bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       id:
         description: '[ 0] id                                             bigint               null:
           false  primary: true   isArray: false  auto: true   col: bigint          len:
@@ -483,12 +483,12 @@ definitions:
         description: '[ 3] position                                       int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       query_id:
         description: '[ 2] query_id                                       bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       updated_at:
         description: '[ 5] updated_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -506,7 +506,7 @@ definitions:
         description: '[ 1] creator_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       id:
         description: '[ 0] id                                             bigint               null:
           false  primary: true   isArray: false  auto: true   col: bigint          len:
@@ -534,7 +534,7 @@ definitions:
         description: '[ 1] creator_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       data_source:
         description: '[ 5] data_source                                    varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -577,7 +577,7 @@ definitions:
         description: '[ 0] building_id                                    bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       created_at:
         description: '[ 4] created_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -610,7 +610,7 @@ definitions:
         description: '[ 1] address_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       created_at:
         description: '[ 9] created_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -620,7 +620,7 @@ definitions:
         description: '[ 0] customer_id                                    bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       email_of_admin_of_building:
         description: '[ 4] EmailOfAdminOfBuilding                         varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -645,7 +645,7 @@ definitions:
         description: '[ 5] PhoneNumOfBuildingAdmin                        int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       tech_contact_email_for_building:
         description: '[ 7] TechContactEmailForBuilding                    varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -655,7 +655,7 @@ definitions:
         description: '[ 8] TechContactPhoneForBuilding                    int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       updated_at:
         description: '[10] updated_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -709,7 +709,7 @@ definitions:
         description: '[ 0] battery_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       created_at:
         description: '[ 7] created_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -734,7 +734,7 @@ definitions:
         description: '[ 3] NumOfFloorsServed                              int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       status:
         description: '[ 4] Status                                         varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -757,7 +757,7 @@ definitions:
         description: '[ 0] address_id                                     bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       company_contact_e_mail:
         description: '[ 9] CompanyContactEMail                            varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -832,7 +832,7 @@ definitions:
         description: '[ 1] user_id                                        bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
     type: object
   model.Elevators:
     properties:
@@ -840,7 +840,7 @@ definitions:
         description: '[ 0] column_id                                      bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
       commision_date:
         description: '[ 6] CommisionDate                                  date                 null:
           true   primary: false  isArray: false  auto: false  col: date            len:
@@ -885,7 +885,7 @@ definitions:
         description: '[ 2] SerialNumber                                   int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       status:
         description: '[ 5] Status                                         varchar(255)         null:
           true   primary: false  isArray: false  auto: false  col: varchar         len:
@@ -943,7 +943,7 @@ definitions:
         description: '[ 0] user_id                                        bigint               null:
           true   primary: false  isArray: false  auto: false  col: bigint          len:
           -1      default: []'
-        type: integer
+        type: string
     type: object
   model.Interventions:
     properties:
@@ -956,17 +956,17 @@ definitions:
         description: '[ 4] battery_id                                     int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       building_id:
         description: '[ 3] building_id                                    int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       column_id:
         description: '[ 5] column_id                                      int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       created_at:
         description: '[13] created_at                                     datetime             null:
           false  primary: false  isArray: false  auto: false  col: datetime        len:
@@ -976,17 +976,17 @@ definitions:
         description: '[ 2] customer_id                                    int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       elevator_id:
         description: '[ 6] elevator_id                                    int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       employee_id:
         description: '[ 7] employee_id                                    int                  null:
           true   primary: false  isArray: false  auto: false  col: int             len:
           -1      default: []'
-        type: integer
+        type: string
       end_datetime:
         description: '[ 9] end_datetime                                   datetime             null:
           true   primary: false  isArray: false  auto: false  col: datetime        len:
@@ -1299,11 +1299,11 @@ definitions:
           -1      default: []'
         type: string
     type: object
-host: localhost:8080
+host: xinqi.dev:8080
 info:
   contact:
-    email: me@me.com
-    name: Me
+    email: xinqidavis@gmail.com
+    name: Xinqi
     url: http://me.com/terms.html
   description: Sample CRUD api for rocket_development db
   license:

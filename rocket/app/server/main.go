@@ -13,17 +13,14 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 
-	//"gorm.io/gorm"
-
 	"github.com/droundy/goopt"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
-	swaggerFiles "github.com/swaggo/files"     // swagger embed files
-	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
+	"github.com/swaggo/files"       // swagger embed files
+	"github.com/swaggo/gin-swagger" // gin-swagger middleware
 
 	"rocket/api"
 	"rocket/dao"
-
 	_ "rocket/docs"
 	"rocket/model"
 )
@@ -53,7 +50,7 @@ var (
 
 // GinServer launch gin server
 func GinServer() (err error) {
-	url := ginSwagger.URL("https://xinqi.dev/swagger/doc.json") // The url pointing to API definition
+	url := ginSwagger.URL("https://xinqi.dev:8080/swagger/doc.json") // The url pointing to API definition
 
 	router := gin.Default()
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
@@ -72,14 +69,14 @@ func GinServer() (err error) {
 // @description Sample CRUD api for rocket_development db
 // @termsOfService
 
-// @contact.name Me
+// @contact.name Xinqi
 // @contact.url http://me.com/terms.html
-// @contact.email me@me.com
+// @contact.email xinqidavis@gmail.com
 
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 
-// @host localhost:8080
+// @host xinqi.dev:8080
 // @BasePath /
 func main() {
 	OsSignal = make(chan os.Signal, 1)

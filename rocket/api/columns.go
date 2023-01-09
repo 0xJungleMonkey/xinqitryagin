@@ -44,7 +44,7 @@ func configGinColumnsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /columns [get]
-// http "http://localhost:8080/columns?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/columns?page=0&pagesize=20" X-Api-User:user123
 func GetAllColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /columns/{argID} [get]
-// http "http://localhost:8080/columns/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/columns/1" X-Api-User:user123
 func GetColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /columns [post]
-// echo '{"battery_id": 86,"id": 97,"type": "PxrsYgZIcgcTxeXDvkUlLXTuL","num_of_floors_served": 92,"status": "GjkFXAlWapXkuopYwXQpwyyJs","information": "fJsNjkFIvMfvhSUkXeJVjmZdU","notes": "GbTYAlQKWShJIMeNnmsHnMjrV","created_at": "2234-12-01T20:46:52.822820591-05:00","updated_at": "2129-10-11T00:57:53.705769736-04:00"}' | http POST "http://localhost:8080/columns" X-Api-User:user123
+// echo '{"battery_id": 45,"id": 26,"type": "WRFNGHtYdRgJIcsLcFfHruhgU","num_of_floors_served": 14,"status": "TfxVyMckwvitTNXcFdBCXwgui","information": "qDblPonVJkspQocavlpbZxSVT","notes": "hYJeGSYkcdpovTrfMqgWixuOD","created_at": "2259-05-14T03:03:19.016220168-04:00","updated_at": "2128-07-28T08:52:11.426256651-04:00"}' | http POST "https://xinqi.dev:8080/columns" X-Api-User:user123
 func AddColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	columns := &model.Columns{}
@@ -171,7 +171,7 @@ func AddColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /columns/{argID} [put]
-// echo '{"battery_id": 86,"id": 97,"type": "PxrsYgZIcgcTxeXDvkUlLXTuL","num_of_floors_served": 92,"status": "GjkFXAlWapXkuopYwXQpwyyJs","information": "fJsNjkFIvMfvhSUkXeJVjmZdU","notes": "GbTYAlQKWShJIMeNnmsHnMjrV","created_at": "2234-12-01T20:46:52.822820591-05:00","updated_at": "2129-10-11T00:57:53.705769736-04:00"}' | http PUT "http://localhost:8080/columns/1"  X-Api-User:user123
+// echo '{"battery_id": 45,"id": 26,"type": "WRFNGHtYdRgJIcsLcFfHruhgU","num_of_floors_served": 14,"status": "TfxVyMckwvitTNXcFdBCXwgui","information": "qDblPonVJkspQocavlpbZxSVT","notes": "hYJeGSYkcdpovTrfMqgWixuOD","created_at": "2259-05-14T03:03:19.016220168-04:00","updated_at": "2128-07-28T08:52:11.426256651-04:00"}' | http PUT "https://xinqi.dev:8080/columns/1"  X-Api-User:user123
 func UpdateColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /columns/{argID} [delete]
-// http DELETE "http://localhost:8080/columns/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/columns/1" X-Api-User:user123
 func DeleteColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

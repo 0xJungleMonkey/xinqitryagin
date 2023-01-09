@@ -4,9 +4,9 @@
         "description": "Sample CRUD api for rocket_development db",
         "title": "Sample CRUD api for rocket_development db",
         "contact": {
-            "name": "Me",
+            "name": "Xinqi",
             "url": "http://me.com/terms.html",
-            "email": "me@me.com"
+            "email": "xinqidavis@gmail.com"
         },
         "license": {
             "name": "Apache 2.0",
@@ -14,7 +14,7 @@
         },
         "version": "1.0"
     },
-    "host": "localhost:8080",
+    "host": "xinqi.dev:8080",
     "basePath": "/",
     "paths": {
         "/activeadmincomments": {
@@ -5840,7 +5840,7 @@
             "properties": {
                 "author_id": {
                     "description": "[ 6] author_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "author_type": {
                     "description": "[ 5] author_type                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -5864,7 +5864,7 @@
                 },
                 "resource_id": {
                     "description": "[ 4] resource_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "resource_type": {
                     "description": "[ 3] resource_type                                  varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -5971,11 +5971,11 @@
                 },
                 "latitude": {
                     "description": "[12] latitude                                       float                null: true   primary: false  isArray: false  auto: false  col: float           len: -1      default: []",
-                    "type": "number"
+                    "type": "string"
                 },
                 "longitude": {
                     "description": "[13] longitude                                      float                null: true   primary: false  isArray: false  auto: false  col: float           len: -1      default: []",
-                    "type": "number"
+                    "type": "string"
                 },
                 "notes": {
                     "description": "[ 9] notes                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6066,7 +6066,7 @@
             "properties": {
                 "building_id": {
                     "description": "[ 1] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "commission_date": {
                     "description": "[ 5] CommissionDate                                 date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []",
@@ -6078,7 +6078,7 @@
                 },
                 "employee_id": {
                     "description": "[ 0] employee_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "id": {
                     "description": "[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []",
@@ -6131,7 +6131,7 @@
                 },
                 "query_id": {
                     "description": "[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "statement": {
                     "description": "[ 3] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []",
@@ -6139,7 +6139,7 @@
                 },
                 "user_id": {
                     "description": "[ 1] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 }
             }
         },
@@ -6156,7 +6156,7 @@
                 },
                 "creator_id": {
                     "description": "[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "emails": {
                     "description": "[ 5] emails                                         text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []",
@@ -6176,7 +6176,7 @@
                 },
                 "query_id": {
                     "description": "[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "schedule": {
                     "description": "[ 4] schedule                                       varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6205,7 +6205,7 @@
                 },
                 "dashboard_id": {
                     "description": "[ 1] dashboard_id                                   bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "id": {
                     "description": "[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []",
@@ -6213,11 +6213,11 @@
                 },
                 "position": {
                     "description": "[ 3] position                                       int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "query_id": {
                     "description": "[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "updated_at": {
                     "description": "[ 5] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6234,7 +6234,7 @@
                 },
                 "creator_id": {
                     "description": "[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "id": {
                     "description": "[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []",
@@ -6259,7 +6259,7 @@
                 },
                 "creator_id": {
                     "description": "[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "data_source": {
                     "description": "[ 5] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6296,7 +6296,7 @@
             "properties": {
                 "building_id": {
                     "description": "[ 0] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "created_at": {
                     "description": "[ 4] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6325,7 +6325,7 @@
             "properties": {
                 "address_id": {
                     "description": "[ 1] address_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "created_at": {
                     "description": "[ 9] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6333,7 +6333,7 @@
                 },
                 "customer_id": {
                     "description": "[ 0] customer_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "email_of_admin_of_building": {
                     "description": "[ 4] EmailOfAdminOfBuilding                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6353,7 +6353,7 @@
                 },
                 "phone_num_of_building_admin": {
                     "description": "[ 5] PhoneNumOfBuildingAdmin                        int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "tech_contact_email_for_building": {
                     "description": "[ 7] TechContactEmailForBuilding                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6361,7 +6361,7 @@
                 },
                 "tech_contact_phone_for_building": {
                     "description": "[ 8] TechContactPhoneForBuilding                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "updated_at": {
                     "description": "[10] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6436,7 +6436,7 @@
             "properties": {
                 "battery_id": {
                     "description": "[ 0] battery_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "created_at": {
                     "description": "[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6456,7 +6456,7 @@
                 },
                 "num_of_floors_served": {
                     "description": "[ 3] NumOfFloorsServed                              int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "status": {
                     "description": "[ 4] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6477,7 +6477,7 @@
             "properties": {
                 "address_id": {
                     "description": "[ 0] address_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "company_contact_e_mail": {
                     "description": "[ 9] CompanyContactEMail                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6537,7 +6537,7 @@
                 },
                 "user_id": {
                     "description": "[ 1] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 }
             }
         },
@@ -6546,7 +6546,7 @@
             "properties": {
                 "column_id": {
                     "description": "[ 0] column_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "commision_date": {
                     "description": "[ 6] CommisionDate                                  date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []",
@@ -6582,7 +6582,7 @@
                 },
                 "serial_number": {
                     "description": "[ 2] SerialNumber                                   int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "status": {
                     "description": "[ 5] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []",
@@ -6631,7 +6631,7 @@
                 },
                 "user_id": {
                     "description": "[ 0] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 }
             }
         },
@@ -6644,15 +6644,15 @@
                 },
                 "battery_id": {
                     "description": "[ 4] battery_id                                     int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "building_id": {
                     "description": "[ 3] building_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "column_id": {
                     "description": "[ 5] column_id                                      int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "created_at": {
                     "description": "[13] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",
@@ -6660,15 +6660,15 @@
                 },
                 "customer_id": {
                     "description": "[ 2] customer_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "elevator_id": {
                     "description": "[ 6] elevator_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "employee_id": {
                     "description": "[ 7] employee_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "end_datetime": {
                     "description": "[ 9] end_datetime                                   datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []",

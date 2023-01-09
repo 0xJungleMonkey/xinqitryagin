@@ -44,7 +44,7 @@ func configGinQuotesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes [get]
-// http "http://localhost:8080/quotes?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/quotes?page=0&pagesize=20" X-Api-User:user123
 func GetAllQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /quotes/{argID} [get]
-// http "http://localhost:8080/quotes/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/quotes/1" X-Api-User:user123
 func GetQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes [post]
-// echo '{"id": 92,"building_type": "gsuAeUpxMAeTGAuVNeLpTrnpf","service_quality": "dtrQTXtdrRPQgtXinOkwZCsYy","number_of_apartments": "rqDWhfFGBLYLnZoqjPtbtfIOV","number_of_floors": "RXUZFoLKkTrDPPIiiENvUApws","number_of_businesses": "QPawZTseoSsOxTTFeESQLIUqm","number_of_basements": "QrvTKGSAUuMsAVcEMtjYEMXgX","number_of_parking": "ndTSYDuwoCTlxBhqqXlJPTtjk","number_of_cages": "bwwXfmxiHihhxvsBTCkMYoyhT","number_of_occupants": "duoNvbeRKPTyoJODuaEBTmWir","number_of_hours": "YHKLtyvxfWUaKLKwnFCIREdrC","number_of_elevators_needed": "XqxOACvRtexEiVoSXagJDWCxS","price_per_unit": "EifHTQfWmsTDAOjLCnNVqhlQk","elevator_price": "QCymTdxSLDDlqjoBHoxnOiKlE","installation_fee": "cAdUvfvutKgfArNFvGhwVKKIU","final_price": "bnAGNdUvbLpmAVfuEFDgmGWxZ","created_at": "2082-07-30T01:00:02.093419591-04:00","updated_at": "2263-01-29T12:08:05.440963163-05:00","name": "qLpWdceXHkjutTIgPJKiKXQhq","company_name": "bVrNGWvwlmybrMTaqLJRqNovD","email": "LCsdWppZJTMEfEGARrTNBYwHT","phone": "ENPkWZybPYcEjZgaVlkEPCMQr","department": "NxYpnERyCAyGlXOWYnYJWQOLI","project_name": "GybrTnfByfwalyRgcHCfOswSw","project_description": "mdevPAoZSVeLFgqNHFqBQUDjv"}' | http POST "http://localhost:8080/quotes" X-Api-User:user123
+// echo '{"id": 70,"building_type": "wjLmFbsXZSYYxlDUHjncHvdLg","service_quality": "bUjriwnVTiPSgZrJDaRKdpveB","number_of_apartments": "ZOqIlVFppxuekerppZyKaKKRe","number_of_floors": "rudeSmVXwAvPACKOqEhhvVCJE","number_of_businesses": "UwokCfoRChGSYMlZfsPdYTQKa","number_of_basements": "KHQDIdNqmwRxLGcccCkfHBkGy","number_of_parking": "NgpAydvmanheyloRwgKoICHIo","number_of_cages": "lhIJseMaEHFSxoxFUZPhLKhVW","number_of_occupants": "tRUJEaaaXKDWUcmGjpmhWOkRj","number_of_hours": "dMwGmcchfrkjfdZjncfKfKUme","number_of_elevators_needed": "tJBqcTLFlmDISESnNEKldeEYu","price_per_unit": "bLWfTkcyaJAXQfqcYWNWQPxvG","elevator_price": "OvcQachhslgLtynQAWwuHpAvc","installation_fee": "ejQHLvXiYLpbHkUsRyvqBgMSr","final_price": "FlFJlnxCnPTfgAnIuTgBEAYqg","created_at": "2125-10-02T03:47:51.649898761-04:00","updated_at": "2158-11-27T22:08:01.381669191-05:00","name": "MOkmMRhOmYCYKxfafGkGnWcrr","company_name": "jqHFPkWSUZtKnxZfNSeXdPOfB","email": "qEJlMHCdqXGaZfuHDARrGoiyv","phone": "MXReGpAwoAWeGXbNSvpSVjxNf","department": "rnAJcEqayUFPOrEhcbXoiaBws","project_name": "YAJoQEbjjBbeCoPSMlavjGgaB","project_description": "EiwmESTxbDAEAglFBIQSfjNGc"}' | http POST "https://xinqi.dev:8080/quotes" X-Api-User:user123
 func AddQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	quotes := &model.Quotes{}
@@ -171,7 +171,7 @@ func AddQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes/{argID} [put]
-// echo '{"id": 92,"building_type": "gsuAeUpxMAeTGAuVNeLpTrnpf","service_quality": "dtrQTXtdrRPQgtXinOkwZCsYy","number_of_apartments": "rqDWhfFGBLYLnZoqjPtbtfIOV","number_of_floors": "RXUZFoLKkTrDPPIiiENvUApws","number_of_businesses": "QPawZTseoSsOxTTFeESQLIUqm","number_of_basements": "QrvTKGSAUuMsAVcEMtjYEMXgX","number_of_parking": "ndTSYDuwoCTlxBhqqXlJPTtjk","number_of_cages": "bwwXfmxiHihhxvsBTCkMYoyhT","number_of_occupants": "duoNvbeRKPTyoJODuaEBTmWir","number_of_hours": "YHKLtyvxfWUaKLKwnFCIREdrC","number_of_elevators_needed": "XqxOACvRtexEiVoSXagJDWCxS","price_per_unit": "EifHTQfWmsTDAOjLCnNVqhlQk","elevator_price": "QCymTdxSLDDlqjoBHoxnOiKlE","installation_fee": "cAdUvfvutKgfArNFvGhwVKKIU","final_price": "bnAGNdUvbLpmAVfuEFDgmGWxZ","created_at": "2082-07-30T01:00:02.093419591-04:00","updated_at": "2263-01-29T12:08:05.440963163-05:00","name": "qLpWdceXHkjutTIgPJKiKXQhq","company_name": "bVrNGWvwlmybrMTaqLJRqNovD","email": "LCsdWppZJTMEfEGARrTNBYwHT","phone": "ENPkWZybPYcEjZgaVlkEPCMQr","department": "NxYpnERyCAyGlXOWYnYJWQOLI","project_name": "GybrTnfByfwalyRgcHCfOswSw","project_description": "mdevPAoZSVeLFgqNHFqBQUDjv"}' | http PUT "http://localhost:8080/quotes/1"  X-Api-User:user123
+// echo '{"id": 70,"building_type": "wjLmFbsXZSYYxlDUHjncHvdLg","service_quality": "bUjriwnVTiPSgZrJDaRKdpveB","number_of_apartments": "ZOqIlVFppxuekerppZyKaKKRe","number_of_floors": "rudeSmVXwAvPACKOqEhhvVCJE","number_of_businesses": "UwokCfoRChGSYMlZfsPdYTQKa","number_of_basements": "KHQDIdNqmwRxLGcccCkfHBkGy","number_of_parking": "NgpAydvmanheyloRwgKoICHIo","number_of_cages": "lhIJseMaEHFSxoxFUZPhLKhVW","number_of_occupants": "tRUJEaaaXKDWUcmGjpmhWOkRj","number_of_hours": "dMwGmcchfrkjfdZjncfKfKUme","number_of_elevators_needed": "tJBqcTLFlmDISESnNEKldeEYu","price_per_unit": "bLWfTkcyaJAXQfqcYWNWQPxvG","elevator_price": "OvcQachhslgLtynQAWwuHpAvc","installation_fee": "ejQHLvXiYLpbHkUsRyvqBgMSr","final_price": "FlFJlnxCnPTfgAnIuTgBEAYqg","created_at": "2125-10-02T03:47:51.649898761-04:00","updated_at": "2158-11-27T22:08:01.381669191-05:00","name": "MOkmMRhOmYCYKxfafGkGnWcrr","company_name": "jqHFPkWSUZtKnxZfNSeXdPOfB","email": "qEJlMHCdqXGaZfuHDARrGoiyv","phone": "MXReGpAwoAWeGXbNSvpSVjxNf","department": "rnAJcEqayUFPOrEhcbXoiaBws","project_name": "YAJoQEbjjBbeCoPSMlavjGgaB","project_description": "EiwmESTxbDAEAglFBIQSfjNGc"}' | http PUT "https://xinqi.dev:8080/quotes/1"  X-Api-User:user123
 func UpdateQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /quotes/{argID} [delete]
-// http DELETE "http://localhost:8080/quotes/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/quotes/1" X-Api-User:user123
 func DeleteQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

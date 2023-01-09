@@ -38,7 +38,7 @@ CREATE TABLE `active_admin_comments` (
 
 JSON Sample
 -------------------------------------
-{    "id": 49,    "namespace": "QeGEqINdDKQrSGbWiSWyiBEkL",    "body": "veljaWZyLZbGaJPTtEYmvQBoZ",    "resource_type": "HYwkbfrZyQSbNJrwCyghIrOhH",    "resource_id": 25,    "author_type": "eLiLoFbPWLmyYsFTdDpYPHISF",    "author_id": 41,    "created_at": "2310-09-19T13:49:50.00975822-04:00",    "updated_at": "2144-07-12T04:40:31.164906144-04:00"}
+{    "id": 25,    "namespace": "YFZTibmyivroMHkMGSQGHYILb",    "body": "BFysrDnDIxwjcbZfvMiSDybyW",    "resource_type": "DiIBfhXSPJwfrRiCXyHyiAJja",    "resource_id": 37,    "author_type": "KHINXaTSOLcxqSMftTYdYVpqb",    "author_id": 79,    "created_at": "2061-03-22T14:48:49.010874691-04:00",    "updated_at": "2167-05-19T09:06:18.036499589-04:00"}
 
 
 
@@ -49,17 +49,17 @@ type ActiveAdminComments struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] namespace                                      varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Namespace string `gorm:"column:namespace;type:varchar;size:255;" json:"namespace"`
+	Namespace null.String `gorm:"column:namespace;type:varchar;size:255;" json:"namespace"`
 	//[ 2] body                                           text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Body string `gorm:"column:body;type:text;size:65535;" json:"body"`
+	Body null.String `gorm:"column:body;type:text;size:65535;" json:"body"`
 	//[ 3] resource_type                                  varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResourceType string `gorm:"column:resource_type;type:varchar;size:255;" json:"resource_type"`
+	ResourceType null.String `gorm:"column:resource_type;type:varchar;size:255;" json:"resource_type"`
 	//[ 4] resource_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	ResourceID int64 `gorm:"column:resource_id;type:bigint;" json:"resource_id"`
+	ResourceID null.Int `gorm:"column:resource_id;type:bigint;" json:"resource_id"`
 	//[ 5] author_type                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	AuthorType string `gorm:"column:author_type;type:varchar;size:255;" json:"author_type"`
+	AuthorType null.String `gorm:"column:author_type;type:varchar;size:255;" json:"author_type"`
 	//[ 6] author_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	AuthorID int64 `gorm:"column:author_id;type:bigint;" json:"author_id"`
+	AuthorID null.Int `gorm:"column:author_id;type:bigint;" json:"author_id"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 8] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -105,7 +105,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Namespace",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "namespace",
 			ProtobufFieldName:  "namespace",
 			ProtobufType:       "string",
@@ -126,7 +126,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Body",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "body",
 			ProtobufFieldName:  "body",
 			ProtobufType:       "string",
@@ -147,7 +147,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResourceType",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "resource_type",
 			ProtobufFieldName:  "resource_type",
 			ProtobufType:       "string",
@@ -168,7 +168,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "ResourceID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "resource_id",
 			ProtobufFieldName:  "resource_id",
 			ProtobufType:       "int64",
@@ -189,7 +189,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "AuthorType",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "author_type",
 			ProtobufFieldName:  "author_type",
 			ProtobufType:       "string",
@@ -210,7 +210,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "AuthorID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "author_id",
 			ProtobufFieldName:  "author_id",
 			ProtobufType:       "int64",

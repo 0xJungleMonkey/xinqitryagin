@@ -44,7 +44,7 @@ func configGinBlazerDashboardQueriesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboardqueries [get]
-// http "http://localhost:8080/blazerdashboardqueries?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/blazerdashboardqueries?page=0&pagesize=20" X-Api-User:user123
 func GetAllBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps htt
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /blazerdashboardqueries/{argID} [get]
-// http "http://localhost:8080/blazerdashboardqueries/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/blazerdashboardqueries/1" X-Api-User:user123
 func GetBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboardqueries [post]
-// echo '{"id": 67,"dashboard_id": 63,"query_id": 8,"position": 24,"created_at": "2240-03-10T15:50:24.189848512-04:00","updated_at": "2162-06-18T05:28:42.775647974-04:00"}' | http POST "http://localhost:8080/blazerdashboardqueries" X-Api-User:user123
+// echo '{"id": 98,"dashboard_id": 56,"query_id": 52,"position": 15,"created_at": "2130-10-06T04:15:13.694155731-04:00","updated_at": "2274-12-16T12:28:24.946793536-05:00"}' | http POST "https://xinqi.dev:8080/blazerdashboardqueries" X-Api-User:user123
 func AddBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerdashboardqueries := &model.BlazerDashboardQueries{}
@@ -171,7 +171,7 @@ func AddBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerdashboardqueries/{argID} [put]
-// echo '{"id": 67,"dashboard_id": 63,"query_id": 8,"position": 24,"created_at": "2240-03-10T15:50:24.189848512-04:00","updated_at": "2162-06-18T05:28:42.775647974-04:00"}' | http PUT "http://localhost:8080/blazerdashboardqueries/1"  X-Api-User:user123
+// echo '{"id": 98,"dashboard_id": 56,"query_id": 52,"position": 15,"created_at": "2130-10-06T04:15:13.694155731-04:00","updated_at": "2274-12-16T12:28:24.946793536-05:00"}' | http PUT "https://xinqi.dev:8080/blazerdashboardqueries/1"  X-Api-User:user123
 func UpdateBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps htt
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /blazerdashboardqueries/{argID} [delete]
-// http DELETE "http://localhost:8080/blazerdashboardqueries/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/blazerdashboardqueries/1" X-Api-User:user123
 func DeleteBlazerDashboardQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

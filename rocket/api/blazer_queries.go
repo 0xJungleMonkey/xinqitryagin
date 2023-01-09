@@ -44,7 +44,7 @@ func configGinBlazerQueriesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerqueries [get]
-// http "http://localhost:8080/blazerqueries?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/blazerqueries?page=0&pagesize=20" X-Api-User:user123
 func GetAllBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /blazerqueries/{argID} [get]
-// http "http://localhost:8080/blazerqueries/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/blazerqueries/1" X-Api-User:user123
 func GetBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerqueries [post]
-// echo '{"id": 24,"creator_id": 63,"name": "NKJULBgGyTRTRBeQwnNCFhZny","description": "lqrjhYBOgbkVZvZvkiMEXSQVu","statement": "WnsrTBkdhcfPjyNEyZixmYKRS","data_source": "FICQVMFiXtpGrIDPIGeBMraPu","status": "jfoLkbpiruRwrJFlUBJhXxyOg","created_at": "2039-06-21T02:48:05.900665277-04:00","updated_at": "2038-06-04T17:32:44.805071809-04:00"}' | http POST "http://localhost:8080/blazerqueries" X-Api-User:user123
+// echo '{"id": 21,"creator_id": 28,"name": "UPhiPxtdZfofNqmitmkMLfeja","description": "ksBmRfvkNLDnmNMfCckuKUvFC","statement": "TKAjwAqOqWZuFmsZORlygFwwk","data_source": "WsFxIRVMkvZBdmICCTeLyRgee","status": "bQFpfcIhrGiEWpEapQrCURsEL","created_at": "2057-01-19T07:31:05.183286882-05:00","updated_at": "2199-03-24T05:10:07.977381229-04:00"}' | http POST "https://xinqi.dev:8080/blazerqueries" X-Api-User:user123
 func AddBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerqueries := &model.BlazerQueries{}
@@ -171,7 +171,7 @@ func AddBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerqueries/{argID} [put]
-// echo '{"id": 24,"creator_id": 63,"name": "NKJULBgGyTRTRBeQwnNCFhZny","description": "lqrjhYBOgbkVZvZvkiMEXSQVu","statement": "WnsrTBkdhcfPjyNEyZixmYKRS","data_source": "FICQVMFiXtpGrIDPIGeBMraPu","status": "jfoLkbpiruRwrJFlUBJhXxyOg","created_at": "2039-06-21T02:48:05.900665277-04:00","updated_at": "2038-06-04T17:32:44.805071809-04:00"}' | http PUT "http://localhost:8080/blazerqueries/1"  X-Api-User:user123
+// echo '{"id": 21,"creator_id": 28,"name": "UPhiPxtdZfofNqmitmkMLfeja","description": "ksBmRfvkNLDnmNMfCckuKUvFC","statement": "TKAjwAqOqWZuFmsZORlygFwwk","data_source": "WsFxIRVMkvZBdmICCTeLyRgee","status": "bQFpfcIhrGiEWpEapQrCURsEL","created_at": "2057-01-19T07:31:05.183286882-05:00","updated_at": "2199-03-24T05:10:07.977381229-04:00"}' | http PUT "https://xinqi.dev:8080/blazerqueries/1"  X-Api-User:user123
 func UpdateBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /blazerqueries/{argID} [delete]
-// http DELETE "http://localhost:8080/blazerqueries/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/blazerqueries/1" X-Api-User:user123
 func DeleteBlazerQueries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

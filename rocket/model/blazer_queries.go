@@ -36,7 +36,7 @@ CREATE TABLE `blazer_queries` (
 
 JSON Sample
 -------------------------------------
-{    "id": 24,    "creator_id": 63,    "name": "NKJULBgGyTRTRBeQwnNCFhZny",    "description": "lqrjhYBOgbkVZvZvkiMEXSQVu",    "statement": "WnsrTBkdhcfPjyNEyZixmYKRS",    "data_source": "FICQVMFiXtpGrIDPIGeBMraPu",    "status": "jfoLkbpiruRwrJFlUBJhXxyOg",    "created_at": "2039-06-21T02:48:05.900665277-04:00",    "updated_at": "2038-06-04T17:32:44.805071809-04:00"}
+{    "id": 21,    "creator_id": 28,    "name": "UPhiPxtdZfofNqmitmkMLfeja",    "description": "ksBmRfvkNLDnmNMfCckuKUvFC",    "statement": "TKAjwAqOqWZuFmsZORlygFwwk",    "data_source": "WsFxIRVMkvZBdmICCTeLyRgee",    "status": "bQFpfcIhrGiEWpEapQrCURsEL",    "created_at": "2057-01-19T07:31:05.183286882-05:00",    "updated_at": "2199-03-24T05:10:07.977381229-04:00"}
 
 
 
@@ -47,17 +47,17 @@ type BlazerQueries struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CreatorID int64 `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
+	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name null.String `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[ 3] description                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Description string `gorm:"column:description;type:text;size:65535;" json:"description"`
+	Description null.String `gorm:"column:description;type:text;size:65535;" json:"description"`
 	//[ 4] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Statement string `gorm:"column:statement;type:text;size:65535;" json:"statement"`
+	Statement null.String `gorm:"column:statement;type:text;size:65535;" json:"statement"`
 	//[ 5] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	DataSource string `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
+	DataSource null.String `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
 	//[ 6] status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status string `gorm:"column:status;type:varchar;size:255;" json:"status"`
+	Status null.String `gorm:"column:status;type:varchar;size:255;" json:"status"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 8] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -103,7 +103,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatorID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "creator_id",
 			ProtobufFieldName:  "creator_id",
 			ProtobufType:       "int64",
@@ -124,7 +124,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Name",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "name",
 			ProtobufFieldName:  "name",
 			ProtobufType:       "string",
@@ -145,7 +145,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Description",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "description",
 			ProtobufFieldName:  "description",
 			ProtobufType:       "string",
@@ -166,7 +166,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Statement",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "statement",
 			ProtobufFieldName:  "statement",
 			ProtobufType:       "string",
@@ -187,7 +187,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "DataSource",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "data_source",
 			ProtobufFieldName:  "data_source",
 			ProtobufType:       "string",
@@ -208,7 +208,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",

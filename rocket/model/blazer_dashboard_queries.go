@@ -34,7 +34,7 @@ CREATE TABLE `blazer_dashboard_queries` (
 
 JSON Sample
 -------------------------------------
-{    "id": 67,    "dashboard_id": 63,    "query_id": 8,    "position": 24,    "created_at": "2240-03-10T15:50:24.189848512-04:00",    "updated_at": "2162-06-18T05:28:42.775647974-04:00"}
+{    "id": 98,    "dashboard_id": 56,    "query_id": 52,    "position": 15,    "created_at": "2130-10-06T04:15:13.694155731-04:00",    "updated_at": "2274-12-16T12:28:24.946793536-05:00"}
 
 
 
@@ -45,11 +45,11 @@ type BlazerDashboardQueries struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] dashboard_id                                   bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	DashboardID int64 `gorm:"column:dashboard_id;type:bigint;" json:"dashboard_id"`
+	DashboardID null.Int `gorm:"column:dashboard_id;type:bigint;" json:"dashboard_id"`
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	QueryID int64 `gorm:"column:query_id;type:bigint;" json:"query_id"`
+	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] position                                       int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	Position int64 `gorm:"column:position;type:int;" json:"position"`
+	Position null.Int `gorm:"column:position;type:int;" json:"position"`
 	//[ 4] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 5] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -95,7 +95,7 @@ var blazer_dashboard_queriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "DashboardID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "dashboard_id",
 			ProtobufFieldName:  "dashboard_id",
 			ProtobufType:       "int64",
@@ -116,7 +116,7 @@ var blazer_dashboard_queriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "QueryID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "query_id",
 			ProtobufFieldName:  "query_id",
 			ProtobufType:       "int64",
@@ -137,7 +137,7 @@ var blazer_dashboard_queriesTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "Position",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "position",
 			ProtobufFieldName:  "position",
 			ProtobufType:       "int32",

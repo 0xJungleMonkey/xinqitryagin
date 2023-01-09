@@ -36,7 +36,7 @@ CREATE TABLE `employees` (
 
 JSON Sample
 -------------------------------------
-{    "user_id": 15,    "id": 75,    "first_name": "KTkwQmHQiwhYqoqxBHHGUhvMU",    "last_name": "UNAZekVfTruOjSLgcbMYCkXaJ",    "title": "chfRnwUrlgBWcqUFJOPdBHgCy",    "email": "PEqHwALSrCxKksIKieyOMSDhj",    "created_at": "2097-03-06T18:07:47.637414849-05:00",    "updated_at": "2130-04-18T02:25:04.527929851-04:00"}
+{    "user_id": 53,    "id": 64,    "first_name": "yeuJOBfoCDJRIyCQAoToeUqAT",    "last_name": "iSipJHOuCjElabEmFcXqtlaHP",    "title": "xWwAALaPsJJvCTEuWbMCpwKtV",    "email": "iiPyRKAKGFTheWOxvQqWUpFNJ",    "created_at": "2275-08-02T20:05:44.858673729-04:00",    "updated_at": "2121-11-22T12:01:00.64442917-05:00"}
 
 
 
@@ -45,17 +45,17 @@ JSON Sample
 // Employees struct is a row record of the employees table in the rocket_development database
 type Employees struct {
 	//[ 0] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	UserID int64 `gorm:"column:user_id;type:bigint;" json:"user_id"`
+	UserID null.Int `gorm:"column:user_id;type:bigint;" json:"user_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] first_name                                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FirstName string `gorm:"column:first_name;type:varchar;size:255;" json:"first_name"`
+	FirstName null.String `gorm:"column:first_name;type:varchar;size:255;" json:"first_name"`
 	//[ 3] last_name                                      varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	LastName string `gorm:"column:last_name;type:varchar;size:255;" json:"last_name"`
+	LastName null.String `gorm:"column:last_name;type:varchar;size:255;" json:"last_name"`
 	//[ 4] title                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Title string `gorm:"column:title;type:varchar;size:255;" json:"title"`
+	Title null.String `gorm:"column:title;type:varchar;size:255;" json:"title"`
 	//[ 5] email                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email string `gorm:"column:email;type:varchar;size:255;" json:"email"`
+	Email null.String `gorm:"column:email;type:varchar;size:255;" json:"email"`
 	//[ 6] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 7] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -80,7 +80,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "UserID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "user_id",
 			ProtobufFieldName:  "user_id",
 			ProtobufType:       "int64",
@@ -122,7 +122,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FirstName",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "first_name",
 			ProtobufFieldName:  "first_name",
 			ProtobufType:       "string",
@@ -143,7 +143,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "LastName",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "last_name",
 			ProtobufFieldName:  "last_name",
 			ProtobufType:       "string",
@@ -164,7 +164,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Title",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "title",
 			ProtobufFieldName:  "title",
 			ProtobufType:       "string",
@@ -185,7 +185,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Email",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "email",
 			ProtobufFieldName:  "email",
 			ProtobufType:       "string",

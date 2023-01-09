@@ -44,7 +44,7 @@ func configGinAdminUsersRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers [get]
-// http "http://localhost:8080/adminusers?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/adminusers?page=0&pagesize=20" X-Api-User:user123
 func GetAllAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /adminusers/{argID} [get]
-// http "http://localhost:8080/adminusers/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/adminusers/1" X-Api-User:user123
 func GetAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers [post]
-// echo '{"id": 99,"email": "pxoKEgJRFHETIIQANCJtblDAp","encrypted_password": "RQxKfTbSDSWyTQMeGOWwUBkWv","reset_password_token": "yFkrvNBKxOUHCCcVAhTQsnLmp","reset_password_sent_at": "2310-01-12T20:36:07.187190547-05:00","remember_created_at": "2292-10-22T03:43:58.146073278-04:00","created_at": "2299-01-06T20:17:23.596949402-05:00","updated_at": "2198-02-02T14:45:44.244426385-05:00"}' | http POST "http://localhost:8080/adminusers" X-Api-User:user123
+// echo '{"id": 66,"email": "BQmquLocGtBDnerSeBWcSnKlS","encrypted_password": "yBOYkImesRodDHcTUPqxZTjEu","reset_password_token": "HVjJlLKlTmgJvBFIJeEPhGOiE","reset_password_sent_at": "2167-10-13T22:33:03.918074201-04:00","remember_created_at": "2116-07-29T02:38:36.571916355-04:00","created_at": "2109-03-15T19:10:34.863372646-04:00","updated_at": "2151-04-17T19:16:30.161084816-04:00"}' | http POST "https://xinqi.dev:8080/adminusers" X-Api-User:user123
 func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	adminusers := &model.AdminUsers{}
@@ -171,7 +171,7 @@ func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers/{argID} [put]
-// echo '{"id": 99,"email": "pxoKEgJRFHETIIQANCJtblDAp","encrypted_password": "RQxKfTbSDSWyTQMeGOWwUBkWv","reset_password_token": "yFkrvNBKxOUHCCcVAhTQsnLmp","reset_password_sent_at": "2310-01-12T20:36:07.187190547-05:00","remember_created_at": "2292-10-22T03:43:58.146073278-04:00","created_at": "2299-01-06T20:17:23.596949402-05:00","updated_at": "2198-02-02T14:45:44.244426385-05:00"}' | http PUT "http://localhost:8080/adminusers/1"  X-Api-User:user123
+// echo '{"id": 66,"email": "BQmquLocGtBDnerSeBWcSnKlS","encrypted_password": "yBOYkImesRodDHcTUPqxZTjEu","reset_password_token": "HVjJlLKlTmgJvBFIJeEPhGOiE","reset_password_sent_at": "2167-10-13T22:33:03.918074201-04:00","remember_created_at": "2116-07-29T02:38:36.571916355-04:00","created_at": "2109-03-15T19:10:34.863372646-04:00","updated_at": "2151-04-17T19:16:30.161084816-04:00"}' | http PUT "https://xinqi.dev:8080/adminusers/1"  X-Api-User:user123
 func UpdateAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /adminusers/{argID} [delete]
-// http DELETE "http://localhost:8080/adminusers/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/adminusers/1" X-Api-User:user123
 func DeleteAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

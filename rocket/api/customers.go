@@ -44,7 +44,7 @@ func configGinCustomersRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /customers [get]
-// http "http://localhost:8080/customers?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/customers?page=0&pagesize=20" X-Api-User:user123
 func GetAllCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /customers/{argID} [get]
-// http "http://localhost:8080/customers/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/customers/1" X-Api-User:user123
 func GetCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /customers [post]
-// echo '{"address_id": 32,"user_id": 90,"id": 77,"customer_creation_date": "mSlZoLXyCPbOcMHNMyvXhBEWL","date": "dhIFBXeAVrhvvAelKIBVBaOmK","company_name": "NiSOMtHhJDPnEdMyroTCrfyns","company_hq_adress": "kviOgeulFHgfhEfeZkxDAEMhx","full_name_of_company_contact": "imfnNivinjrcahIEEpUTqqthT","company_contact_phone": "yJGUeApGFoFwJtymoCucABvKa","company_contact_e_mail": "vvwfPNUxWeOZtHInJVKHdXPPa","company_desc": "ghaIJrMMpZmTaLMEmKdwlxNKl","full_name_service_tech_auth": "HVuBRXIJdFmtcTJBoBcIFcZsU","tech_auth_phone_service": "gVbTXttlQqlsOBlyQSJTVdgYa","tech_manager_email_service": "IAbXcKFJCJTCOEsswgmGvXeea","created_at": "2058-08-31T19:55:05.345388406-04:00","updated_at": "2143-01-10T23:08:02.834963619-05:00"}' | http POST "http://localhost:8080/customers" X-Api-User:user123
+// echo '{"address_id": 47,"user_id": 82,"id": 30,"customer_creation_date": "yLZmDodZXJEYeQxFLBLFLpGba","date": "ZRQKVSyiprGXtaCCoIBkATvKl","company_name": "urfYUaDbCXvPLkcjvKfExCnce","company_hq_adress": "mNiFsCwrWiFdLtpeTcNBKmurZ","full_name_of_company_contact": "QZerlZEfCCHgrkllxDglMLlDx","company_contact_phone": "HgytWudfyuhFRjPjFpBrdNLwl","company_contact_e_mail": "FvHAycAQWUTqSXuBFpPZRKITP","company_desc": "ZymwbTuDpZvlsQqySSTbiQbev","full_name_service_tech_auth": "XWYVLdagjfRCrlOouHkrftPmD","tech_auth_phone_service": "EOTaHqWYEOJRBKNNvyjDnXDQk","tech_manager_email_service": "patlANCKIygEJmrlNLXHnEkpu","created_at": "2215-09-21T16:46:30.656177553-04:00","updated_at": "2174-11-02T02:13:13.945507815-04:00"}' | http POST "https://xinqi.dev:8080/customers" X-Api-User:user123
 func AddCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	customers := &model.Customers{}
@@ -171,7 +171,7 @@ func AddCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /customers/{argID} [put]
-// echo '{"address_id": 32,"user_id": 90,"id": 77,"customer_creation_date": "mSlZoLXyCPbOcMHNMyvXhBEWL","date": "dhIFBXeAVrhvvAelKIBVBaOmK","company_name": "NiSOMtHhJDPnEdMyroTCrfyns","company_hq_adress": "kviOgeulFHgfhEfeZkxDAEMhx","full_name_of_company_contact": "imfnNivinjrcahIEEpUTqqthT","company_contact_phone": "yJGUeApGFoFwJtymoCucABvKa","company_contact_e_mail": "vvwfPNUxWeOZtHInJVKHdXPPa","company_desc": "ghaIJrMMpZmTaLMEmKdwlxNKl","full_name_service_tech_auth": "HVuBRXIJdFmtcTJBoBcIFcZsU","tech_auth_phone_service": "gVbTXttlQqlsOBlyQSJTVdgYa","tech_manager_email_service": "IAbXcKFJCJTCOEsswgmGvXeea","created_at": "2058-08-31T19:55:05.345388406-04:00","updated_at": "2143-01-10T23:08:02.834963619-05:00"}' | http PUT "http://localhost:8080/customers/1"  X-Api-User:user123
+// echo '{"address_id": 47,"user_id": 82,"id": 30,"customer_creation_date": "yLZmDodZXJEYeQxFLBLFLpGba","date": "ZRQKVSyiprGXtaCCoIBkATvKl","company_name": "urfYUaDbCXvPLkcjvKfExCnce","company_hq_adress": "mNiFsCwrWiFdLtpeTcNBKmurZ","full_name_of_company_contact": "QZerlZEfCCHgrkllxDglMLlDx","company_contact_phone": "HgytWudfyuhFRjPjFpBrdNLwl","company_contact_e_mail": "FvHAycAQWUTqSXuBFpPZRKITP","company_desc": "ZymwbTuDpZvlsQqySSTbiQbev","full_name_service_tech_auth": "XWYVLdagjfRCrlOouHkrftPmD","tech_auth_phone_service": "EOTaHqWYEOJRBKNNvyjDnXDQk","tech_manager_email_service": "patlANCKIygEJmrlNLXHnEkpu","created_at": "2215-09-21T16:46:30.656177553-04:00","updated_at": "2174-11-02T02:13:13.945507815-04:00"}' | http PUT "https://xinqi.dev:8080/customers/1"  X-Api-User:user123
 func UpdateCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /customers/{argID} [delete]
-// http DELETE "http://localhost:8080/customers/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/customers/1" X-Api-User:user123
 func DeleteCustomers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -44,7 +44,7 @@ func configGinActiveStorageAttachmentsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageattachments [get]
-// http "http://localhost:8080/activestorageattachments?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/activestorageattachments?page=0&pagesize=20" X-Api-User:user123
 func GetAllActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps h
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /activestorageattachments/{argID} [get]
-// http "http://localhost:8080/activestorageattachments/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/activestorageattachments/1" X-Api-User:user123
 func GetActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageattachments [post]
-// echo '{"id": 95,"name": "mxVOkmcqTKanSGYsdITDnUQCe","record_type": "RsnGbgIamPhEDiSoRvnFmSSgH","record_id": 78,"blob_id": 74,"created_at": "2175-02-23T08:08:44.832239258-05:00"}' | http POST "http://localhost:8080/activestorageattachments" X-Api-User:user123
+// echo '{"id": 90,"name": "DPLgdipCaEJfNKCZTqrWMYngS","record_type": "HuTfGFDJmqSnNvfnSQIoxVLRg","record_id": 69,"blob_id": 93,"created_at": "2239-05-25T14:52:17.606307356-04:00"}' | http POST "https://xinqi.dev:8080/activestorageattachments" X-Api-User:user123
 func AddActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activestorageattachments := &model.ActiveStorageAttachments{}
@@ -171,7 +171,7 @@ func AddActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageattachments/{argID} [put]
-// echo '{"id": 95,"name": "mxVOkmcqTKanSGYsdITDnUQCe","record_type": "RsnGbgIamPhEDiSoRvnFmSSgH","record_id": 78,"blob_id": 74,"created_at": "2175-02-23T08:08:44.832239258-05:00"}' | http PUT "http://localhost:8080/activestorageattachments/1"  X-Api-User:user123
+// echo '{"id": 90,"name": "DPLgdipCaEJfNKCZTqrWMYngS","record_type": "HuTfGFDJmqSnNvfnSQIoxVLRg","record_id": 69,"blob_id": 93,"created_at": "2239-05-25T14:52:17.606307356-04:00"}' | http PUT "https://xinqi.dev:8080/activestorageattachments/1"  X-Api-User:user123
 func UpdateActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps h
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /activestorageattachments/{argID} [delete]
-// http DELETE "http://localhost:8080/activestorageattachments/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/activestorageattachments/1" X-Api-User:user123
 func DeleteActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

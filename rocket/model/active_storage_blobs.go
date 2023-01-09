@@ -35,7 +35,7 @@ CREATE TABLE `active_storage_blobs` (
 
 JSON Sample
 -------------------------------------
-{    "id": 94,    "key": "aKyrVGbTSgUxgqFkJtsqUsuvK",    "filename": "pgpJMMUyxOeidbbWynVCObFXE",    "content_type": "hQleGlLICFpdfpyUKcLPdXqwp",    "metadata": "GfGyrHaXaqyDPOPLqkWvXntBd",    "byte_size": 22,    "checksum": "iVSVYlhmPwjotnUBRkLeYGmLi",    "created_at": "2148-11-12T14:36:57.165949653-05:00"}
+{    "id": 36,    "key": "esZylDOnXDmPiFroHVpFpjZrS",    "filename": "KTEoXQesAowOQNuYIBVLMXjyV",    "content_type": "YPgMunWnHEZTkGdyvlDhuWwXQ",    "metadata": "ylnceCQVBIqQJkafHhqpnKDOE",    "byte_size": 57,    "checksum": "QaOFHGVaDDPaltOVeeokSlxhW",    "created_at": "2028-10-06T05:55:46.271395521-04:00"}
 
 
 
@@ -50,9 +50,9 @@ type ActiveStorageBlobs struct {
 	//[ 2] filename                                       varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Filename string `gorm:"column:filename;type:varchar;size:255;" json:"filename"`
 	//[ 3] content_type                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ContentType string `gorm:"column:content_type;type:varchar;size:255;" json:"content_type"`
+	ContentType null.String `gorm:"column:content_type;type:varchar;size:255;" json:"content_type"`
 	//[ 4] metadata                                       text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Metadata string `gorm:"column:metadata;type:text;size:65535;" json:"metadata"`
+	Metadata null.String `gorm:"column:metadata;type:text;size:65535;" json:"metadata"`
 	//[ 5] byte_size                                      bigint               null: false  primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	ByteSize int64 `gorm:"column:byte_size;type:bigint;" json:"byte_size"`
 	//[ 6] checksum                                       varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -142,7 +142,7 @@ var active_storage_blobsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ContentType",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "content_type",
 			ProtobufFieldName:  "content_type",
 			ProtobufType:       "string",
@@ -163,7 +163,7 @@ var active_storage_blobsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Metadata",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "metadata",
 			ProtobufFieldName:  "metadata",
 			ProtobufType:       "string",

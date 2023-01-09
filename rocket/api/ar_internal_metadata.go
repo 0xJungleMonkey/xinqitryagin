@@ -44,7 +44,7 @@ func configGinArInternalMetadataRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /arinternalmetadata [get]
-// http "http://localhost:8080/arinternalmetadata?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/arinternalmetadata?page=0&pagesize=20" X-Api-User:user123
 func GetAllArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /arinternalmetadata/{argKey} [get]
-// http "http://localhost:8080/arinternalmetadata/hello world" X-Api-User:user123
+// http "https://xinqi.dev:8080/arinternalmetadata/hello world" X-Api-User:user123
 func GetArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /arinternalmetadata [post]
-// echo '{"key": "OoKHHCgKJhQORaxGjunjUpqJo","value": "yXDNWVCasMOiQjAAXbxtlTJLe","created_at": "2202-12-28T05:30:42.09037911-05:00","updated_at": "2261-05-31T18:31:16.646908023-04:00"}' | http POST "http://localhost:8080/arinternalmetadata" X-Api-User:user123
+// echo '{"key": "nRZVsKQufstExEhlfPVxlmLXk","value": "GISvPrxXogtdcYaErTwkEVVJU","created_at": "2132-01-16T18:21:01.070836955-05:00","updated_at": "2024-03-05T08:43:52.802240903-05:00"}' | http POST "https://xinqi.dev:8080/arinternalmetadata" X-Api-User:user123
 func AddArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	arinternalmetadata := &model.ArInternalMetadata{}
@@ -171,7 +171,7 @@ func AddArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /arinternalmetadata/{argKey} [put]
-// echo '{"key": "OoKHHCgKJhQORaxGjunjUpqJo","value": "yXDNWVCasMOiQjAAXbxtlTJLe","created_at": "2202-12-28T05:30:42.09037911-05:00","updated_at": "2261-05-31T18:31:16.646908023-04:00"}' | http PUT "http://localhost:8080/arinternalmetadata/hello world"  X-Api-User:user123
+// echo '{"key": "nRZVsKQufstExEhlfPVxlmLXk","value": "GISvPrxXogtdcYaErTwkEVVJU","created_at": "2132-01-16T18:21:01.070836955-05:00","updated_at": "2024-03-05T08:43:52.802240903-05:00"}' | http PUT "https://xinqi.dev:8080/arinternalmetadata/hello world"  X-Api-User:user123
 func UpdateArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /arinternalmetadata/{argKey} [delete]
-// http DELETE "http://localhost:8080/arinternalmetadata/hello world" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/arinternalmetadata/hello world" X-Api-User:user123
 func DeleteArInternalMetadata(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

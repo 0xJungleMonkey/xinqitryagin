@@ -36,7 +36,7 @@ CREATE TABLE `users` (
 
 JSON Sample
 -------------------------------------
-{    "id": 65,    "email": "QfQMuypPQnIXVbwUgSCtLThFR",    "encrypted_password": "xoduTHUbNRLHqsSLXqwElnjLr",    "reset_password_token": "xMomKFBGKoekDoSsiieuyxpPp",    "reset_password_sent_at": "2049-07-09T20:25:06.862458643-04:00",    "remember_created_at": "2190-02-04T03:06:46.667554486-05:00",    "created_at": "2158-04-20T16:17:26.08071177-04:00",    "updated_at": "2224-02-18T10:04:39.029071897-05:00"}
+{    "id": 88,    "email": "cVIiuETQSZLyZsXxukQonZfnJ",    "encrypted_password": "TydAJOOCpMruySLFruklPExYC",    "reset_password_token": "vVYkdSYLsvpfiUhQCtFLCEFHs",    "reset_password_sent_at": "2279-05-19T05:45:52.782788719-04:00",    "remember_created_at": "2293-02-05T08:09:08.404155924-05:00",    "created_at": "2077-01-01T15:51:20.745236225-05:00",    "updated_at": "2079-07-06T02:32:19.695402633-04:00"}
 
 
 
@@ -51,7 +51,7 @@ type Users_ struct {
 	//[ 2] encrypted_password                             varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	EncryptedPassword string `gorm:"column:encrypted_password;type:varchar;size:255;" json:"encrypted_password"`
 	//[ 3] reset_password_token                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResetPasswordToken string `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
+	ResetPasswordToken null.String `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
 	//[ 4] reset_password_sent_at                         datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	ResetPasswordSentAt null.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
 	//[ 5] remember_created_at                            datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -143,7 +143,7 @@ var usersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResetPasswordToken",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "reset_password_token",
 			ProtobufFieldName:  "reset_password_token",
 			ProtobufType:       "string",

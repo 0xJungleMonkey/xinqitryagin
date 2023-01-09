@@ -44,7 +44,7 @@ func configGinActiveStorageBlobsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageblobs [get]
-// http "http://localhost:8080/activestorageblobs?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/activestorageblobs?page=0&pagesize=20" X-Api-User:user123
 func GetAllActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /activestorageblobs/{argID} [get]
-// http "http://localhost:8080/activestorageblobs/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/activestorageblobs/1" X-Api-User:user123
 func GetActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageblobs [post]
-// echo '{"id": 94,"key": "aKyrVGbTSgUxgqFkJtsqUsuvK","filename": "pgpJMMUyxOeidbbWynVCObFXE","content_type": "hQleGlLICFpdfpyUKcLPdXqwp","metadata": "GfGyrHaXaqyDPOPLqkWvXntBd","byte_size": 22,"checksum": "iVSVYlhmPwjotnUBRkLeYGmLi","created_at": "2148-11-12T14:36:57.165949653-05:00"}' | http POST "http://localhost:8080/activestorageblobs" X-Api-User:user123
+// echo '{"id": 36,"key": "esZylDOnXDmPiFroHVpFpjZrS","filename": "KTEoXQesAowOQNuYIBVLMXjyV","content_type": "YPgMunWnHEZTkGdyvlDhuWwXQ","metadata": "ylnceCQVBIqQJkafHhqpnKDOE","byte_size": 57,"checksum": "QaOFHGVaDDPaltOVeeokSlxhW","created_at": "2028-10-06T05:55:46.271395521-04:00"}' | http POST "https://xinqi.dev:8080/activestorageblobs" X-Api-User:user123
 func AddActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activestorageblobs := &model.ActiveStorageBlobs{}
@@ -171,7 +171,7 @@ func AddActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageblobs/{argID} [put]
-// echo '{"id": 94,"key": "aKyrVGbTSgUxgqFkJtsqUsuvK","filename": "pgpJMMUyxOeidbbWynVCObFXE","content_type": "hQleGlLICFpdfpyUKcLPdXqwp","metadata": "GfGyrHaXaqyDPOPLqkWvXntBd","byte_size": 22,"checksum": "iVSVYlhmPwjotnUBRkLeYGmLi","created_at": "2148-11-12T14:36:57.165949653-05:00"}' | http PUT "http://localhost:8080/activestorageblobs/1"  X-Api-User:user123
+// echo '{"id": 36,"key": "esZylDOnXDmPiFroHVpFpjZrS","filename": "KTEoXQesAowOQNuYIBVLMXjyV","content_type": "YPgMunWnHEZTkGdyvlDhuWwXQ","metadata": "ylnceCQVBIqQJkafHhqpnKDOE","byte_size": 57,"checksum": "QaOFHGVaDDPaltOVeeokSlxhW","created_at": "2028-10-06T05:55:46.271395521-04:00"}' | http PUT "https://xinqi.dev:8080/activestorageblobs/1"  X-Api-User:user123
 func UpdateActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprou
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /activestorageblobs/{argID} [delete]
-// http DELETE "http://localhost:8080/activestorageblobs/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/activestorageblobs/1" X-Api-User:user123
 func DeleteActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

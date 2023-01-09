@@ -44,7 +44,7 @@ func configGinBatteriesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /batteries [get]
-// http "http://localhost:8080/batteries?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/batteries?page=0&pagesize=20" X-Api-User:user123
 func GetAllBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /batteries/{argID} [get]
-// http "http://localhost:8080/batteries/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/batteries/1" X-Api-User:user123
 func GetBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /batteries [post]
-// echo '{"employee_id": 47,"building_id": 52,"id": 85,"type": "psWHseRwuqWBnqlZMixuTFGgG","status": "xrpBRHmrBmZYIjkPimblHuURA","commission_date": "2309-07-25T05:30:09.554624717-04:00","last_inspection_date": "2031-04-05T20:22:07.554888989-04:00","operations_cert": "qvAndllqtumLnJTinOYtZmEAr","information": "KhiaVoklJVXcTPMlmeLAeCXjR","notes": "DLmbqbJHjfOJyHDfwsOdaXxEY","created_at": "2137-06-24T19:14:55.093189018-04:00","updated_at": "2085-07-15T06:49:48.389975171-04:00"}' | http POST "http://localhost:8080/batteries" X-Api-User:user123
+// echo '{"employee_id": 75,"building_id": 42,"id": 78,"type": "aGANkrGIAaoUJhJtSWNHyskul","status": "jfQNBmVcAXrtxgHtGtIMYgkNp","commission_date": "2052-09-21T00:17:29.25745044-04:00","last_inspection_date": "2196-11-03T05:33:42.809382605-04:00","operations_cert": "YvLJfMnNfpqgMewuEtInUgNyZ","information": "CdbMFWBRGbmsMPouRAbcEbEfk","notes": "DbgLwnkqchmNYfYbdjLUfotIg","created_at": "2053-02-20T15:35:28.468211157-05:00","updated_at": "2100-12-11T06:06:00.223718468-05:00"}' | http POST "https://xinqi.dev:8080/batteries" X-Api-User:user123
 func AddBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	batteries := &model.Batteries{}
@@ -171,7 +171,7 @@ func AddBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /batteries/{argID} [put]
-// echo '{"employee_id": 47,"building_id": 52,"id": 85,"type": "psWHseRwuqWBnqlZMixuTFGgG","status": "xrpBRHmrBmZYIjkPimblHuURA","commission_date": "2309-07-25T05:30:09.554624717-04:00","last_inspection_date": "2031-04-05T20:22:07.554888989-04:00","operations_cert": "qvAndllqtumLnJTinOYtZmEAr","information": "KhiaVoklJVXcTPMlmeLAeCXjR","notes": "DLmbqbJHjfOJyHDfwsOdaXxEY","created_at": "2137-06-24T19:14:55.093189018-04:00","updated_at": "2085-07-15T06:49:48.389975171-04:00"}' | http PUT "http://localhost:8080/batteries/1"  X-Api-User:user123
+// echo '{"employee_id": 75,"building_id": 42,"id": 78,"type": "aGANkrGIAaoUJhJtSWNHyskul","status": "jfQNBmVcAXrtxgHtGtIMYgkNp","commission_date": "2052-09-21T00:17:29.25745044-04:00","last_inspection_date": "2196-11-03T05:33:42.809382605-04:00","operations_cert": "YvLJfMnNfpqgMewuEtInUgNyZ","information": "CdbMFWBRGbmsMPouRAbcEbEfk","notes": "DbgLwnkqchmNYfYbdjLUfotIg","created_at": "2053-02-20T15:35:28.468211157-05:00","updated_at": "2100-12-11T06:06:00.223718468-05:00"}' | http PUT "https://xinqi.dev:8080/batteries/1"  X-Api-User:user123
 func UpdateBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /batteries/{argID} [delete]
-// http DELETE "http://localhost:8080/batteries/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/batteries/1" X-Api-User:user123
 func DeleteBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

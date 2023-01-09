@@ -34,7 +34,7 @@ CREATE TABLE `building_details` (
 
 JSON Sample
 -------------------------------------
-{    "building_id": 78,    "id": 40,    "information_key": "vDyVFhbuuoscyyuvGHsxWuHpV",    "value": "EsErKjVpytOeEoyhmVhprfAAG",    "created_at": "2265-03-08T10:39:27.773812921-05:00",    "updated_at": "2309-01-31T10:58:44.985119194-05:00"}
+{    "building_id": 78,    "id": 65,    "information_key": "dXLuIYyDpNEGSiCpQlVerlRmL",    "value": "DWrnschjAycdolHlGDhWTtfHj",    "created_at": "2151-05-13T23:25:15.314438141-04:00",    "updated_at": "2269-07-22T19:22:00.151137566-04:00"}
 
 
 
@@ -43,13 +43,13 @@ JSON Sample
 // BuildingDetails struct is a row record of the building_details table in the rocket_development database
 type BuildingDetails struct {
 	//[ 0] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	BuildingID int64 `gorm:"column:building_id;type:bigint;" json:"building_id"`
+	BuildingID null.Int `gorm:"column:building_id;type:bigint;" json:"building_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] InformationKey                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	InformationKey string `gorm:"column:InformationKey;type:varchar;size:255;" json:"information_key"`
+	InformationKey null.String `gorm:"column:InformationKey;type:varchar;size:255;" json:"information_key"`
 	//[ 3] Value                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Value string `gorm:"column:Value;type:varchar;size:255;" json:"value"`
+	Value null.String `gorm:"column:Value;type:varchar;size:255;" json:"value"`
 	//[ 4] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 5] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -74,7 +74,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "BuildingID",
-			GoFieldType:        "int64",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "building_id",
 			ProtobufFieldName:  "building_id",
 			ProtobufType:       "int64",
@@ -116,7 +116,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "InformationKey",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "information_key",
 			ProtobufFieldName:  "information_key",
 			ProtobufType:       "string",
@@ -137,7 +137,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Value",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "value",
 			ProtobufFieldName:  "value",
 			ProtobufType:       "string",

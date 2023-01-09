@@ -44,7 +44,7 @@ func configGinInterventionsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /interventions [get]
-// http "http://localhost:8080/interventions?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:8080/interventions?page=0&pagesize=20" X-Api-User:user123
 func GetAllInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /interventions/{argID} [get]
-// http "http://localhost:8080/interventions/1" X-Api-User:user123
+// http "https://xinqi.dev:8080/interventions/1" X-Api-User:user123
 func GetInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /interventions [post]
-// echo '{"id": 53,"author": "IbrOUdDPtKWcoFKLuxNuKQCVY","customer_id": 24,"building_id": 83,"battery_id": 91,"column_id": 50,"elevator_id": 93,"employee_id": 44,"start_datetime": "2314-08-18T05:57:11.056126945-04:00","end_datetime": "2277-02-05T12:46:19.982542179-05:00","result": "ErCGutoOOVhnjialuolTrfvBZ","report": "PEpCNPVTEIjAcDLQHdBiSFYtc","status": "HXdWypNJlWiPiiBEEBAwXuIhI","created_at": "2105-12-01T12:27:31.303773103-05:00","updated_at": "2055-12-02T15:00:29.586349077-05:00"}' | http POST "http://localhost:8080/interventions" X-Api-User:user123
+// echo '{"id": 70,"author": "uywvOMhCVHQpblNtUtvqDoAnh","customer_id": 25,"building_id": 93,"battery_id": 17,"column_id": 50,"elevator_id": 9,"employee_id": 46,"start_datetime": "2169-01-19T23:43:37.317538938-05:00","end_datetime": "2052-05-20T19:28:21.751392715-04:00","result": "IrGZJeKCNknXOjJFSvvFDtGqU","report": "unJMemmcouFDADoAuRZbcyqgB","status": "iKAGZqHUZJtneqBkUNvmnlsgQ","created_at": "2177-06-23T23:51:02.462718236-04:00","updated_at": "2026-04-03T11:24:49.462157428-04:00"}' | http POST "https://xinqi.dev:8080/interventions" X-Api-User:user123
 func AddInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	interventions := &model.Interventions{}
@@ -171,7 +171,7 @@ func AddInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Para
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /interventions/{argID} [put]
-// echo '{"id": 53,"author": "IbrOUdDPtKWcoFKLuxNuKQCVY","customer_id": 24,"building_id": 83,"battery_id": 91,"column_id": 50,"elevator_id": 93,"employee_id": 44,"start_datetime": "2314-08-18T05:57:11.056126945-04:00","end_datetime": "2277-02-05T12:46:19.982542179-05:00","result": "ErCGutoOOVhnjialuolTrfvBZ","report": "PEpCNPVTEIjAcDLQHdBiSFYtc","status": "HXdWypNJlWiPiiBEEBAwXuIhI","created_at": "2105-12-01T12:27:31.303773103-05:00","updated_at": "2055-12-02T15:00:29.586349077-05:00"}' | http PUT "http://localhost:8080/interventions/1"  X-Api-User:user123
+// echo '{"id": 70,"author": "uywvOMhCVHQpblNtUtvqDoAnh","customer_id": 25,"building_id": 93,"battery_id": 17,"column_id": 50,"elevator_id": 9,"employee_id": 46,"start_datetime": "2169-01-19T23:43:37.317538938-05:00","end_datetime": "2052-05-20T19:28:21.751392715-04:00","result": "IrGZJeKCNknXOjJFSvvFDtGqU","report": "unJMemmcouFDADoAuRZbcyqgB","status": "iKAGZqHUZJtneqBkUNvmnlsgQ","created_at": "2177-06-23T23:51:02.462718236-04:00","updated_at": "2026-04-03T11:24:49.462157428-04:00"}' | http PUT "https://xinqi.dev:8080/interventions/1"  X-Api-User:user123
 func UpdateInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /interventions/{argID} [delete]
-// http DELETE "http://localhost:8080/interventions/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:8080/interventions/1" X-Api-User:user123
 func DeleteInterventions(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
