@@ -52,7 +52,7 @@ type Interventions struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] author                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Author null.String `gorm:"column:author;type:varchar;size:255;" json:"author"`
+	Author string `gorm:"column:author;type:varchar;size:255;" json:"author"`
 	//[ 2] customer_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
 	CustomerID null.Int `gorm:"column:customer_id;type:int;" json:"customer_id"`
 	//[ 3] building_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
@@ -70,11 +70,11 @@ type Interventions struct {
 	//[ 9] end_datetime                                   datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	EndDatetime null.Time `gorm:"column:end_datetime;type:datetime;" json:"end_datetime"`
 	//[10] result                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Result null.String `gorm:"column:result;type:varchar;size:255;" json:"result"`
+	Result string `gorm:"column:result;type:varchar;size:255;" json:"result"`
 	//[11] report                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Report null.String `gorm:"column:report;type:varchar;size:255;" json:"report"`
+	Report string `gorm:"column:report;type:varchar;size:255;" json:"report"`
 	//[12] status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status null.String `gorm:"column:status;type:varchar;size:255;" json:"status"`
+	Status string `gorm:"column:status;type:varchar;size:255;" json:"status"`
 	//[13] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[14] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -120,7 +120,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Author",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "author",
 			ProtobufFieldName:  "author",
 			ProtobufType:       "string",
@@ -309,7 +309,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Result",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "result",
 			ProtobufFieldName:  "result",
 			ProtobufType:       "string",
@@ -330,7 +330,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Report",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "report",
 			ProtobufFieldName:  "report",
 			ProtobufType:       "string",
@@ -351,7 +351,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",

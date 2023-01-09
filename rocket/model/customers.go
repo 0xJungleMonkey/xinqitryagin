@@ -61,27 +61,27 @@ type Customers struct {
 	//[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 3] CustomerCreationDate                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CustomerCreationDate null.String `gorm:"column:CustomerCreationDate;type:varchar;size:255;" json:"customer_creation_date"`
+	CustomerCreationDate string `gorm:"column:CustomerCreationDate;type:varchar;size:255;" json:"customer_creation_date"`
 	//[ 4] date                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Date null.String `gorm:"column:date;type:varchar;size:255;" json:"date"`
+	Date string `gorm:"column:date;type:varchar;size:255;" json:"date"`
 	//[ 5] CompanyName                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CompanyName null.String `gorm:"column:CompanyName;type:varchar;size:255;" json:"company_name"`
+	CompanyName string `gorm:"column:CompanyName;type:varchar;size:255;" json:"company_name"`
 	//[ 6] CompanyHQAdress                                varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CompanyHQAdress null.String `gorm:"column:CompanyHQAdress;type:varchar;size:255;" json:"company_hq_adress"`
+	CompanyHQAdress string `gorm:"column:CompanyHQAdress;type:varchar;size:255;" json:"company_hq_adress"`
 	//[ 7] FullNameOfCompanyContact                       varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FullNameOfCompanyContact null.String `gorm:"column:FullNameOfCompanyContact;type:varchar;size:255;" json:"full_name_of_company_contact"`
+	FullNameOfCompanyContact string `gorm:"column:FullNameOfCompanyContact;type:varchar;size:255;" json:"full_name_of_company_contact"`
 	//[ 8] CompanyContactPhone                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CompanyContactPhone null.String `gorm:"column:CompanyContactPhone;type:varchar;size:255;" json:"company_contact_phone"`
+	CompanyContactPhone string `gorm:"column:CompanyContactPhone;type:varchar;size:255;" json:"company_contact_phone"`
 	//[ 9] CompanyContactEMail                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CompanyContactEMail null.String `gorm:"column:CompanyContactEMail;type:varchar;size:255;" json:"company_contact_e_mail"`
+	CompanyContactEMail string `gorm:"column:CompanyContactEMail;type:varchar;size:255;" json:"company_contact_e_mail"`
 	//[10] CompanyDesc                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	CompanyDesc null.String `gorm:"column:CompanyDesc;type:text;size:65535;" json:"company_desc"`
+	CompanyDesc string `gorm:"column:CompanyDesc;type:text;size:65535;" json:"company_desc"`
 	//[11] FullNameServiceTechAuth                        varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FullNameServiceTechAuth null.String `gorm:"column:FullNameServiceTechAuth;type:varchar;size:255;" json:"full_name_service_tech_auth"`
+	FullNameServiceTechAuth string `gorm:"column:FullNameServiceTechAuth;type:varchar;size:255;" json:"full_name_service_tech_auth"`
 	//[12] TechAuthPhoneService                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	TechAuthPhoneService null.String `gorm:"column:TechAuthPhoneService;type:varchar;size:255;" json:"tech_auth_phone_service"`
+	TechAuthPhoneService string `gorm:"column:TechAuthPhoneService;type:varchar;size:255;" json:"tech_auth_phone_service"`
 	//[13] TechManagerEmailService                        varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	TechManagerEmailService null.String `gorm:"column:TechManagerEmailService;type:varchar;size:255;" json:"tech_manager_email_service"`
+	TechManagerEmailService string `gorm:"column:TechManagerEmailService;type:varchar;size:255;" json:"tech_manager_email_service"`
 	//[14] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[15] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -169,7 +169,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CustomerCreationDate",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "customer_creation_date",
 			ProtobufFieldName:  "customer_creation_date",
 			ProtobufType:       "string",
@@ -190,7 +190,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Date",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "date",
 			ProtobufFieldName:  "date",
 			ProtobufType:       "string",
@@ -211,7 +211,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CompanyName",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_name",
 			ProtobufFieldName:  "company_name",
 			ProtobufType:       "string",
@@ -232,7 +232,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CompanyHQAdress",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_hq_adress",
 			ProtobufFieldName:  "company_hq_adress",
 			ProtobufType:       "string",
@@ -253,7 +253,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FullNameOfCompanyContact",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "full_name_of_company_contact",
 			ProtobufFieldName:  "full_name_of_company_contact",
 			ProtobufType:       "string",
@@ -274,7 +274,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CompanyContactPhone",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_contact_phone",
 			ProtobufFieldName:  "company_contact_phone",
 			ProtobufType:       "string",
@@ -295,7 +295,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CompanyContactEMail",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_contact_e_mail",
 			ProtobufFieldName:  "company_contact_e_mail",
 			ProtobufType:       "string",
@@ -316,7 +316,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "CompanyDesc",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_desc",
 			ProtobufFieldName:  "company_desc",
 			ProtobufType:       "string",
@@ -337,7 +337,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FullNameServiceTechAuth",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "full_name_service_tech_auth",
 			ProtobufFieldName:  "full_name_service_tech_auth",
 			ProtobufType:       "string",
@@ -358,7 +358,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "TechAuthPhoneService",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "tech_auth_phone_service",
 			ProtobufFieldName:  "tech_auth_phone_service",
 			ProtobufType:       "string",
@@ -379,7 +379,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "TechManagerEmailService",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "tech_manager_email_service",
 			ProtobufFieldName:  "tech_manager_email_service",
 			ProtobufType:       "string",

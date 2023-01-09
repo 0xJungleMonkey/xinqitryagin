@@ -41,7 +41,7 @@ type ArInternalMetadata struct {
 	//[ 0] key                                            varchar(255)         null: false  primary: true   isArray: false  auto: false  col: varchar         len: 255     default: []
 	Key string `gorm:"primary_key;column:key;type:varchar;size:255;" json:"key"`
 	//[ 1] value                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Value null.String `gorm:"column:value;type:varchar;size:255;" json:"value"`
+	Value string `gorm:"column:value;type:varchar;size:255;" json:"value"`
 	//[ 2] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 3] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -87,7 +87,7 @@ var ar_internal_metadataTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Value",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "value",
 			ProtobufFieldName:  "value",
 			ProtobufType:       "string",

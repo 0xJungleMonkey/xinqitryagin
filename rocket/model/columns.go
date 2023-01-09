@@ -50,15 +50,15 @@ type Columns struct {
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Type null.String `gorm:"column:Type;type:varchar;size:255;" json:"type"`
+	Type string `gorm:"column:Type;type:varchar;size:255;" json:"type"`
 	//[ 3] NumOfFloorsServed                              int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
 	NumOfFloorsServed null.Int `gorm:"column:NumOfFloorsServed;type:int;" json:"num_of_floors_served"`
 	//[ 4] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status null.String `gorm:"column:Status;type:varchar;size:255;" json:"status"`
+	Status string `gorm:"column:Status;type:varchar;size:255;" json:"status"`
 	//[ 5] Information                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Information null.String `gorm:"column:Information;type:text;size:65535;" json:"information"`
+	Information string `gorm:"column:Information;type:text;size:65535;" json:"information"`
 	//[ 6] Notes                                          text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Notes null.String `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
+	Notes string `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 8] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -125,7 +125,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Type",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "type",
 			ProtobufFieldName:  "type",
 			ProtobufType:       "string",
@@ -167,7 +167,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",
@@ -188,7 +188,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Information",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "information",
 			ProtobufFieldName:  "information",
 			ProtobufType:       "string",
@@ -209,7 +209,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Notes",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "notes",
 			ProtobufFieldName:  "notes",
 			ProtobufType:       "string",

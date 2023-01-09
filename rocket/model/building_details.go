@@ -47,9 +47,9 @@ type BuildingDetails struct {
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] InformationKey                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	InformationKey null.String `gorm:"column:InformationKey;type:varchar;size:255;" json:"information_key"`
+	InformationKey string `gorm:"column:InformationKey;type:varchar;size:255;" json:"information_key"`
 	//[ 3] Value                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Value null.String `gorm:"column:Value;type:varchar;size:255;" json:"value"`
+	Value string `gorm:"column:Value;type:varchar;size:255;" json:"value"`
 	//[ 4] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 5] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -116,7 +116,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "InformationKey",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "information_key",
 			ProtobufFieldName:  "information_key",
 			ProtobufType:       "string",
@@ -137,7 +137,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Value",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "value",
 			ProtobufFieldName:  "value",
 			ProtobufType:       "string",

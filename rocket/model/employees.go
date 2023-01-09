@@ -49,13 +49,13 @@ type Employees struct {
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] first_name                                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FirstName null.String `gorm:"column:first_name;type:varchar;size:255;" json:"first_name"`
+	FirstName string `gorm:"column:first_name;type:varchar;size:255;" json:"first_name"`
 	//[ 3] last_name                                      varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	LastName null.String `gorm:"column:last_name;type:varchar;size:255;" json:"last_name"`
+	LastName string `gorm:"column:last_name;type:varchar;size:255;" json:"last_name"`
 	//[ 4] title                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Title null.String `gorm:"column:title;type:varchar;size:255;" json:"title"`
+	Title string `gorm:"column:title;type:varchar;size:255;" json:"title"`
 	//[ 5] email                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email null.String `gorm:"column:email;type:varchar;size:255;" json:"email"`
+	Email string `gorm:"column:email;type:varchar;size:255;" json:"email"`
 	//[ 6] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 7] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -122,7 +122,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FirstName",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "first_name",
 			ProtobufFieldName:  "first_name",
 			ProtobufType:       "string",
@@ -143,7 +143,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "LastName",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "last_name",
 			ProtobufFieldName:  "last_name",
 			ProtobufType:       "string",
@@ -164,7 +164,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Title",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "title",
 			ProtobufFieldName:  "title",
 			ProtobufType:       "string",
@@ -185,7 +185,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Email",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "email",
 			ProtobufFieldName:  "email",
 			ProtobufType:       "string",

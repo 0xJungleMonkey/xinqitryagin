@@ -49,9 +49,9 @@ type BlazerAudits struct {
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Statement null.String `gorm:"column:statement;type:text;size:65535;" json:"statement"`
+	Statement string `gorm:"column:statement;type:text;size:65535;" json:"statement"`
 	//[ 4] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	DataSource null.String `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
+	DataSource string `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
 	//[ 5] created_at                                     datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt null.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 }
@@ -137,7 +137,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Statement",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "statement",
 			ProtobufFieldName:  "statement",
 			ProtobufType:       "string",
@@ -158,7 +158,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "DataSource",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "data_source",
 			ProtobufFieldName:  "data_source",
 			ProtobufType:       "string",

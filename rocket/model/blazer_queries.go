@@ -49,15 +49,15 @@ type BlazerQueries struct {
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name null.String `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[ 3] description                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Description null.String `gorm:"column:description;type:text;size:65535;" json:"description"`
+	Description string `gorm:"column:description;type:text;size:65535;" json:"description"`
 	//[ 4] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Statement null.String `gorm:"column:statement;type:text;size:65535;" json:"statement"`
+	Statement string `gorm:"column:statement;type:text;size:65535;" json:"statement"`
 	//[ 5] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	DataSource null.String `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
+	DataSource string `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
 	//[ 6] status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status null.String `gorm:"column:status;type:varchar;size:255;" json:"status"`
+	Status string `gorm:"column:status;type:varchar;size:255;" json:"status"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 8] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -124,7 +124,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Name",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "name",
 			ProtobufFieldName:  "name",
 			ProtobufType:       "string",
@@ -145,7 +145,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Description",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "description",
 			ProtobufFieldName:  "description",
 			ProtobufType:       "string",
@@ -166,7 +166,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Statement",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "statement",
 			ProtobufFieldName:  "statement",
 			ProtobufType:       "string",
@@ -187,7 +187,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "DataSource",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "data_source",
 			ProtobufFieldName:  "data_source",
 			ProtobufType:       "string",
@@ -208,7 +208,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",

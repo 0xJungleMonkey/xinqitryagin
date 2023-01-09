@@ -49,15 +49,15 @@ type ActiveAdminComments struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] namespace                                      varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Namespace null.String `gorm:"column:namespace;type:varchar;size:255;" json:"namespace"`
+	Namespace string `gorm:"column:namespace;type:varchar;size:255;" json:"namespace"`
 	//[ 2] body                                           text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Body null.String `gorm:"column:body;type:text;size:65535;" json:"body"`
+	Body string `gorm:"column:body;type:text;size:65535;" json:"body"`
 	//[ 3] resource_type                                  varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResourceType null.String `gorm:"column:resource_type;type:varchar;size:255;" json:"resource_type"`
+	ResourceType string `gorm:"column:resource_type;type:varchar;size:255;" json:"resource_type"`
 	//[ 4] resource_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	ResourceID null.Int `gorm:"column:resource_id;type:bigint;" json:"resource_id"`
 	//[ 5] author_type                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	AuthorType null.String `gorm:"column:author_type;type:varchar;size:255;" json:"author_type"`
+	AuthorType string `gorm:"column:author_type;type:varchar;size:255;" json:"author_type"`
 	//[ 6] author_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	AuthorID null.Int `gorm:"column:author_id;type:bigint;" json:"author_id"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -105,7 +105,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Namespace",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "namespace",
 			ProtobufFieldName:  "namespace",
 			ProtobufType:       "string",
@@ -126,7 +126,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Body",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "body",
 			ProtobufFieldName:  "body",
 			ProtobufType:       "string",
@@ -147,7 +147,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResourceType",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "resource_type",
 			ProtobufFieldName:  "resource_type",
 			ProtobufType:       "string",
@@ -189,7 +189,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "AuthorType",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "author_type",
 			ProtobufFieldName:  "author_type",
 			ProtobufType:       "string",

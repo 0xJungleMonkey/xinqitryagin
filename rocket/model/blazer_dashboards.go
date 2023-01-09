@@ -45,7 +45,7 @@ type BlazerDashboards struct {
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name null.String `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[ 3] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 4] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -112,7 +112,7 @@ var blazer_dashboardsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Name",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "name",
 			ProtobufFieldName:  "name",
 			ProtobufType:       "string",

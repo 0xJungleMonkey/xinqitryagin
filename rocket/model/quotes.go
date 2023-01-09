@@ -62,53 +62,53 @@ type Quotes struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] building_type                                  varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	BuildingType null.String `gorm:"column:building_type;type:varchar;size:255;" json:"building_type"`
+	BuildingType string `gorm:"column:building_type;type:varchar;size:255;" json:"building_type"`
 	//[ 2] service_quality                                varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ServiceQuality null.String `gorm:"column:service_quality;type:varchar;size:255;" json:"service_quality"`
+	ServiceQuality string `gorm:"column:service_quality;type:varchar;size:255;" json:"service_quality"`
 	//[ 3] number_of_apartments                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfApartments null.String `gorm:"column:number_of_apartments;type:varchar;size:255;" json:"number_of_apartments"`
+	NumberOfApartments string `gorm:"column:number_of_apartments;type:varchar;size:255;" json:"number_of_apartments"`
 	//[ 4] number_of_floors                               varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfFloors null.String `gorm:"column:number_of_floors;type:varchar;size:255;" json:"number_of_floors"`
+	NumberOfFloors string `gorm:"column:number_of_floors;type:varchar;size:255;" json:"number_of_floors"`
 	//[ 5] number_of_businesses                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfBusinesses null.String `gorm:"column:number_of_businesses;type:varchar;size:255;" json:"number_of_businesses"`
+	NumberOfBusinesses string `gorm:"column:number_of_businesses;type:varchar;size:255;" json:"number_of_businesses"`
 	//[ 6] number_of_basements                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfBasements null.String `gorm:"column:number_of_basements;type:varchar;size:255;" json:"number_of_basements"`
+	NumberOfBasements string `gorm:"column:number_of_basements;type:varchar;size:255;" json:"number_of_basements"`
 	//[ 7] number_of_parking                              varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfParking null.String `gorm:"column:number_of_parking;type:varchar;size:255;" json:"number_of_parking"`
+	NumberOfParking string `gorm:"column:number_of_parking;type:varchar;size:255;" json:"number_of_parking"`
 	//[ 8] number_of_cages                                varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfCages null.String `gorm:"column:number_of_cages;type:varchar;size:255;" json:"number_of_cages"`
+	NumberOfCages string `gorm:"column:number_of_cages;type:varchar;size:255;" json:"number_of_cages"`
 	//[ 9] number_of_occupants                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfOccupants null.String `gorm:"column:number_of_occupants;type:varchar;size:255;" json:"number_of_occupants"`
+	NumberOfOccupants string `gorm:"column:number_of_occupants;type:varchar;size:255;" json:"number_of_occupants"`
 	//[10] number_of_hours                                varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfHours null.String `gorm:"column:number_of_hours;type:varchar;size:255;" json:"number_of_hours"`
+	NumberOfHours string `gorm:"column:number_of_hours;type:varchar;size:255;" json:"number_of_hours"`
 	//[11] number_of_elevators_needed                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberOfElevatorsNeeded null.String `gorm:"column:number_of_elevators_needed;type:varchar;size:255;" json:"number_of_elevators_needed"`
+	NumberOfElevatorsNeeded string `gorm:"column:number_of_elevators_needed;type:varchar;size:255;" json:"number_of_elevators_needed"`
 	//[12] price_per_unit                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	PricePerUnit null.String `gorm:"column:price_per_unit;type:varchar;size:255;" json:"price_per_unit"`
+	PricePerUnit string `gorm:"column:price_per_unit;type:varchar;size:255;" json:"price_per_unit"`
 	//[13] elevator_price                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ElevatorPrice null.String `gorm:"column:elevator_price;type:varchar;size:255;" json:"elevator_price"`
+	ElevatorPrice string `gorm:"column:elevator_price;type:varchar;size:255;" json:"elevator_price"`
 	//[14] installation_fee                               varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	InstallationFee null.String `gorm:"column:installation_fee;type:varchar;size:255;" json:"installation_fee"`
+	InstallationFee string `gorm:"column:installation_fee;type:varchar;size:255;" json:"installation_fee"`
 	//[15] final_price                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FinalPrice null.String `gorm:"column:final_price;type:varchar;size:255;" json:"final_price"`
+	FinalPrice string `gorm:"column:final_price;type:varchar;size:255;" json:"final_price"`
 	//[16] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[17] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	UpdatedAt time.Time `gorm:"column:updated_at;type:datetime;" json:"updated_at"`
 	//[18] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name null.String `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[19] company_name                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CompanyName null.String `gorm:"column:company_name;type:varchar;size:255;" json:"company_name"`
+	CompanyName string `gorm:"column:company_name;type:varchar;size:255;" json:"company_name"`
 	//[20] email                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email null.String `gorm:"column:email;type:varchar;size:255;" json:"email"`
+	Email string `gorm:"column:email;type:varchar;size:255;" json:"email"`
 	//[21] phone                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Phone null.String `gorm:"column:phone;type:varchar;size:255;" json:"phone"`
+	Phone string `gorm:"column:phone;type:varchar;size:255;" json:"phone"`
 	//[22] department                                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Department null.String `gorm:"column:department;type:varchar;size:255;" json:"department"`
+	Department string `gorm:"column:department;type:varchar;size:255;" json:"department"`
 	//[23] project_name                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ProjectName null.String `gorm:"column:project_name;type:varchar;size:255;" json:"project_name"`
+	ProjectName string `gorm:"column:project_name;type:varchar;size:255;" json:"project_name"`
 	//[24] project_description                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ProjectDescription null.String `gorm:"column:project_description;type:varchar;size:255;" json:"project_description"`
+	ProjectDescription string `gorm:"column:project_description;type:varchar;size:255;" json:"project_description"`
 }
 
 var quotesTableInfo = &TableInfo{
@@ -150,7 +150,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "BuildingType",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "building_type",
 			ProtobufFieldName:  "building_type",
 			ProtobufType:       "string",
@@ -171,7 +171,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ServiceQuality",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "service_quality",
 			ProtobufFieldName:  "service_quality",
 			ProtobufType:       "string",
@@ -192,7 +192,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfApartments",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_apartments",
 			ProtobufFieldName:  "number_of_apartments",
 			ProtobufType:       "string",
@@ -213,7 +213,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfFloors",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_floors",
 			ProtobufFieldName:  "number_of_floors",
 			ProtobufType:       "string",
@@ -234,7 +234,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfBusinesses",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_businesses",
 			ProtobufFieldName:  "number_of_businesses",
 			ProtobufType:       "string",
@@ -255,7 +255,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfBasements",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_basements",
 			ProtobufFieldName:  "number_of_basements",
 			ProtobufType:       "string",
@@ -276,7 +276,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfParking",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_parking",
 			ProtobufFieldName:  "number_of_parking",
 			ProtobufType:       "string",
@@ -297,7 +297,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfCages",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_cages",
 			ProtobufFieldName:  "number_of_cages",
 			ProtobufType:       "string",
@@ -318,7 +318,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfOccupants",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_occupants",
 			ProtobufFieldName:  "number_of_occupants",
 			ProtobufType:       "string",
@@ -339,7 +339,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfHours",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_hours",
 			ProtobufFieldName:  "number_of_hours",
 			ProtobufType:       "string",
@@ -360,7 +360,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberOfElevatorsNeeded",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "number_of_elevators_needed",
 			ProtobufFieldName:  "number_of_elevators_needed",
 			ProtobufType:       "string",
@@ -381,7 +381,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "PricePerUnit",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "price_per_unit",
 			ProtobufFieldName:  "price_per_unit",
 			ProtobufType:       "string",
@@ -402,7 +402,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ElevatorPrice",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "elevator_price",
 			ProtobufFieldName:  "elevator_price",
 			ProtobufType:       "string",
@@ -423,7 +423,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "InstallationFee",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "installation_fee",
 			ProtobufFieldName:  "installation_fee",
 			ProtobufType:       "string",
@@ -444,7 +444,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FinalPrice",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "final_price",
 			ProtobufFieldName:  "final_price",
 			ProtobufType:       "string",
@@ -507,7 +507,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Name",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "name",
 			ProtobufFieldName:  "name",
 			ProtobufType:       "string",
@@ -528,7 +528,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CompanyName",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "company_name",
 			ProtobufFieldName:  "company_name",
 			ProtobufType:       "string",
@@ -549,7 +549,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Email",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "email",
 			ProtobufFieldName:  "email",
 			ProtobufType:       "string",
@@ -570,7 +570,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Phone",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "phone",
 			ProtobufFieldName:  "phone",
 			ProtobufType:       "string",
@@ -591,7 +591,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Department",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "department",
 			ProtobufFieldName:  "department",
 			ProtobufType:       "string",
@@ -612,7 +612,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ProjectName",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "project_name",
 			ProtobufFieldName:  "project_name",
 			ProtobufType:       "string",
@@ -633,7 +633,7 @@ var quotesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ProjectDescription",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "project_description",
 			ProtobufFieldName:  "project_description",
 			ProtobufType:       "string",

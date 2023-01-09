@@ -50,9 +50,9 @@ type ActiveStorageBlobs struct {
 	//[ 2] filename                                       varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Filename string `gorm:"column:filename;type:varchar;size:255;" json:"filename"`
 	//[ 3] content_type                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ContentType null.String `gorm:"column:content_type;type:varchar;size:255;" json:"content_type"`
+	ContentType string `gorm:"column:content_type;type:varchar;size:255;" json:"content_type"`
 	//[ 4] metadata                                       text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Metadata null.String `gorm:"column:metadata;type:text;size:65535;" json:"metadata"`
+	Metadata string `gorm:"column:metadata;type:text;size:65535;" json:"metadata"`
 	//[ 5] byte_size                                      bigint               null: false  primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
 	ByteSize int64 `gorm:"column:byte_size;type:bigint;" json:"byte_size"`
 	//[ 6] checksum                                       varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -142,7 +142,7 @@ var active_storage_blobsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ContentType",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "content_type",
 			ProtobufFieldName:  "content_type",
 			ProtobufType:       "string",
@@ -163,7 +163,7 @@ var active_storage_blobsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Metadata",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "metadata",
 			ProtobufFieldName:  "metadata",
 			ProtobufType:       "string",

@@ -51,7 +51,7 @@ type AdminUsers struct {
 	//[ 2] encrypted_password                             varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	EncryptedPassword string `gorm:"column:encrypted_password;type:varchar;size:255;" json:"encrypted_password"`
 	//[ 3] reset_password_token                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResetPasswordToken null.String `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
+	ResetPasswordToken string `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
 	//[ 4] reset_password_sent_at                         datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	ResetPasswordSentAt null.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
 	//[ 5] remember_created_at                            datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -143,7 +143,7 @@ var admin_usersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResetPasswordToken",
-			GoFieldType:        "null.String",
+			GoFieldType:        "string",
 			JSONFieldName:      "reset_password_token",
 			ProtobufFieldName:  "reset_password_token",
 			ProtobufType:       "string",
