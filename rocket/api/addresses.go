@@ -44,7 +44,7 @@ func configGinAddressesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /addresses [get]
-// http "https://xinqi.dev:8080/addresses?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/addresses?page=0&pagesize=20" X-Api-User:user123
 func GetAllAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /addresses/{argID} [get]
-// http "https://xinqi.dev:8080/addresses/1" X-Api-User:user123
+// http "https://xinqi.dev:443/addresses/1" X-Api-User:user123
 func GetAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /addresses [post]
-// echo '{"id": 19,"address_type": "ysEYusBvKEsKCCZCGoipSEJZw","status": "kkpJWaqIYBXVAmbOcRCxTSkov","entity": "ptnRZIjNlmblvvOqCBqXOSQVq","number_and_street": "cJcGXmXIyAWERoGsAcwnLbEgq","suite_or_apartment": "MvikQqNtbjZZhDDiSyTuAnQph","city": "lGtfSarMOMtMdANqTPPnkBimd","postal_code": "OJGdPhirgGLxPuXrIZyiLISjP","country": "DjVVcgGUtQDxssGjtCdrfrQaa","notes": "HxuOqDNEAxfNOVdtiDABWXcDM","created_at": "2104-03-30T12:17:42.106755569-04:00","updated_at": "2210-05-17T15:21:17.590633911-04:00","latitude": 0.8088093,"longitude": 0.19749658}' | http POST "https://xinqi.dev:8080/addresses" X-Api-User:user123
+// echo '{"id": 24,"address_type": "hlolbIKttQNbdakFVeVehSaJK","status": "MOMkAtvnCLnAcSKHhKupygdqi","entity": "asvVVLrsVfeRMwfqcIlcHaXRd","number_and_street": "PNkjKXtXPGtFRupLgJZedVIsS","suite_or_apartment": "AntDPaBtwZSsVwaZVPmSLUhRc","city": "vCidxUHsUuRMZKIljBIdfQnLO","postal_code": "NwHgUvOmiCotPmnIrrWNtLOhH","country": "nkUdZdBaItmDKFOadTnPnMtAC","notes": "oipWLLuVTEeimXSWdWBoQfGZT","created_at": "2278-05-28T14:40:16.809797006-04:00","updated_at": "2207-08-16T22:51:36.157414608-04:00","latitude": 0.2979277,"longitude": 0.16605319}' | http POST "https://xinqi.dev:443/addresses" X-Api-User:user123
 func AddAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	addresses := &model.Addresses{}
@@ -171,7 +171,7 @@ func AddAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /addresses/{argID} [put]
-// echo '{"id": 19,"address_type": "ysEYusBvKEsKCCZCGoipSEJZw","status": "kkpJWaqIYBXVAmbOcRCxTSkov","entity": "ptnRZIjNlmblvvOqCBqXOSQVq","number_and_street": "cJcGXmXIyAWERoGsAcwnLbEgq","suite_or_apartment": "MvikQqNtbjZZhDDiSyTuAnQph","city": "lGtfSarMOMtMdANqTPPnkBimd","postal_code": "OJGdPhirgGLxPuXrIZyiLISjP","country": "DjVVcgGUtQDxssGjtCdrfrQaa","notes": "HxuOqDNEAxfNOVdtiDABWXcDM","created_at": "2104-03-30T12:17:42.106755569-04:00","updated_at": "2210-05-17T15:21:17.590633911-04:00","latitude": 0.8088093,"longitude": 0.19749658}' | http PUT "https://xinqi.dev:8080/addresses/1"  X-Api-User:user123
+// echo '{"id": 24,"address_type": "hlolbIKttQNbdakFVeVehSaJK","status": "MOMkAtvnCLnAcSKHhKupygdqi","entity": "asvVVLrsVfeRMwfqcIlcHaXRd","number_and_street": "PNkjKXtXPGtFRupLgJZedVIsS","suite_or_apartment": "AntDPaBtwZSsVwaZVPmSLUhRc","city": "vCidxUHsUuRMZKIljBIdfQnLO","postal_code": "NwHgUvOmiCotPmnIrrWNtLOhH","country": "nkUdZdBaItmDKFOadTnPnMtAC","notes": "oipWLLuVTEeimXSWdWBoQfGZT","created_at": "2278-05-28T14:40:16.809797006-04:00","updated_at": "2207-08-16T22:51:36.157414608-04:00","latitude": 0.2979277,"longitude": 0.16605319}' | http PUT "https://xinqi.dev:443/addresses/1"  X-Api-User:user123
 func UpdateAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /addresses/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/addresses/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/addresses/1" X-Api-User:user123
 func DeleteAddresses(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

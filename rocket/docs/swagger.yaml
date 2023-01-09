@@ -1299,7 +1299,7 @@ definitions:
           -1      default: []'
         type: string
     type: object
-host: xinqi.dev:8080
+host: xinqi.dev:443
 info:
   contact:
     email: xinqidavis@gmail.com

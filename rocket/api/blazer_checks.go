@@ -44,7 +44,7 @@ func configGinBlazerChecksRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerchecks [get]
-// http "https://xinqi.dev:8080/blazerchecks?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/blazerchecks?page=0&pagesize=20" X-Api-User:user123
 func GetAllBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /blazerchecks/{argID} [get]
-// http "https://xinqi.dev:8080/blazerchecks/1" X-Api-User:user123
+// http "https://xinqi.dev:443/blazerchecks/1" X-Api-User:user123
 func GetBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerchecks [post]
-// echo '{"id": 93,"creator_id": 67,"query_id": 41,"state": "NRtsAmUUOIVdqZDctKKJOxedB","schedule": "sKHumyriFOWpyVwLZbKwCTQJM","emails": "ABWemDyAsADqwNffUjxXkWOtp","slack_channels": "cDyWyIkTsfltphXOwBhvJwBgb","check_type": "PFjpEkWShpelMJvMVkVbCUhfP","message": "PHIXavaIMwBoOfMrHSgJutmZd","last_run_at": "2150-03-25T17:01:27.465368917-04:00","created_at": "2038-01-11T09:04:29.452009613-05:00","updated_at": "2248-05-31T05:21:41.470212697-04:00"}' | http POST "https://xinqi.dev:8080/blazerchecks" X-Api-User:user123
+// echo '{"id": 79,"creator_id": 75,"query_id": 92,"state": "XSMUKVxRvcrRlCgXeoYPwoAht","schedule": "TKGNiYcVcXqGGlUgNwWNlLlvM","emails": "THLxlCvFfuxbmJHVJLKwwipvN","slack_channels": "uUypuJkIHLaugMetnYuxNLlsA","check_type": "EkQGfVHfDwfdrlJqhRBOjXxyj","message": "tBOsNodiKrPHdEAhbBrxDayGF","last_run_at": "2113-06-23T15:48:07.741220907-04:00","created_at": "2291-09-08T16:53:25.196579006-04:00","updated_at": "2027-07-30T10:50:22.184852061-04:00"}' | http POST "https://xinqi.dev:443/blazerchecks" X-Api-User:user123
 func AddBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazerchecks := &model.BlazerChecks{}
@@ -171,7 +171,7 @@ func AddBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazerchecks/{argID} [put]
-// echo '{"id": 93,"creator_id": 67,"query_id": 41,"state": "NRtsAmUUOIVdqZDctKKJOxedB","schedule": "sKHumyriFOWpyVwLZbKwCTQJM","emails": "ABWemDyAsADqwNffUjxXkWOtp","slack_channels": "cDyWyIkTsfltphXOwBhvJwBgb","check_type": "PFjpEkWShpelMJvMVkVbCUhfP","message": "PHIXavaIMwBoOfMrHSgJutmZd","last_run_at": "2150-03-25T17:01:27.465368917-04:00","created_at": "2038-01-11T09:04:29.452009613-05:00","updated_at": "2248-05-31T05:21:41.470212697-04:00"}' | http PUT "https://xinqi.dev:8080/blazerchecks/1"  X-Api-User:user123
+// echo '{"id": 79,"creator_id": 75,"query_id": 92,"state": "XSMUKVxRvcrRlCgXeoYPwoAht","schedule": "TKGNiYcVcXqGGlUgNwWNlLlvM","emails": "THLxlCvFfuxbmJHVJLKwwipvN","slack_channels": "uUypuJkIHLaugMetnYuxNLlsA","check_type": "EkQGfVHfDwfdrlJqhRBOjXxyj","message": "tBOsNodiKrPHdEAhbBrxDayGF","last_run_at": "2113-06-23T15:48:07.741220907-04:00","created_at": "2291-09-08T16:53:25.196579006-04:00","updated_at": "2027-07-30T10:50:22.184852061-04:00"}' | http PUT "https://xinqi.dev:443/blazerchecks/1"  X-Api-User:user123
 func UpdateBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /blazerchecks/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/blazerchecks/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/blazerchecks/1" X-Api-User:user123
 func DeleteBlazerChecks(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -42,7 +42,7 @@ CREATE TABLE `batteries` (
 
 JSON Sample
 -------------------------------------
-{    "employee_id": 61,    "building_id": 37,    "id": 4,    "type": "LRmEUJjjOWTnDqbkmIoNawOyq",    "status": "EAlnbBbcMttPdFJLWZkdjNAGC",    "commission_date": "2197-04-17T23:37:02.148214162-04:00",    "last_inspection_date": "2086-11-30T08:21:38.331607087-05:00",    "operations_cert": "SdEBpvVVTOddKuKNoGrWmbuEJ",    "information": "vIiFgONZdtJUYXjFJtuJkVRJy",    "notes": "hoKarwlekihRGUvcdrqUVLnFJ",    "created_at": "2204-07-29T14:53:38.762285002-04:00",    "updated_at": "2195-05-28T10:32:58.797995071-04:00"}
+{    "employee_id": 21,    "building_id": 29,    "id": 58,    "type": "ATlfuxlTmLThoMlNKnZjotSRu",    "status": "idkHiZKdpXCYsuJXBPTKficdU",    "commission_date": "2239-11-03T01:32:02.59477926-05:00",    "last_inspection_date": "2229-09-21T05:30:37.951031015-04:00",    "operations_cert": "esSeXkilOCQWGVFvsSMKgDyQC",    "information": "hCKROhPcxSlmbafQejjTkERND",    "notes": "DeRgPaDMOUbuJFrFdqYhjrFBY",    "created_at": "2283-04-13T17:10:14.232493842-04:00",    "updated_at": "2025-04-22T10:46:58.335922255-04:00"}
 
 
 

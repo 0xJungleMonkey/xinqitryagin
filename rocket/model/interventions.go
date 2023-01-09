@@ -41,7 +41,7 @@ CREATE TABLE `interventions` (
 
 JSON Sample
 -------------------------------------
-{    "id": 55,    "author": "gDpZGfTgwxUBMjwSoVjhEFLDo",    "customer_id": 42,    "building_id": 89,    "battery_id": 21,    "column_id": 32,    "elevator_id": 31,    "employee_id": 27,    "start_datetime": "2252-07-12T04:34:33.225167429-04:00",    "end_datetime": "2201-11-08T23:05:23.245450624-05:00",    "result": "xGLGvFEYwDXGYcdLspowhyrSZ",    "report": "KxWKFhcaKOZxtFgLGZsesobyl",    "status": "yqVRMKFALSmhRXFnRsEeFlTjb",    "created_at": "2193-08-30T22:53:32.62854925-04:00",    "updated_at": "2060-11-28T15:02:23.288821949-05:00"}
+{    "id": 14,    "author": "PWEDfbQsjDUMQIpqKPcHGXmyI",    "customer_id": 2,    "building_id": 34,    "battery_id": 44,    "column_id": 49,    "elevator_id": 80,    "employee_id": 6,    "start_datetime": "2053-01-04T08:27:14.392870348-05:00",    "end_datetime": "2033-08-21T08:37:54.913067066-04:00",    "result": "gOaXBayxrNFRWfHgKNsBgTqfH",    "report": "ApTXdScVSVeOuJgFQIZXcMXms",    "status": "nnBLiIHrPoFmuBNCfAUhbTxJN",    "created_at": "2148-04-10T04:21:12.672224248-04:00",    "updated_at": "2167-07-04T19:27:12.004375002-04:00"}
 
 
 

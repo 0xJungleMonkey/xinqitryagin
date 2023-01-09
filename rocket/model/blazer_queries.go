@@ -36,7 +36,7 @@ CREATE TABLE `blazer_queries` (
 
 JSON Sample
 -------------------------------------
-{    "id": 74,    "creator_id": 38,    "name": "wcSrvZqYbJCWuMLmrHAQYjvIb",    "description": "wSQuiYmgRaasScSPIbZuhnekq",    "statement": "whHMGACNslBEFDITbPiBbqQbW",    "data_source": "obfmGIIauKXDDnuGprPoXKaHn",    "status": "hvmXmMLTnbXtbOErmIPMaFqwK",    "created_at": "2025-12-23T05:40:25.870865301-05:00",    "updated_at": "2061-11-12T20:27:21.323702645-05:00"}
+{    "id": 87,    "creator_id": 70,    "name": "NdcOmfserkVeuxdqGICjAhkZO",    "description": "MUUYcQTuoHsHAjnKIxLuwBNlq",    "statement": "dGJfoQRWBbYZmlARsTCVsnpEf",    "data_source": "tRXPTTHstmApDsEJvMalnqAHr",    "status": "DOuSUJgybpcpujIYNnkPUplHA",    "created_at": "2146-12-04T12:28:21.175094354-05:00",    "updated_at": "2252-12-29T09:16:42.379840163-05:00"}
 
 
 

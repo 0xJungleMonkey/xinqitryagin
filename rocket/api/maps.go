@@ -44,7 +44,7 @@ func configGinMapsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /maps [get]
-// http "https://xinqi.dev:8080/maps?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/maps?page=0&pagesize=20" X-Api-User:user123
 func GetAllMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /maps/{argID} [get]
-// http "https://xinqi.dev:8080/maps/1" X-Api-User:user123
+// http "https://xinqi.dev:443/maps/1" X-Api-User:user123
 func GetMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /maps [post]
-// echo '{"id": 27,"created_at": "2051-09-25T15:16:19.132276024-04:00","updated_at": "2220-07-04T14:07:36.071978684-04:00"}' | http POST "https://xinqi.dev:8080/maps" X-Api-User:user123
+// echo '{"id": 32,"created_at": "2063-05-05T15:03:09.835780651-04:00","updated_at": "2306-11-21T10:14:49.049934727-05:00"}' | http POST "https://xinqi.dev:443/maps" X-Api-User:user123
 func AddMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	maps := &model.Maps{}
@@ -171,7 +171,7 @@ func AddMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /maps/{argID} [put]
-// echo '{"id": 27,"created_at": "2051-09-25T15:16:19.132276024-04:00","updated_at": "2220-07-04T14:07:36.071978684-04:00"}' | http PUT "https://xinqi.dev:8080/maps/1"  X-Api-User:user123
+// echo '{"id": 32,"created_at": "2063-05-05T15:03:09.835780651-04:00","updated_at": "2306-11-21T10:14:49.049934727-05:00"}' | http PUT "https://xinqi.dev:443/maps/1"  X-Api-User:user123
 func UpdateMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /maps/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/maps/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/maps/1" X-Api-User:user123
 func DeleteMaps(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

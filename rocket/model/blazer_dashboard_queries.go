@@ -34,7 +34,7 @@ CREATE TABLE `blazer_dashboard_queries` (
 
 JSON Sample
 -------------------------------------
-{    "id": 0,    "dashboard_id": 47,    "query_id": 95,    "position": 79,    "created_at": "2304-09-10T23:34:25.740574979-04:00",    "updated_at": "2040-01-01T13:25:09.361126874-05:00"}
+{    "id": 50,    "dashboard_id": 39,    "query_id": 13,    "position": 65,    "created_at": "2047-04-01T11:51:11.43437793-04:00",    "updated_at": "2219-04-24T09:38:11.679308645-04:00"}
 
 
 

@@ -44,7 +44,7 @@ func configGinQuotesRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes [get]
-// http "https://xinqi.dev:8080/quotes?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/quotes?page=0&pagesize=20" X-Api-User:user123
 func GetAllQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /quotes/{argID} [get]
-// http "https://xinqi.dev:8080/quotes/1" X-Api-User:user123
+// http "https://xinqi.dev:443/quotes/1" X-Api-User:user123
 func GetQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes [post]
-// echo '{"id": 76,"building_type": "xMTvATLdGtcrbrLdYgPJHJPpu","service_quality": "MOuOsEGSMYYCyrINRgSunMnwT","number_of_apartments": "pqYkNMlVtTZtuRuIYnVQfAYvG","number_of_floors": "uAIkZYcdVkvQXVdSayTbfZbbr","number_of_businesses": "INaZsgnTvSVBAbYxhCwQTHEYK","number_of_basements": "vEkBENcmqvGNDxCLkDCTdtWCL","number_of_parking": "ESmQauyIKYKoMbBlVrKJgWSGA","number_of_cages": "HuxTuDGcdEBvjUhjrBFgiaQpd","number_of_occupants": "UqXiKxrKHmflHTVviwDAmtVJL","number_of_hours": "bsoKMEyXeWHJwltBhaDrGPwQR","number_of_elevators_needed": "AUBVfVihSldqaNxkiTIsckCTN","price_per_unit": "fYIZZtmbKfyaVSLZVekCqFqqu","elevator_price": "WGxwNSgDJTDPCwCaJqdJZSdEq","installation_fee": "WmJsnAbXAbDlBMpWDUpGfCrST","final_price": "OjrINTkHphndqAjvigZyYacYR","created_at": "2244-12-31T03:44:28.82444961-05:00","updated_at": "2150-05-20T22:07:43.497022152-04:00","name": "voqErujsPsXDniVykknqnwjUR","company_name": "pCaGaXekLRyDKqvAggLeKJKPr","email": "rCOomwYpQJZNxZtvjWoGXAEWU","phone": "IyMLCUepudgXcgoKykcFTEtAD","department": "bbRpELAZlCUAxQKBcyHmxvsqS","project_name": "swMVcwXqjyKQWyQVguGgokdjy","project_description": "gGNynsLGUFZFLkadcDVDISyQY"}' | http POST "https://xinqi.dev:8080/quotes" X-Api-User:user123
+// echo '{"id": 88,"building_type": "KVmOEWtsHFAGbvFkbhldEsxiB","service_quality": "hucHgKLRwsNuoOQpbKBiaqBUD","number_of_apartments": "RGyoMqKhPKGLWXCCQwXnmKqqF","number_of_floors": "LBdHegueEwRBdeZTWfILaxpdf","number_of_businesses": "RHfNqdrXMVQuOMgHBwcKZSpWt","number_of_basements": "FKLpXVGoLyfhOtatIUhuCPoPe","number_of_parking": "uuSLwvvngKlcLwkRdLAPUclyK","number_of_cages": "WZOZQPgpOjdIeyEHEkfWwhZGw","number_of_occupants": "fdNYGwXcMfeSJvlVXeLluSplR","number_of_hours": "NiInTecPpfgVPQEYibAwZeeoA","number_of_elevators_needed": "SmsShJkKlngamLCoGlqFJLHcb","price_per_unit": "qXatymIyFhNgXxLhSOPfspuvq","elevator_price": "YgfILLfmbaQVSAbrUwLciaDvb","installation_fee": "bhskwrqvYQmfCLCQiSCcmidKK","final_price": "TTolTDSXYNJvuRZsiecLDogGC","created_at": "2113-08-26T03:21:37.695839006-04:00","updated_at": "2254-03-19T20:13:44.070752076-04:00","name": "xwCENClmsDeGlTuJqRrZsSOnT","company_name": "wNfsrvfcLdsVCHtKZdlAmDoQW","email": "RpJsmmuMIeWUCyQKHprarAcdi","phone": "cwPnyoeDQDilYlYNkwABNbfgw","department": "vCiegXgmExeDsFULGYRvafMkP","project_name": "tOJLLOOXliOVCNHUEWjoMsbah","project_description": "JiCUKvSQgqKcAbYVLukplGuxb"}' | http POST "https://xinqi.dev:443/quotes" X-Api-User:user123
 func AddQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	quotes := &model.Quotes{}
@@ -171,7 +171,7 @@ func AddQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /quotes/{argID} [put]
-// echo '{"id": 76,"building_type": "xMTvATLdGtcrbrLdYgPJHJPpu","service_quality": "MOuOsEGSMYYCyrINRgSunMnwT","number_of_apartments": "pqYkNMlVtTZtuRuIYnVQfAYvG","number_of_floors": "uAIkZYcdVkvQXVdSayTbfZbbr","number_of_businesses": "INaZsgnTvSVBAbYxhCwQTHEYK","number_of_basements": "vEkBENcmqvGNDxCLkDCTdtWCL","number_of_parking": "ESmQauyIKYKoMbBlVrKJgWSGA","number_of_cages": "HuxTuDGcdEBvjUhjrBFgiaQpd","number_of_occupants": "UqXiKxrKHmflHTVviwDAmtVJL","number_of_hours": "bsoKMEyXeWHJwltBhaDrGPwQR","number_of_elevators_needed": "AUBVfVihSldqaNxkiTIsckCTN","price_per_unit": "fYIZZtmbKfyaVSLZVekCqFqqu","elevator_price": "WGxwNSgDJTDPCwCaJqdJZSdEq","installation_fee": "WmJsnAbXAbDlBMpWDUpGfCrST","final_price": "OjrINTkHphndqAjvigZyYacYR","created_at": "2244-12-31T03:44:28.82444961-05:00","updated_at": "2150-05-20T22:07:43.497022152-04:00","name": "voqErujsPsXDniVykknqnwjUR","company_name": "pCaGaXekLRyDKqvAggLeKJKPr","email": "rCOomwYpQJZNxZtvjWoGXAEWU","phone": "IyMLCUepudgXcgoKykcFTEtAD","department": "bbRpELAZlCUAxQKBcyHmxvsqS","project_name": "swMVcwXqjyKQWyQVguGgokdjy","project_description": "gGNynsLGUFZFLkadcDVDISyQY"}' | http PUT "https://xinqi.dev:8080/quotes/1"  X-Api-User:user123
+// echo '{"id": 88,"building_type": "KVmOEWtsHFAGbvFkbhldEsxiB","service_quality": "hucHgKLRwsNuoOQpbKBiaqBUD","number_of_apartments": "RGyoMqKhPKGLWXCCQwXnmKqqF","number_of_floors": "LBdHegueEwRBdeZTWfILaxpdf","number_of_businesses": "RHfNqdrXMVQuOMgHBwcKZSpWt","number_of_basements": "FKLpXVGoLyfhOtatIUhuCPoPe","number_of_parking": "uuSLwvvngKlcLwkRdLAPUclyK","number_of_cages": "WZOZQPgpOjdIeyEHEkfWwhZGw","number_of_occupants": "fdNYGwXcMfeSJvlVXeLluSplR","number_of_hours": "NiInTecPpfgVPQEYibAwZeeoA","number_of_elevators_needed": "SmsShJkKlngamLCoGlqFJLHcb","price_per_unit": "qXatymIyFhNgXxLhSOPfspuvq","elevator_price": "YgfILLfmbaQVSAbrUwLciaDvb","installation_fee": "bhskwrqvYQmfCLCQiSCcmidKK","final_price": "TTolTDSXYNJvuRZsiecLDogGC","created_at": "2113-08-26T03:21:37.695839006-04:00","updated_at": "2254-03-19T20:13:44.070752076-04:00","name": "xwCENClmsDeGlTuJqRrZsSOnT","company_name": "wNfsrvfcLdsVCHtKZdlAmDoQW","email": "RpJsmmuMIeWUCyQKHprarAcdi","phone": "cwPnyoeDQDilYlYNkwABNbfgw","department": "vCiegXgmExeDsFULGYRvafMkP","project_name": "tOJLLOOXliOVCNHUEWjoMsbah","project_description": "JiCUKvSQgqKcAbYVLukplGuxb"}' | http PUT "https://xinqi.dev:443/quotes/1"  X-Api-User:user123
 func UpdateQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /quotes/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/quotes/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/quotes/1" X-Api-User:user123
 func DeleteQuotes(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

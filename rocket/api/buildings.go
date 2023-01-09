@@ -44,7 +44,7 @@ func configGinBuildingsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildings [get]
-// http "https://xinqi.dev:8080/buildings?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/buildings?page=0&pagesize=20" X-Api-User:user123
 func GetAllBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /buildings/{argID} [get]
-// http "https://xinqi.dev:8080/buildings/1" X-Api-User:user123
+// http "https://xinqi.dev:443/buildings/1" X-Api-User:user123
 func GetBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildings [post]
-// echo '{"customer_id": 3,"address_id": 94,"id": 16,"full_name_of_building_admin": "XvgyoQRNmsTHWkBqTnaLjcobF","email_of_admin_of_building": "GyskUWUdMxrMqSujcopZZvkRw","phone_num_of_building_admin": 55,"full_name_of_tech_contact_for_building": "LuCymWrftlRNdikaDStlneBav","tech_contact_email_for_building": "CDZBERVkqICnImgKXOVyrhCXv","tech_contact_phone_for_building": 57,"created_at": "2229-08-01T00:41:09.140322238-04:00","updated_at": "2127-05-21T20:10:21.536520329-04:00"}' | http POST "https://xinqi.dev:8080/buildings" X-Api-User:user123
+// echo '{"customer_id": 36,"address_id": 75,"id": 43,"full_name_of_building_admin": "PikhZBvQAbSIexCdfuRjBOrCv","email_of_admin_of_building": "nuhrPpwJTXmgEgDcLKSYUDsRu","phone_num_of_building_admin": 77,"full_name_of_tech_contact_for_building": "fEEvgaILfwoHspAxsNjWfhGEc","tech_contact_email_for_building": "eBhULakAiYxGvFoKfgNTFWVcE","tech_contact_phone_for_building": 53,"created_at": "2166-03-04T13:37:58.314351706-05:00","updated_at": "2212-07-17T15:57:02.060192426-04:00"}' | http POST "https://xinqi.dev:443/buildings" X-Api-User:user123
 func AddBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	buildings := &model.Buildings{}
@@ -171,7 +171,7 @@ func AddBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildings/{argID} [put]
-// echo '{"customer_id": 3,"address_id": 94,"id": 16,"full_name_of_building_admin": "XvgyoQRNmsTHWkBqTnaLjcobF","email_of_admin_of_building": "GyskUWUdMxrMqSujcopZZvkRw","phone_num_of_building_admin": 55,"full_name_of_tech_contact_for_building": "LuCymWrftlRNdikaDStlneBav","tech_contact_email_for_building": "CDZBERVkqICnImgKXOVyrhCXv","tech_contact_phone_for_building": 57,"created_at": "2229-08-01T00:41:09.140322238-04:00","updated_at": "2127-05-21T20:10:21.536520329-04:00"}' | http PUT "https://xinqi.dev:8080/buildings/1"  X-Api-User:user123
+// echo '{"customer_id": 36,"address_id": 75,"id": 43,"full_name_of_building_admin": "PikhZBvQAbSIexCdfuRjBOrCv","email_of_admin_of_building": "nuhrPpwJTXmgEgDcLKSYUDsRu","phone_num_of_building_admin": 77,"full_name_of_tech_contact_for_building": "fEEvgaILfwoHspAxsNjWfhGEc","tech_contact_email_for_building": "eBhULakAiYxGvFoKfgNTFWVcE","tech_contact_phone_for_building": 53,"created_at": "2166-03-04T13:37:58.314351706-05:00","updated_at": "2212-07-17T15:57:02.060192426-04:00"}' | http PUT "https://xinqi.dev:443/buildings/1"  X-Api-User:user123
 func UpdateBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /buildings/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/buildings/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/buildings/1" X-Api-User:user123
 func DeleteBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

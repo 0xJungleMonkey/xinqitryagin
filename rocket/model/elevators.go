@@ -41,7 +41,7 @@ CREATE TABLE `elevators` (
 
 JSON Sample
 -------------------------------------
-{    "column_id": 30,    "id": 45,    "serial_number": 58,    "model": "IKeegHIuvBoTUWkunJYeyTPwf",    "type": "TLlGeHVqPOQPjHouPoQTJFPEb",    "status": "GiigtMWNUudJhaihkAGIPPYbo",    "commision_date": "2146-01-14T15:28:09.265315357-05:00",    "last_inspection_date": "2106-10-12T16:30:03.220650278-04:00",    "inspection_cert": "vCuAIHJWUiihyrhbZXMKvOxTF",    "information": "giJMxGSmLyClPRQtRfpuipEAN",    "notes": "PwxYMjffUHsHoyJQsgxyYOmMM",    "created_at": "2123-10-22T17:09:06.165564197-04:00",    "updated_at": "2100-08-06T05:34:08.697236723-04:00"}
+{    "column_id": 48,    "id": 99,    "serial_number": 75,    "model": "ajduYLNGGRrZigOGjHJaooyhw",    "type": "KtKoRPwppeEwvJybmKlPchdSW",    "status": "CKbqiDfGdxIJgLZhaQQHSPvqN",    "commision_date": "2174-09-03T15:41:29.697008849-04:00",    "last_inspection_date": "2214-09-09T19:11:30.597946503-04:00",    "inspection_cert": "CqbVrduKtkUlWdZXjtKlHGOJD",    "information": "wImUsDPdxlnfYKwpwmnrRxlJd",    "notes": "tEFoHktVXsLnwNGxQHQehHaVc",    "created_at": "2304-12-27T12:23:11.553614863-05:00",    "updated_at": "2269-11-23T10:11:54.617340153-05:00"}
 
 
 

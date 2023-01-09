@@ -44,7 +44,7 @@ func configGinActiveAdminCommentsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activeadmincomments [get]
-// http "https://xinqi.dev:8080/activeadmincomments?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/activeadmincomments?page=0&pagesize=20" X-Api-User:user123
 func GetAllActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /activeadmincomments/{argID} [get]
-// http "https://xinqi.dev:8080/activeadmincomments/1" X-Api-User:user123
+// http "https://xinqi.dev:443/activeadmincomments/1" X-Api-User:user123
 func GetActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activeadmincomments [post]
-// echo '{"id": 98,"namespace": "WQlsJyAfVCOrUVNfUJpSWRjIq","body": "OxkhGRaVHFTDJUqQQCUQVLKLL","resource_type": "fqwymQRRYaydfCjtHGmOUgTYP","resource_id": 11,"author_type": "CKLYnDrjuyWCikBbQGKqrZtYq","author_id": 16,"created_at": "2221-02-16T10:22:27.81830752-05:00","updated_at": "2237-04-17T13:59:22.556384504-04:00"}' | http POST "https://xinqi.dev:8080/activeadmincomments" X-Api-User:user123
+// echo '{"id": 60,"namespace": "FUDGUxnhSBQgVyfPDqibeZBHo","body": "adXTIJtjGDMZiqAVUvouUymJE","resource_type": "YOXxZtTkKgwmnuhPVNxXFnSDA","resource_id": 31,"author_type": "YPtDqwhmAssVFOHBtesBlXfGT","author_id": 15,"created_at": "2123-02-12T01:05:19.306534679-05:00","updated_at": "2073-11-02T01:32:25.863236464-04:00"}' | http POST "https://xinqi.dev:443/activeadmincomments" X-Api-User:user123
 func AddActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activeadmincomments := &model.ActiveAdminComments{}
@@ -171,7 +171,7 @@ func AddActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activeadmincomments/{argID} [put]
-// echo '{"id": 98,"namespace": "WQlsJyAfVCOrUVNfUJpSWRjIq","body": "OxkhGRaVHFTDJUqQQCUQVLKLL","resource_type": "fqwymQRRYaydfCjtHGmOUgTYP","resource_id": 11,"author_type": "CKLYnDrjuyWCikBbQGKqrZtYq","author_id": 16,"created_at": "2221-02-16T10:22:27.81830752-05:00","updated_at": "2237-04-17T13:59:22.556384504-04:00"}' | http PUT "https://xinqi.dev:8080/activeadmincomments/1"  X-Api-User:user123
+// echo '{"id": 60,"namespace": "FUDGUxnhSBQgVyfPDqibeZBHo","body": "adXTIJtjGDMZiqAVUvouUymJE","resource_type": "YOXxZtTkKgwmnuhPVNxXFnSDA","resource_id": 31,"author_type": "YPtDqwhmAssVFOHBtesBlXfGT","author_id": 15,"created_at": "2123-02-12T01:05:19.306534679-05:00","updated_at": "2073-11-02T01:32:25.863236464-04:00"}' | http PUT "https://xinqi.dev:443/activeadmincomments/1"  X-Api-User:user123
 func UpdateActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httpro
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /activeadmincomments/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/activeadmincomments/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/activeadmincomments/1" X-Api-User:user123
 func DeleteActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

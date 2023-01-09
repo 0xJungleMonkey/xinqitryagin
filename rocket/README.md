@@ -40,39 +40,39 @@ Will create a binary `./bin/example`
 ```.bash
 ./bin/example
 ```
-This will launch the web server on xinqi.dev:8080
+This will launch the web server on xinqi.dev:443
 
 ## Swagger
 The swagger web ui contains the documentation for the http server, it also provides an interactive interface to exercise the api and view results.
-https://xinqi.dev:8080/swagger/index.html
+https://xinqi.dev:443/swagger/index.html
 
 ## REST urls for fetching data
 
 
-* https://xinqi.dev:8080/activeadmincomments
-* https://xinqi.dev:8080/activestorageattachments
-* https://xinqi.dev:8080/activestorageblobs
-* https://xinqi.dev:8080/addresses
-* https://xinqi.dev:8080/adminusers
-* https://xinqi.dev:8080/arinternalmetadata
-* https://xinqi.dev:8080/batteries
-* https://xinqi.dev:8080/blazeraudits
-* https://xinqi.dev:8080/blazerchecks
-* https://xinqi.dev:8080/blazerdashboardqueries
-* https://xinqi.dev:8080/blazerdashboards
-* https://xinqi.dev:8080/blazerqueries
-* https://xinqi.dev:8080/buildingdetails
-* https://xinqi.dev:8080/buildings
-* https://xinqi.dev:8080/columns
-* https://xinqi.dev:8080/customers
-* https://xinqi.dev:8080/elevators
-* https://xinqi.dev:8080/employees
-* https://xinqi.dev:8080/interventions
-* https://xinqi.dev:8080/leads
-* https://xinqi.dev:8080/maps
-* https://xinqi.dev:8080/quotes
-* https://xinqi.dev:8080/schemamigrations
-* https://xinqi.dev:8080/users_
+* https://xinqi.dev:443/activeadmincomments
+* https://xinqi.dev:443/activestorageattachments
+* https://xinqi.dev:443/activestorageblobs
+* https://xinqi.dev:443/addresses
+* https://xinqi.dev:443/adminusers
+* https://xinqi.dev:443/arinternalmetadata
+* https://xinqi.dev:443/batteries
+* https://xinqi.dev:443/blazeraudits
+* https://xinqi.dev:443/blazerchecks
+* https://xinqi.dev:443/blazerdashboardqueries
+* https://xinqi.dev:443/blazerdashboards
+* https://xinqi.dev:443/blazerqueries
+* https://xinqi.dev:443/buildingdetails
+* https://xinqi.dev:443/buildings
+* https://xinqi.dev:443/columns
+* https://xinqi.dev:443/customers
+* https://xinqi.dev:443/elevators
+* https://xinqi.dev:443/employees
+* https://xinqi.dev:443/interventions
+* https://xinqi.dev:443/leads
+* https://xinqi.dev:443/maps
+* https://xinqi.dev:443/quotes
+* https://xinqi.dev:443/schemamigrations
+* https://xinqi.dev:443/users_
 
 ## Project Generated Details
 ```.bash
@@ -95,7 +95,9 @@ gen \
     --server \
     --overwrite \
     --host=xinqi.dev \
+    --port=443 \
     --rest \
+    --listen=:8080 \
     --scheme=https \
     --generate-dao \
     --generate-proj \

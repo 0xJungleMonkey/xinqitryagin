@@ -34,7 +34,7 @@ CREATE TABLE `building_details` (
 
 JSON Sample
 -------------------------------------
-{    "building_id": 11,    "id": 64,    "information_key": "MlnubnrKHTkniPLXXLenRorkx",    "value": "mkFATIbIvvreKPuNggyjlEJud",    "created_at": "2139-10-04T02:41:33.113925679-04:00",    "updated_at": "2099-12-10T05:40:36.118204781-05:00"}
+{    "building_id": 51,    "id": 36,    "information_key": "JDcukNVWiVBVRLAabTgfuuVnY",    "value": "HGdfSgMXNRgJFwmsImBCCKTsD",    "created_at": "2104-10-24T00:15:37.502813235-04:00",    "updated_at": "2206-05-21T03:09:44.430668259-04:00"}
 
 
 

@@ -44,7 +44,7 @@ func configGinLeadsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /leads [get]
-// http "https://xinqi.dev:8080/leads?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/leads?page=0&pagesize=20" X-Api-User:user123
 func GetAllLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /leads/{argID} [get]
-// http "https://xinqi.dev:8080/leads/1" X-Api-User:user123
+// http "https://xinqi.dev:443/leads/1" X-Api-User:user123
 func GetLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /leads [post]
-// echo '{"id": 18,"full_name_of_the_contact": "EXVeSMEiZvRfkCgvGuCHGILsB","bussiness_name": "EpEbaqsTOjpVTjHMVAAMVebZK","email": "lIxvCocTpaUnlOlSaFHdtTkEh","phone": "GfSdWkXsytcRGxJPCPYJedxty","project_name": "MLXdwmsSBCeVPumdaBkDPofcZ","project_description": "VneOymDOLhFiiXdBccILAIyrH","department_incharge": "ftuvxKNQrSnepBEPVPsBlpWfZ","message": "dUiNBOpxngwGNPIOXgLVWTaPo","attached_file": "CkY2YApOWBwQTCtOKAMpCx4oEyQvVmE7Pl5JGUYLUiNQW00BXBtaIlkETDYIVjEpDFFOBxUGCw1VU1MlOE0SLxw7LEwQDyQCCyMSFAZEFgVCUSYYRUs/Pw1QXRM1TmMKOAM=","creation_date": "2299-08-29T05:53:56.173221422-04:00","created_at": "2246-07-13T22:44:59.400116506-04:00","updated_at": "2023-05-26T21:27:53.137809367-04:00"}' | http POST "https://xinqi.dev:8080/leads" X-Api-User:user123
+// echo '{"id": 48,"full_name_of_the_contact": "eVNovaebfsHXjTIEWkWLBhAxw","bussiness_name": "KOpPLRtgrIBqqdgKDLSmsTuOr","email": "AcqfTTMlnmslohrLgauZWUpQB","phone": "qReYwJXYlBXltxQMWbxabfOBQ","project_name": "WnOOUnjPbLWsGoKnDSskrKveA","project_description": "bujaAPqnGSaxTVuxQoAqbYbGE","department_incharge": "hItDASwwOesrFqlfhcsZsLXCP","message": "GUjOWFBcOKnvGUJNWHinBGRaj","attached_file": "IU9BWEodDVJNCEIaDwouOAMCIwgWFVkCLQoZWxlJHFlDB1MDWClPOVsIDypiQRxPUExIUjsGX1gS","creation_date": "2144-04-14T02:09:31.547324224-04:00","created_at": "2206-10-26T22:38:08.990963601-04:00","updated_at": "2180-08-08T11:13:44.146573219-04:00"}' | http POST "https://xinqi.dev:443/leads" X-Api-User:user123
 func AddLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	leads := &model.Leads{}
@@ -171,7 +171,7 @@ func AddLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /leads/{argID} [put]
-// echo '{"id": 18,"full_name_of_the_contact": "EXVeSMEiZvRfkCgvGuCHGILsB","bussiness_name": "EpEbaqsTOjpVTjHMVAAMVebZK","email": "lIxvCocTpaUnlOlSaFHdtTkEh","phone": "GfSdWkXsytcRGxJPCPYJedxty","project_name": "MLXdwmsSBCeVPumdaBkDPofcZ","project_description": "VneOymDOLhFiiXdBccILAIyrH","department_incharge": "ftuvxKNQrSnepBEPVPsBlpWfZ","message": "dUiNBOpxngwGNPIOXgLVWTaPo","attached_file": "CkY2YApOWBwQTCtOKAMpCx4oEyQvVmE7Pl5JGUYLUiNQW00BXBtaIlkETDYIVjEpDFFOBxUGCw1VU1MlOE0SLxw7LEwQDyQCCyMSFAZEFgVCUSYYRUs/Pw1QXRM1TmMKOAM=","creation_date": "2299-08-29T05:53:56.173221422-04:00","created_at": "2246-07-13T22:44:59.400116506-04:00","updated_at": "2023-05-26T21:27:53.137809367-04:00"}' | http PUT "https://xinqi.dev:8080/leads/1"  X-Api-User:user123
+// echo '{"id": 48,"full_name_of_the_contact": "eVNovaebfsHXjTIEWkWLBhAxw","bussiness_name": "KOpPLRtgrIBqqdgKDLSmsTuOr","email": "AcqfTTMlnmslohrLgauZWUpQB","phone": "qReYwJXYlBXltxQMWbxabfOBQ","project_name": "WnOOUnjPbLWsGoKnDSskrKveA","project_description": "bujaAPqnGSaxTVuxQoAqbYbGE","department_incharge": "hItDASwwOesrFqlfhcsZsLXCP","message": "GUjOWFBcOKnvGUJNWHinBGRaj","attached_file": "IU9BWEodDVJNCEIaDwouOAMCIwgWFVkCLQoZWxlJHFlDB1MDWClPOVsIDypiQRxPUExIUjsGX1gS","creation_date": "2144-04-14T02:09:31.547324224-04:00","created_at": "2206-10-26T22:38:08.990963601-04:00","updated_at": "2180-08-08T11:13:44.146573219-04:00"}' | http PUT "https://xinqi.dev:443/leads/1"  X-Api-User:user123
 func UpdateLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /leads/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/leads/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/leads/1" X-Api-User:user123
 func DeleteLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

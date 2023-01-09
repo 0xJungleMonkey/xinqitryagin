@@ -40,7 +40,7 @@ CREATE TABLE `addresses` (
 
 JSON Sample
 -------------------------------------
-{    "id": 19,    "address_type": "ysEYusBvKEsKCCZCGoipSEJZw",    "status": "kkpJWaqIYBXVAmbOcRCxTSkov",    "entity": "ptnRZIjNlmblvvOqCBqXOSQVq",    "number_and_street": "cJcGXmXIyAWERoGsAcwnLbEgq",    "suite_or_apartment": "MvikQqNtbjZZhDDiSyTuAnQph",    "city": "lGtfSarMOMtMdANqTPPnkBimd",    "postal_code": "OJGdPhirgGLxPuXrIZyiLISjP",    "country": "DjVVcgGUtQDxssGjtCdrfrQaa",    "notes": "HxuOqDNEAxfNOVdtiDABWXcDM",    "created_at": "2104-03-30T12:17:42.106755569-04:00",    "updated_at": "2210-05-17T15:21:17.590633911-04:00",    "latitude": 0.8088093,    "longitude": 0.19749658}
+{    "id": 24,    "address_type": "hlolbIKttQNbdakFVeVehSaJK",    "status": "MOMkAtvnCLnAcSKHhKupygdqi",    "entity": "asvVVLrsVfeRMwfqcIlcHaXRd",    "number_and_street": "PNkjKXtXPGtFRupLgJZedVIsS",    "suite_or_apartment": "AntDPaBtwZSsVwaZVPmSLUhRc",    "city": "vCidxUHsUuRMZKIljBIdfQnLO",    "postal_code": "NwHgUvOmiCotPmnIrrWNtLOhH",    "country": "nkUdZdBaItmDKFOadTnPnMtAC",    "notes": "oipWLLuVTEeimXSWdWBoQfGZT",    "created_at": "2278-05-28T14:40:16.809797006-04:00",    "updated_at": "2207-08-16T22:51:36.157414608-04:00",    "latitude": 0.2979277,    "longitude": 0.16605319}
 
 
 

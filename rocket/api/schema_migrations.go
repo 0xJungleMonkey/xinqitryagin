@@ -44,7 +44,7 @@ func configGinSchemaMigrationsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /schemamigrations [get]
-// http "https://xinqi.dev:8080/schemamigrations?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/schemamigrations?page=0&pagesize=20" X-Api-User:user123
 func GetAllSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /schemamigrations/{argVersion} [get]
-// http "https://xinqi.dev:8080/schemamigrations/hello world" X-Api-User:user123
+// http "https://xinqi.dev:443/schemamigrations/hello world" X-Api-User:user123
 func GetSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /schemamigrations [post]
-// echo '{"version": "qQZEwuWdfWyGSODYaOHTCevvx"}' | http POST "https://xinqi.dev:8080/schemamigrations" X-Api-User:user123
+// echo '{"version": "WOWSkTyppmwaEtLpMYEpOnhbI"}' | http POST "https://xinqi.dev:443/schemamigrations" X-Api-User:user123
 func AddSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	schemamigrations := &model.SchemaMigrations{}
@@ -171,7 +171,7 @@ func AddSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.P
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /schemamigrations/{argVersion} [put]
-// echo '{"version": "qQZEwuWdfWyGSODYaOHTCevvx"}' | http PUT "https://xinqi.dev:8080/schemamigrations/hello world"  X-Api-User:user123
+// echo '{"version": "WOWSkTyppmwaEtLpMYEpOnhbI"}' | http PUT "https://xinqi.dev:443/schemamigrations/hello world"  X-Api-User:user123
 func UpdateSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /schemamigrations/{argVersion} [delete]
-// http DELETE "https://xinqi.dev:8080/schemamigrations/hello world" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/schemamigrations/hello world" X-Api-User:user123
 func DeleteSchemaMigrations(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

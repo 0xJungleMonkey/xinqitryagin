@@ -44,7 +44,7 @@ func configGinElevatorsRouter(router gin.IRoutes) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators [get]
-// http "https://xinqi.dev:8080/elevators?page=0&pagesize=20" X-Api-User:user123
+// http "https://xinqi.dev:443/elevators?page=0&pagesize=20" X-Api-User:user123
 func GetAllElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	page, err := readInt(r, "page", 0)
@@ -88,7 +88,7 @@ func GetAllElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError "ErrNotFound, db record for id not found - returns NotFound HTTP 404 not found error"
 // @Router /elevators/{argID} [get]
-// http "https://xinqi.dev:8080/elevators/1" X-Api-User:user123
+// http "https://xinqi.dev:443/elevators/1" X-Api-User:user123
 func GetElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -123,7 +123,7 @@ func GetElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators [post]
-// echo '{"column_id": 30,"id": 45,"serial_number": 58,"model": "IKeegHIuvBoTUWkunJYeyTPwf","type": "TLlGeHVqPOQPjHouPoQTJFPEb","status": "GiigtMWNUudJhaihkAGIPPYbo","commision_date": "2146-01-14T15:28:09.265315357-05:00","last_inspection_date": "2106-10-12T16:30:03.220650278-04:00","inspection_cert": "vCuAIHJWUiihyrhbZXMKvOxTF","information": "giJMxGSmLyClPRQtRfpuipEAN","notes": "PwxYMjffUHsHoyJQsgxyYOmMM","created_at": "2123-10-22T17:09:06.165564197-04:00","updated_at": "2100-08-06T05:34:08.697236723-04:00"}' | http POST "https://xinqi.dev:8080/elevators" X-Api-User:user123
+// echo '{"column_id": 48,"id": 99,"serial_number": 75,"model": "ajduYLNGGRrZigOGjHJaooyhw","type": "KtKoRPwppeEwvJybmKlPchdSW","status": "CKbqiDfGdxIJgLZhaQQHSPvqN","commision_date": "2174-09-03T15:41:29.697008849-04:00","last_inspection_date": "2214-09-09T19:11:30.597946503-04:00","inspection_cert": "CqbVrduKtkUlWdZXjtKlHGOJD","information": "wImUsDPdxlnfYKwpwmnrRxlJd","notes": "tEFoHktVXsLnwNGxQHQehHaVc","created_at": "2304-12-27T12:23:11.553614863-05:00","updated_at": "2269-11-23T10:11:54.617340153-05:00"}' | http POST "https://xinqi.dev:443/elevators" X-Api-User:user123
 func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	elevators := &model.Elevators{}
@@ -171,7 +171,7 @@ func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators/{argID} [put]
-// echo '{"column_id": 30,"id": 45,"serial_number": 58,"model": "IKeegHIuvBoTUWkunJYeyTPwf","type": "TLlGeHVqPOQPjHouPoQTJFPEb","status": "GiigtMWNUudJhaihkAGIPPYbo","commision_date": "2146-01-14T15:28:09.265315357-05:00","last_inspection_date": "2106-10-12T16:30:03.220650278-04:00","inspection_cert": "vCuAIHJWUiihyrhbZXMKvOxTF","information": "giJMxGSmLyClPRQtRfpuipEAN","notes": "PwxYMjffUHsHoyJQsgxyYOmMM","created_at": "2123-10-22T17:09:06.165564197-04:00","updated_at": "2100-08-06T05:34:08.697236723-04:00"}' | http PUT "https://xinqi.dev:8080/elevators/1"  X-Api-User:user123
+// echo '{"column_id": 48,"id": 99,"serial_number": 75,"model": "ajduYLNGGRrZigOGjHJaooyhw","type": "KtKoRPwppeEwvJybmKlPchdSW","status": "CKbqiDfGdxIJgLZhaQQHSPvqN","commision_date": "2174-09-03T15:41:29.697008849-04:00","last_inspection_date": "2214-09-09T19:11:30.597946503-04:00","inspection_cert": "CqbVrduKtkUlWdZXjtKlHGOJD","information": "wImUsDPdxlnfYKwpwmnrRxlJd","notes": "tEFoHktVXsLnwNGxQHQehHaVc","created_at": "2304-12-27T12:23:11.553614863-05:00","updated_at": "2269-11-23T10:11:54.617340153-05:00"}' | http PUT "https://xinqi.dev:443/elevators/1"  X-Api-User:user123
 func UpdateElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
@@ -225,7 +225,7 @@ func UpdateElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 500 {object} api.HTTPError
 // @Router /elevators/{argID} [delete]
-// http DELETE "https://xinqi.dev:8080/elevators/1" X-Api-User:user123
+// http DELETE "https://xinqi.dev:443/elevators/1" X-Api-User:user123
 func DeleteElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
