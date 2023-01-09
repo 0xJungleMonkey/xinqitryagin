@@ -40,7 +40,7 @@ CREATE TABLE `addresses` (
 
 JSON Sample
 -------------------------------------
-{    "id": 8,    "address_type": "RkaTEvwbYVcQjKQZdsQrFNWQv",    "status": "gjxNPDloofXgYtHWMQlLcIsDR",    "entity": "xVdvLAebXSGwLCGVhmDmZROmC",    "number_and_street": "tmNwuKgcpQcZkDqiMhQOpVPVP",    "suite_or_apartment": "uiFQkbNqVLLFBlCNwbIgZFhmW",    "city": "deBgIFJNVxDlAsTBRdFGkAfij",    "postal_code": "OtTmOhLMwZjXNqYQtDQIaVixN",    "country": "CjsdKixaigslNUiMIPTLaARID",    "notes": "doosrrpUkwNjUNNpcpZdKsVfY",    "created_at": "2038-10-14T10:17:22.292242305-04:00",    "updated_at": "2275-04-04T08:44:15.654140493-04:00",    "latitude": 0.6202745,    "longitude": 0.04570943}
+{    "id": 96,    "address_type": "XtbjsoJqhOPgJtDotUYyCyKns",    "status": "YqMSjyhePLAKZDKhqyoOkGHgX",    "entity": "fOtadXcFSWHjadhWxjKnJHgAs",    "number_and_street": "IAPaBIQlvFSqrACUUYWIgWtRQ",    "suite_or_apartment": "KSHtEgsQHIYOTgnUhZIZnphFR",    "city": "qiqHeQiMTNSDtQJKmflPxixHo",    "postal_code": "PCmDZsigqEUxZGKtLieCSNwgf",    "country": "WThCIZKTQapjTYHaOtEbPqHSh",    "notes": "TBkvFawNrvLMcttmefjlTrmMk",    "created_at": "2169-10-07T03:47:40.455929199-04:00",    "updated_at": "2276-12-02T10:28:51.918914572-05:00",    "latitude": 0.30996025,    "longitude": 0.40509677}
 
 
 
@@ -51,23 +51,23 @@ type Addresses struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] address_type                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	AddressType string `gorm:"column:address_type;type:varchar;size:255;" json:"address_type"`
+	AddressType null.String `gorm:"column:address_type;type:varchar;size:255;" json:"address_type"`
 	//[ 2] status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status string `gorm:"column:status;type:varchar;size:255;" json:"status"`
+	Status null.String `gorm:"column:status;type:varchar;size:255;" json:"status"`
 	//[ 3] entity                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Entity string `gorm:"column:entity;type:varchar;size:255;" json:"entity"`
+	Entity null.String `gorm:"column:entity;type:varchar;size:255;" json:"entity"`
 	//[ 4] number_and_street                              varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	NumberAndStreet string `gorm:"column:number_and_street;type:varchar;size:255;" json:"number_and_street"`
+	NumberAndStreet null.String `gorm:"column:number_and_street;type:varchar;size:255;" json:"number_and_street"`
 	//[ 5] suite_or_apartment                             varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	SuiteOrApartment string `gorm:"column:suite_or_apartment;type:varchar;size:255;" json:"suite_or_apartment"`
+	SuiteOrApartment null.String `gorm:"column:suite_or_apartment;type:varchar;size:255;" json:"suite_or_apartment"`
 	//[ 6] city                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	City string `gorm:"column:city;type:varchar;size:255;" json:"city"`
+	City null.String `gorm:"column:city;type:varchar;size:255;" json:"city"`
 	//[ 7] postal_code                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	PostalCode string `gorm:"column:postal_code;type:varchar;size:255;" json:"postal_code"`
+	PostalCode null.String `gorm:"column:postal_code;type:varchar;size:255;" json:"postal_code"`
 	//[ 8] country                                        varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Country string `gorm:"column:country;type:varchar;size:255;" json:"country"`
+	Country null.String `gorm:"column:country;type:varchar;size:255;" json:"country"`
 	//[ 9] notes                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Notes string `gorm:"column:notes;type:varchar;size:255;" json:"notes"`
+	Notes null.String `gorm:"column:notes;type:varchar;size:255;" json:"notes"`
 	//[10] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[11] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -117,7 +117,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "AddressType",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "address_type",
 			ProtobufFieldName:  "address_type",
 			ProtobufType:       "string",
@@ -138,7 +138,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",
@@ -159,7 +159,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Entity",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "entity",
 			ProtobufFieldName:  "entity",
 			ProtobufType:       "string",
@@ -180,7 +180,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "NumberAndStreet",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "number_and_street",
 			ProtobufFieldName:  "number_and_street",
 			ProtobufType:       "string",
@@ -201,7 +201,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "SuiteOrApartment",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "suite_or_apartment",
 			ProtobufFieldName:  "suite_or_apartment",
 			ProtobufType:       "string",
@@ -222,7 +222,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "City",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "city",
 			ProtobufFieldName:  "city",
 			ProtobufType:       "string",
@@ -243,7 +243,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "PostalCode",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "postal_code",
 			ProtobufFieldName:  "postal_code",
 			ProtobufType:       "string",
@@ -264,7 +264,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Country",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "country",
 			ProtobufFieldName:  "country",
 			ProtobufType:       "string",
@@ -285,7 +285,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Notes",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "notes",
 			ProtobufFieldName:  "notes",
 			ProtobufType:       "string",

@@ -34,7 +34,7 @@ CREATE TABLE `blazer_audits` (
 
 JSON Sample
 -------------------------------------
-{    "id": 27,    "user_id": 82,    "query_id": 84,    "statement": "KFrbshwGIgKrFIVkkqbcFUyjI",    "data_source": "HvnRqvhqPBWLDtODEJZXbwLam",    "created_at": "2245-04-19T21:51:28.619843212-04:00"}
+{    "id": 7,    "user_id": 60,    "query_id": 8,    "statement": "YXiHpKjsHciWTELlFilwkSGch",    "data_source": "WKZdmVhrfXBblaPamZcFIjxsy",    "created_at": "2215-01-08T10:47:08.246446584-05:00"}
 
 
 
@@ -45,15 +45,15 @@ type BlazerAudits struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	UserID int `gorm:"column:user_id;type:bigint;" json:"user_id"`
+	UserID null.Int `gorm:"column:user_id;type:bigint;" json:"user_id"`
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	QueryID int `gorm:"column:query_id;type:bigint;" json:"query_id"`
+	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Statement string `gorm:"column:statement;type:text;size:65535;" json:"statement"`
+	Statement null.String `gorm:"column:statement;type:text;size:65535;" json:"statement"`
 	//[ 4] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	DataSource string `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
+	DataSource null.String `gorm:"column:data_source;type:varchar;size:255;" json:"data_source"`
 	//[ 5] created_at                                     datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
+	CreatedAt null.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 }
 
 var blazer_auditsTableInfo = &TableInfo{
@@ -95,7 +95,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "UserID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "user_id",
 			ProtobufFieldName:  "user_id",
 			ProtobufType:       "int64",
@@ -116,7 +116,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "QueryID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "query_id",
 			ProtobufFieldName:  "query_id",
 			ProtobufType:       "int64",
@@ -137,7 +137,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Statement",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "statement",
 			ProtobufFieldName:  "statement",
 			ProtobufType:       "string",
@@ -158,7 +158,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "DataSource",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "data_source",
 			ProtobufFieldName:  "data_source",
 			ProtobufType:       "string",
@@ -179,7 +179,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatedAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "created_at",
 			ProtobufFieldName:  "created_at",
 			ProtobufType:       "google.protobuf.Timestamp",

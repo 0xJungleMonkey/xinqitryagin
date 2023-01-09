@@ -123,7 +123,7 @@ func GetLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /leads [post]
-// echo '{"id": 3,"full_name_of_the_contact": "qGUrYHotjoogjClFAxDQZlkrO","bussiness_name": "NhDbeOQFEuYrrfJoUmLscEDea","email": "BCfwyEDPZmlhZuLPuxKFhJUEu","phone": "euxHFXkPjrWFuWuZiKBXMIEmD","project_name": "gkkTeCbAGVgvBrtZgHEHtCEgS","project_description": "IhSKUBKgMxVOfCSQKKFIAsbeR","department_incharge": "urdtEJWerQfSQrHBRYPQqlfno","message": "cqiEbRRYfsLvHhYXjcTDMHIee","attached_file": "DhIkR1AdHRNNOCRPHkYgWBcwMS5SEAU3OCo4OToVAFMfNVBURBQVBF1FRV0dI0UbAE8bTTEvIzJBDVpYND4hEApPCVM=","creation_date": "2081-11-10T22:08:42.222514957-05:00","created_at": "2083-01-05T07:44:04.85001711-05:00","updated_at": "2242-09-15T14:26:23.631717092-04:00"}' | http POST "http://localhost:8080/leads" X-Api-User:user123
+// echo '{"id": 59,"full_name_of_the_contact": "SffAuXKveZdGAWglMfIGWXvlR","bussiness_name": "CxjHdOwDcgdeqxZDjWmuPZuGB","email": "mVCdwXmwJBFsGaEOnaPLxEkga","phone": "NQNwrdujgguRiAIAaqgIRhKiE","project_name": "RoRUFPDcuMNAemMNqFcgWPmog","project_description": "RNnSgTJCTdXulnHdyftUNYbbJ","department_incharge": "qUKQTcorIFusuvIrNPBssTZUR","message": "jTjRvtkXmmnlJYBtrrUUvRVBM","attached_file": "YU0YYFpSOVIDJzpFT1kuNTdCXSInAwVWHDQuEghTO1hZBSRUNRkdGEY4Ui4QMAckITMhXCIhTT1GTjlPXyoGD1pJTxsIJGA9Hx0PBCUQPjs2CQ==","creation_date": "2193-02-08T18:23:51.795708179-05:00","created_at": "2266-02-27T16:56:45.947281709-05:00","updated_at": "2176-06-07T03:53:36.522028335-04:00"}' | http POST "http://localhost:8080/leads" X-Api-User:user123
 func AddLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	leads := &model.Leads{}
@@ -171,7 +171,7 @@ func AddLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /leads/{argID} [put]
-// echo '{"id": 3,"full_name_of_the_contact": "qGUrYHotjoogjClFAxDQZlkrO","bussiness_name": "NhDbeOQFEuYrrfJoUmLscEDea","email": "BCfwyEDPZmlhZuLPuxKFhJUEu","phone": "euxHFXkPjrWFuWuZiKBXMIEmD","project_name": "gkkTeCbAGVgvBrtZgHEHtCEgS","project_description": "IhSKUBKgMxVOfCSQKKFIAsbeR","department_incharge": "urdtEJWerQfSQrHBRYPQqlfno","message": "cqiEbRRYfsLvHhYXjcTDMHIee","attached_file": "DhIkR1AdHRNNOCRPHkYgWBcwMS5SEAU3OCo4OToVAFMfNVBURBQVBF1FRV0dI0UbAE8bTTEvIzJBDVpYND4hEApPCVM=","creation_date": "2081-11-10T22:08:42.222514957-05:00","created_at": "2083-01-05T07:44:04.85001711-05:00","updated_at": "2242-09-15T14:26:23.631717092-04:00"}' | http PUT "http://localhost:8080/leads/1"  X-Api-User:user123
+// echo '{"id": 59,"full_name_of_the_contact": "SffAuXKveZdGAWglMfIGWXvlR","bussiness_name": "CxjHdOwDcgdeqxZDjWmuPZuGB","email": "mVCdwXmwJBFsGaEOnaPLxEkga","phone": "NQNwrdujgguRiAIAaqgIRhKiE","project_name": "RoRUFPDcuMNAemMNqFcgWPmog","project_description": "RNnSgTJCTdXulnHdyftUNYbbJ","department_incharge": "qUKQTcorIFusuvIrNPBssTZUR","message": "jTjRvtkXmmnlJYBtrrUUvRVBM","attached_file": "YU0YYFpSOVIDJzpFT1kuNTdCXSInAwVWHDQuEghTO1hZBSRUNRkdGEY4Ui4QMAckITMhXCIhTT1GTjlPXyoGD1pJTxsIJGA9Hx0PBCUQPjs2CQ==","creation_date": "2193-02-08T18:23:51.795708179-05:00","created_at": "2266-02-27T16:56:45.947281709-05:00","updated_at": "2176-06-07T03:53:36.522028335-04:00"}' | http PUT "http://localhost:8080/leads/1"  X-Api-User:user123
 func UpdateLeads(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

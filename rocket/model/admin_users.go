@@ -36,7 +36,7 @@ CREATE TABLE `admin_users` (
 
 JSON Sample
 -------------------------------------
-{    "id": 18,    "email": "IlilALlglhXPXCgqeXYkhAfFI",    "encrypted_password": "PbRcmrrLXgCTsAdnHIXjXQQey",    "reset_password_token": "plwicApMrNpaRoRpjEnAMCulg",    "reset_password_sent_at": "2069-03-26T17:18:05.041137398-04:00",    "remember_created_at": "2314-02-13T01:36:54.382880052-05:00",    "created_at": "2294-12-02T12:25:51.287070111-05:00",    "updated_at": "2125-11-10T13:26:52.108394433-05:00"}
+{    "id": 99,    "email": "pxoKEgJRFHETIIQANCJtblDAp",    "encrypted_password": "RQxKfTbSDSWyTQMeGOWwUBkWv",    "reset_password_token": "yFkrvNBKxOUHCCcVAhTQsnLmp",    "reset_password_sent_at": "2310-01-12T20:36:07.187190547-05:00",    "remember_created_at": "2292-10-22T03:43:58.146073278-04:00",    "created_at": "2299-01-06T20:17:23.596949402-05:00",    "updated_at": "2198-02-02T14:45:44.244426385-05:00"}
 
 
 
@@ -51,11 +51,11 @@ type AdminUsers struct {
 	//[ 2] encrypted_password                             varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	EncryptedPassword string `gorm:"column:encrypted_password;type:varchar;size:255;" json:"encrypted_password"`
 	//[ 3] reset_password_token                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResetPasswordToken string `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
+	ResetPasswordToken null.String `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
 	//[ 4] reset_password_sent_at                         datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	ResetPasswordSentAt time.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
+	ResetPasswordSentAt null.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
 	//[ 5] remember_created_at                            datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	RememberCreatedAt time.Time `gorm:"column:remember_created_at;type:datetime;" json:"remember_created_at"`
+	RememberCreatedAt null.Time `gorm:"column:remember_created_at;type:datetime;" json:"remember_created_at"`
 	//[ 6] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 7] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -143,7 +143,7 @@ var admin_usersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResetPasswordToken",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "reset_password_token",
 			ProtobufFieldName:  "reset_password_token",
 			ProtobufType:       "string",
@@ -164,7 +164,7 @@ var admin_usersTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "ResetPasswordSentAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "reset_password_sent_at",
 			ProtobufFieldName:  "reset_password_sent_at",
 			ProtobufType:       "google.protobuf.Timestamp",
@@ -185,7 +185,7 @@ var admin_usersTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "RememberCreatedAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "remember_created_at",
 			ProtobufFieldName:  "remember_created_at",
 			ProtobufType:       "google.protobuf.Timestamp",

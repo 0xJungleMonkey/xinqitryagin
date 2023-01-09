@@ -123,7 +123,7 @@ func GetColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /columns [post]
-// echo '{"battery_id": 58,"id": 18,"type": "EylsSuqYyBVtxIwUtPtgRSEBQ","num_of_floors_served": 46,"status": "caLsTKBPYVuETXBlAbFPHHqCI","information": "UVSmTcYMLfryLjpiSaXMAmWxx","notes": "DdRqBVnTeWqwbSlUYdBvdMvem","created_at": "2248-12-13T02:50:07.436996309-05:00","updated_at": "2025-09-14T12:55:01.31592986-04:00"}' | http POST "http://localhost:8080/columns" X-Api-User:user123
+// echo '{"battery_id": 86,"id": 97,"type": "PxrsYgZIcgcTxeXDvkUlLXTuL","num_of_floors_served": 92,"status": "GjkFXAlWapXkuopYwXQpwyyJs","information": "fJsNjkFIvMfvhSUkXeJVjmZdU","notes": "GbTYAlQKWShJIMeNnmsHnMjrV","created_at": "2234-12-01T20:46:52.822820591-05:00","updated_at": "2129-10-11T00:57:53.705769736-04:00"}' | http POST "http://localhost:8080/columns" X-Api-User:user123
 func AddColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	columns := &model.Columns{}
@@ -171,7 +171,7 @@ func AddColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /columns/{argID} [put]
-// echo '{"battery_id": 58,"id": 18,"type": "EylsSuqYyBVtxIwUtPtgRSEBQ","num_of_floors_served": 46,"status": "caLsTKBPYVuETXBlAbFPHHqCI","information": "UVSmTcYMLfryLjpiSaXMAmWxx","notes": "DdRqBVnTeWqwbSlUYdBvdMvem","created_at": "2248-12-13T02:50:07.436996309-05:00","updated_at": "2025-09-14T12:55:01.31592986-04:00"}' | http PUT "http://localhost:8080/columns/1"  X-Api-User:user123
+// echo '{"battery_id": 86,"id": 97,"type": "PxrsYgZIcgcTxeXDvkUlLXTuL","num_of_floors_served": 92,"status": "GjkFXAlWapXkuopYwXQpwyyJs","information": "fJsNjkFIvMfvhSUkXeJVjmZdU","notes": "GbTYAlQKWShJIMeNnmsHnMjrV","created_at": "2234-12-01T20:46:52.822820591-05:00","updated_at": "2129-10-11T00:57:53.705769736-04:00"}' | http PUT "http://localhost:8080/columns/1"  X-Api-User:user123
 func UpdateColumns(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

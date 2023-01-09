@@ -123,7 +123,7 @@ func GetBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildings [post]
-// echo '{"customer_id": 84,"address_id": 69,"id": 35,"full_name_of_building_admin": "xQOHZKXqDuOUNlBPfVwgXfinM","email_of_admin_of_building": "eRbPrKXbxxNBBZfmBWwrirwmI","phone_num_of_building_admin": 45,"full_name_of_tech_contact_for_building": "bFoVEClufqWeoaiuxNQsRYmEK","tech_contact_email_for_building": "xhXvaBxNZyUyiWqlCEBmeYgRx","tech_contact_phone_for_building": 73,"created_at": "2168-01-02T23:41:54.743188052-05:00","updated_at": "2207-12-05T10:47:51.931699991-05:00"}' | http POST "http://localhost:8080/buildings" X-Api-User:user123
+// echo '{"customer_id": 96,"address_id": 9,"id": 93,"full_name_of_building_admin": "mgkQYwlPtVgkqFrdsZTEnbBmA","email_of_admin_of_building": "ZmsZSFUHoXQZENvELYahvRbbJ","phone_num_of_building_admin": 57,"full_name_of_tech_contact_for_building": "EcKhZUSbFfVVIuqpismxvJYnf","tech_contact_email_for_building": "unjXQgXqapCeRpRLghyZlrPeV","tech_contact_phone_for_building": 30,"created_at": "2258-02-22T00:25:59.833505938-05:00","updated_at": "2133-07-17T15:31:31.76297619-04:00"}' | http POST "http://localhost:8080/buildings" X-Api-User:user123
 func AddBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	buildings := &model.Buildings{}
@@ -171,7 +171,7 @@ func AddBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildings/{argID} [put]
-// echo '{"customer_id": 84,"address_id": 69,"id": 35,"full_name_of_building_admin": "xQOHZKXqDuOUNlBPfVwgXfinM","email_of_admin_of_building": "eRbPrKXbxxNBBZfmBWwrirwmI","phone_num_of_building_admin": 45,"full_name_of_tech_contact_for_building": "bFoVEClufqWeoaiuxNQsRYmEK","tech_contact_email_for_building": "xhXvaBxNZyUyiWqlCEBmeYgRx","tech_contact_phone_for_building": 73,"created_at": "2168-01-02T23:41:54.743188052-05:00","updated_at": "2207-12-05T10:47:51.931699991-05:00"}' | http PUT "http://localhost:8080/buildings/1"  X-Api-User:user123
+// echo '{"customer_id": 96,"address_id": 9,"id": 93,"full_name_of_building_admin": "mgkQYwlPtVgkqFrdsZTEnbBmA","email_of_admin_of_building": "ZmsZSFUHoXQZENvELYahvRbbJ","phone_num_of_building_admin": 57,"full_name_of_tech_contact_for_building": "EcKhZUSbFfVVIuqpismxvJYnf","tech_contact_email_for_building": "unjXQgXqapCeRpRLghyZlrPeV","tech_contact_phone_for_building": 30,"created_at": "2258-02-22T00:25:59.833505938-05:00","updated_at": "2133-07-17T15:31:31.76297619-04:00"}' | http PUT "http://localhost:8080/buildings/1"  X-Api-User:user123
 func UpdateBuildings(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

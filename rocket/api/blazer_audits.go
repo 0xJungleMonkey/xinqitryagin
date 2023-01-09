@@ -123,7 +123,7 @@ func GetBlazerAudits(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazeraudits [post]
-// echo '{"id": 27,"user_id": 82,"query_id": 84,"statement": "KFrbshwGIgKrFIVkkqbcFUyjI","data_source": "HvnRqvhqPBWLDtODEJZXbwLam","created_at": "2245-04-19T21:51:28.619843212-04:00"}' | http POST "http://localhost:8080/blazeraudits" X-Api-User:user123
+// echo '{"id": 7,"user_id": 60,"query_id": 8,"statement": "YXiHpKjsHciWTELlFilwkSGch","data_source": "WKZdmVhrfXBblaPamZcFIjxsy","created_at": "2215-01-08T10:47:08.246446584-05:00"}' | http POST "http://localhost:8080/blazeraudits" X-Api-User:user123
 func AddBlazerAudits(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	blazeraudits := &model.BlazerAudits{}
@@ -171,7 +171,7 @@ func AddBlazerAudits(w http.ResponseWriter, r *http.Request, ps httprouter.Param
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /blazeraudits/{argID} [put]
-// echo '{"id": 27,"user_id": 82,"query_id": 84,"statement": "KFrbshwGIgKrFIVkkqbcFUyjI","data_source": "HvnRqvhqPBWLDtODEJZXbwLam","created_at": "2245-04-19T21:51:28.619843212-04:00"}' | http PUT "http://localhost:8080/blazeraudits/1"  X-Api-User:user123
+// echo '{"id": 7,"user_id": 60,"query_id": 8,"statement": "YXiHpKjsHciWTELlFilwkSGch","data_source": "WKZdmVhrfXBblaPamZcFIjxsy","created_at": "2215-01-08T10:47:08.246446584-05:00"}' | http PUT "http://localhost:8080/blazeraudits/1"  X-Api-User:user123
 func UpdateBlazerAudits(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

@@ -32,7 +32,7 @@ CREATE TABLE `blazer_dashboards` (
 
 JSON Sample
 -------------------------------------
-{    "id": 46,    "creator_id": 1,    "name": "PBSgrXZQlpkObDfkSJKTaaEot",    "created_at": "2050-10-15T02:40:30.396953519-04:00",    "updated_at": "2110-01-24T03:44:21.74031864-05:00"}
+{    "id": 63,    "creator_id": 86,    "name": "CpBBZNMqKJVYPGNEGEUZnuydP",    "created_at": "2299-08-02T15:59:59.165996095-04:00",    "updated_at": "2070-12-20T05:28:46.963815209-05:00"}
 
 
 
@@ -43,9 +43,9 @@ type BlazerDashboards struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CreatorID int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
+	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
+	Name null.String `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[ 3] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 4] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -91,7 +91,7 @@ var blazer_dashboardsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatorID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "creator_id",
 			ProtobufFieldName:  "creator_id",
 			ProtobufType:       "int64",
@@ -112,7 +112,7 @@ var blazer_dashboardsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Name",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "name",
 			ProtobufFieldName:  "name",
 			ProtobufType:       "string",

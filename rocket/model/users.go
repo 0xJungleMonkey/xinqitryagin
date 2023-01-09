@@ -36,7 +36,7 @@ CREATE TABLE `users` (
 
 JSON Sample
 -------------------------------------
-{    "id": 41,    "email": "mkdOtBgPaXeFlnPVPSuZyDVbj",    "encrypted_password": "XhxgSEMCwcBvwkyZFBfjixwVN",    "reset_password_token": "KoyWXSDkTlxgbLLNXASqLTPBB",    "reset_password_sent_at": "2059-06-18T07:03:45.240382936-04:00",    "remember_created_at": "2192-07-26T08:15:01.780230068-04:00",    "created_at": "2228-07-10T04:55:55.626865059-04:00",    "updated_at": "2224-04-05T01:59:42.338418248-04:00"}
+{    "id": 65,    "email": "QfQMuypPQnIXVbwUgSCtLThFR",    "encrypted_password": "xoduTHUbNRLHqsSLXqwElnjLr",    "reset_password_token": "xMomKFBGKoekDoSsiieuyxpPp",    "reset_password_sent_at": "2049-07-09T20:25:06.862458643-04:00",    "remember_created_at": "2190-02-04T03:06:46.667554486-05:00",    "created_at": "2158-04-20T16:17:26.08071177-04:00",    "updated_at": "2224-02-18T10:04:39.029071897-05:00"}
 
 
 
@@ -51,11 +51,11 @@ type Users_ struct {
 	//[ 2] encrypted_password                             varchar(255)         null: false  primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	EncryptedPassword string `gorm:"column:encrypted_password;type:varchar;size:255;" json:"encrypted_password"`
 	//[ 3] reset_password_token                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ResetPasswordToken string `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
+	ResetPasswordToken null.String `gorm:"column:reset_password_token;type:varchar;size:255;" json:"reset_password_token"`
 	//[ 4] reset_password_sent_at                         datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	ResetPasswordSentAt time.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
+	ResetPasswordSentAt null.Time `gorm:"column:reset_password_sent_at;type:datetime;" json:"reset_password_sent_at"`
 	//[ 5] remember_created_at                            datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	RememberCreatedAt time.Time `gorm:"column:remember_created_at;type:datetime;" json:"remember_created_at"`
+	RememberCreatedAt null.Time `gorm:"column:remember_created_at;type:datetime;" json:"remember_created_at"`
 	//[ 6] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 7] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -143,7 +143,7 @@ var usersTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ResetPasswordToken",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "reset_password_token",
 			ProtobufFieldName:  "reset_password_token",
 			ProtobufType:       "string",
@@ -164,7 +164,7 @@ var usersTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "ResetPasswordSentAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "reset_password_sent_at",
 			ProtobufFieldName:  "reset_password_sent_at",
 			ProtobufType:       "google.protobuf.Timestamp",
@@ -185,7 +185,7 @@ var usersTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "RememberCreatedAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "remember_created_at",
 			ProtobufFieldName:  "remember_created_at",
 			ProtobufType:       "google.protobuf.Timestamp",

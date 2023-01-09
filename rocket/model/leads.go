@@ -39,7 +39,7 @@ CREATE TABLE `leads` (
 
 JSON Sample
 -------------------------------------
-{    "id": 3,    "full_name_of_the_contact": "qGUrYHotjoogjClFAxDQZlkrO",    "bussiness_name": "NhDbeOQFEuYrrfJoUmLscEDea",    "email": "BCfwyEDPZmlhZuLPuxKFhJUEu",    "phone": "euxHFXkPjrWFuWuZiKBXMIEmD",    "project_name": "gkkTeCbAGVgvBrtZgHEHtCEgS",    "project_description": "IhSKUBKgMxVOfCSQKKFIAsbeR",    "department_incharge": "urdtEJWerQfSQrHBRYPQqlfno",    "message": "cqiEbRRYfsLvHhYXjcTDMHIee",    "attached_file": "DhIkR1AdHRNNOCRPHkYgWBcwMS5SEAU3OCo4OToVAFMfNVBURBQVBF1FRV0dI0UbAE8bTTEvIzJBDVpYND4hEApPCVM=",    "creation_date": "2081-11-10T22:08:42.222514957-05:00",    "created_at": "2083-01-05T07:44:04.85001711-05:00",    "updated_at": "2242-09-15T14:26:23.631717092-04:00"}
+{    "id": 59,    "full_name_of_the_contact": "SffAuXKveZdGAWglMfIGWXvlR",    "bussiness_name": "CxjHdOwDcgdeqxZDjWmuPZuGB",    "email": "mVCdwXmwJBFsGaEOnaPLxEkga",    "phone": "NQNwrdujgguRiAIAaqgIRhKiE",    "project_name": "RoRUFPDcuMNAemMNqFcgWPmog",    "project_description": "RNnSgTJCTdXulnHdyftUNYbbJ",    "department_incharge": "qUKQTcorIFusuvIrNPBssTZUR",    "message": "jTjRvtkXmmnlJYBtrrUUvRVBM",    "attached_file": "YU0YYFpSOVIDJzpFT1kuNTdCXSInAwVWHDQuEghTO1hZBSRUNRkdGEY4Ui4QMAckITMhXCIhTT1GTjlPXyoGD1pJTxsIJGA9Hx0PBCUQPjs2CQ==",    "creation_date": "2193-02-08T18:23:51.795708179-05:00",    "created_at": "2266-02-27T16:56:45.947281709-05:00",    "updated_at": "2176-06-07T03:53:36.522028335-04:00"}
 
 
 
@@ -50,25 +50,25 @@ type Leads struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] Full_name_of_the_contact                       varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FullNameOfTheContact string `gorm:"column:Full_name_of_the_contact;type:varchar;size:255;" json:"full_name_of_the_contact"`
+	FullNameOfTheContact null.String `gorm:"column:Full_name_of_the_contact;type:varchar;size:255;" json:"full_name_of_the_contact"`
 	//[ 2] Bussiness_name                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	BussinessName string `gorm:"column:Bussiness_name;type:varchar;size:255;" json:"bussiness_name"`
+	BussinessName null.String `gorm:"column:Bussiness_name;type:varchar;size:255;" json:"bussiness_name"`
 	//[ 3] Email                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Email string `gorm:"column:Email;type:varchar;size:255;" json:"email"`
+	Email null.String `gorm:"column:Email;type:varchar;size:255;" json:"email"`
 	//[ 4] Phone                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Phone string `gorm:"column:Phone;type:varchar;size:255;" json:"phone"`
+	Phone null.String `gorm:"column:Phone;type:varchar;size:255;" json:"phone"`
 	//[ 5] Project_name                                   varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ProjectName string `gorm:"column:Project_name;type:varchar;size:255;" json:"project_name"`
+	ProjectName null.String `gorm:"column:Project_name;type:varchar;size:255;" json:"project_name"`
 	//[ 6] Project_description                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	ProjectDescription string `gorm:"column:Project_description;type:varchar;size:255;" json:"project_description"`
+	ProjectDescription null.String `gorm:"column:Project_description;type:varchar;size:255;" json:"project_description"`
 	//[ 7] Department_incharge                            varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	DepartmentIncharge string `gorm:"column:Department_incharge;type:varchar;size:255;" json:"department_incharge"`
+	DepartmentIncharge null.String `gorm:"column:Department_incharge;type:varchar;size:255;" json:"department_incharge"`
 	//[ 8] Message                                        varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Message string `gorm:"column:Message;type:varchar;size:255;" json:"message"`
+	Message null.String `gorm:"column:Message;type:varchar;size:255;" json:"message"`
 	//[ 9] Attached_file                                  blob                 null: true   primary: false  isArray: false  auto: false  col: blob            len: -1      default: []
 	AttachedFile []byte `gorm:"column:Attached_file;type:blob;" json:"attached_file"`
 	//[10] Creation_date                                  datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	CreationDate time.Time `gorm:"column:Creation_date;type:datetime;" json:"creation_date"`
+	CreationDate null.Time `gorm:"column:Creation_date;type:datetime;" json:"creation_date"`
 	//[11] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[12] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -114,7 +114,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FullNameOfTheContact",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "full_name_of_the_contact",
 			ProtobufFieldName:  "full_name_of_the_contact",
 			ProtobufType:       "string",
@@ -135,7 +135,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "BussinessName",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "bussiness_name",
 			ProtobufFieldName:  "bussiness_name",
 			ProtobufType:       "string",
@@ -156,7 +156,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Email",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "email",
 			ProtobufFieldName:  "email",
 			ProtobufType:       "string",
@@ -177,7 +177,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Phone",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "phone",
 			ProtobufFieldName:  "phone",
 			ProtobufType:       "string",
@@ -198,7 +198,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ProjectName",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "project_name",
 			ProtobufFieldName:  "project_name",
 			ProtobufType:       "string",
@@ -219,7 +219,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "ProjectDescription",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "project_description",
 			ProtobufFieldName:  "project_description",
 			ProtobufType:       "string",
@@ -240,7 +240,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "DepartmentIncharge",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "department_incharge",
 			ProtobufFieldName:  "department_incharge",
 			ProtobufType:       "string",
@@ -261,7 +261,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Message",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "message",
 			ProtobufFieldName:  "message",
 			ProtobufType:       "string",
@@ -303,7 +303,7 @@ var leadsTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "CreationDate",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "creation_date",
 			ProtobufFieldName:  "creation_date",
 			ProtobufType:       "google.protobuf.Timestamp",

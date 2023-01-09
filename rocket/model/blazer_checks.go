@@ -40,7 +40,7 @@ CREATE TABLE `blazer_checks` (
 
 JSON Sample
 -------------------------------------
-{    "id": 92,    "creator_id": 76,    "query_id": 97,    "state": "qAvMsZguWQdDojljRoqisMAoX",    "schedule": "RCXZcQwfjZgjeRUtXwSTIhgEV",    "emails": "GZTjRJhboejWXhZSLDLMbTsZU",    "slack_channels": "qsSRhKBBkfwOgcThikBsdOgPY",    "check_type": "gkoSNfPngAuVffKCXdNObTYuA",    "message": "PCkxrkMUEUBptYducSogduope",    "last_run_at": "2162-06-20T00:58:16.00755968-04:00",    "created_at": "2195-05-10T21:11:19.569844809-04:00",    "updated_at": "2310-11-20T10:00:11.521654142-05:00"}
+{    "id": 57,    "creator_id": 11,    "query_id": 36,    "state": "cAFyktuxUwSWWKhSKUWOMOKDh",    "schedule": "QnByQNAhTTtdqbAdkMiWOtOMV",    "emails": "UeGBdPYgMIHixUSDxOjhLWXXZ",    "slack_channels": "VtlrDUbOxJGGNvdgUCetTgWuq",    "check_type": "pOWKphxEJEQUynuXZMLmdeHFr",    "message": "aCSblojMObKCXJimdBnQGQNdp",    "last_run_at": "2299-03-11T22:48:53.832374067-05:00",    "created_at": "2156-05-02T17:42:19.373386897-04:00",    "updated_at": "2265-02-25T16:33:11.91830151-05:00"}
 
 
 
@@ -51,23 +51,23 @@ type BlazerChecks struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CreatorID int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
+	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	QueryID int `gorm:"column:query_id;type:bigint;" json:"query_id"`
+	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] state                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	State string `gorm:"column:state;type:varchar;size:255;" json:"state"`
+	State null.String `gorm:"column:state;type:varchar;size:255;" json:"state"`
 	//[ 4] schedule                                       varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Schedule string `gorm:"column:schedule;type:varchar;size:255;" json:"schedule"`
+	Schedule null.String `gorm:"column:schedule;type:varchar;size:255;" json:"schedule"`
 	//[ 5] emails                                         text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Emails string `gorm:"column:emails;type:text;size:65535;" json:"emails"`
+	Emails null.String `gorm:"column:emails;type:text;size:65535;" json:"emails"`
 	//[ 6] slack_channels                                 text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	SlackChannels string `gorm:"column:slack_channels;type:text;size:65535;" json:"slack_channels"`
+	SlackChannels null.String `gorm:"column:slack_channels;type:text;size:65535;" json:"slack_channels"`
 	//[ 7] check_type                                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	CheckType string `gorm:"column:check_type;type:varchar;size:255;" json:"check_type"`
+	CheckType null.String `gorm:"column:check_type;type:varchar;size:255;" json:"check_type"`
 	//[ 8] message                                        text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Message string `gorm:"column:message;type:text;size:65535;" json:"message"`
+	Message null.String `gorm:"column:message;type:text;size:65535;" json:"message"`
 	//[ 9] last_run_at                                    datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
-	LastRunAt time.Time `gorm:"column:last_run_at;type:datetime;" json:"last_run_at"`
+	LastRunAt null.Time `gorm:"column:last_run_at;type:datetime;" json:"last_run_at"`
 	//[10] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[11] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -113,7 +113,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatorID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "creator_id",
 			ProtobufFieldName:  "creator_id",
 			ProtobufType:       "int64",
@@ -134,7 +134,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "QueryID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "query_id",
 			ProtobufFieldName:  "query_id",
 			ProtobufType:       "int64",
@@ -155,7 +155,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "State",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "state",
 			ProtobufFieldName:  "state",
 			ProtobufType:       "string",
@@ -176,7 +176,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Schedule",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "schedule",
 			ProtobufFieldName:  "schedule",
 			ProtobufType:       "string",
@@ -197,7 +197,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Emails",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "emails",
 			ProtobufFieldName:  "emails",
 			ProtobufType:       "string",
@@ -218,7 +218,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "SlackChannels",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "slack_channels",
 			ProtobufFieldName:  "slack_channels",
 			ProtobufType:       "string",
@@ -239,7 +239,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "CheckType",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "check_type",
 			ProtobufFieldName:  "check_type",
 			ProtobufType:       "string",
@@ -260,7 +260,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Message",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "message",
 			ProtobufFieldName:  "message",
 			ProtobufType:       "string",
@@ -281,7 +281,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "datetime",
 			ColumnLength:       -1,
 			GoFieldName:        "LastRunAt",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "last_run_at",
 			ProtobufFieldName:  "last_run_at",
 			ProtobufType:       "google.protobuf.Timestamp",

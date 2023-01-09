@@ -41,7 +41,7 @@ CREATE TABLE `elevators` (
 
 JSON Sample
 -------------------------------------
-{    "column_id": 67,    "id": 48,    "serial_number": 7,    "model": "ShugyGPTneSydRNnWEOSEvJwi",    "type": "SRdwpNBxeKKZVYWUITpsYQCuX",    "status": "WtBUedpxBVIFlFJEnQTxhscck",    "commision_date": "2168-12-10T22:58:12.763405188-05:00",    "last_inspection_date": "2117-05-07T09:46:58.132113095-04:00",    "inspection_cert": "yoYsJaHpAkYvbdNsJWBikytBB",    "information": "hSrgKnjtDtkNqAuaSOxDUNfac",    "notes": "UfcXFNUxFCiKTAVNLXNytpetd",    "created_at": "2068-12-15T00:19:46.862163752-05:00",    "updated_at": "2253-04-21T11:07:45.190158297-04:00"}
+{    "column_id": 60,    "id": 83,    "serial_number": 0,    "model": "tsxyNuGukqybVroZfYRvoIZrv",    "type": "nMecqycwwRvxaqEyfhBPYVJIs",    "status": "wFfpFIYfvsDvtOwNSDSTpQjgg",    "commision_date": "2122-04-04T08:37:18.972803188-04:00",    "last_inspection_date": "2226-10-03T11:12:08.69314046-04:00",    "inspection_cert": "iMoxfiCQvDSPBlWXNJechfsOq",    "information": "rrRKhblwnAQpjkuZjfZecYlJc",    "notes": "iwMLRUvRKyVrCdWRpCsvAmBLZ",    "created_at": "2071-09-21T15:19:23.652481199-04:00",    "updated_at": "2126-06-30T04:24:39.760038557-04:00"}
 
 
 
@@ -50,27 +50,27 @@ JSON Sample
 // Elevators struct is a row record of the elevators table in the rocket_development database
 type Elevators struct {
 	//[ 0] column_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	ColumnID int `gorm:"column:column_id;type:bigint;" json:"column_id"`
+	ColumnID null.Int `gorm:"column:column_id;type:bigint;" json:"column_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] SerialNumber                                   int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	SerialNumber int `gorm:"column:SerialNumber;type:int;" json:"serial_number"`
+	SerialNumber null.Int `gorm:"column:SerialNumber;type:int;" json:"serial_number"`
 	//[ 3] Model                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Model string `gorm:"column:Model;type:varchar;size:255;" json:"model"`
+	Model null.String `gorm:"column:Model;type:varchar;size:255;" json:"model"`
 	//[ 4] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Type string `gorm:"column:Type;type:varchar;size:255;" json:"type"`
+	Type null.String `gorm:"column:Type;type:varchar;size:255;" json:"type"`
 	//[ 5] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	Status string `gorm:"column:Status;type:varchar;size:255;" json:"status"`
+	Status null.String `gorm:"column:Status;type:varchar;size:255;" json:"status"`
 	//[ 6] CommisionDate                                  date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []
-	CommisionDate time.Time `gorm:"column:CommisionDate;type:date;" json:"commision_date"`
+	CommisionDate null.Time `gorm:"column:CommisionDate;type:date;" json:"commision_date"`
 	//[ 7] LastInspectionDate                             date                 null: true   primary: false  isArray: false  auto: false  col: date            len: -1      default: []
-	LastInspectionDate time.Time `gorm:"column:LastInspectionDate;type:date;" json:"last_inspection_date"`
+	LastInspectionDate null.Time `gorm:"column:LastInspectionDate;type:date;" json:"last_inspection_date"`
 	//[ 8] InspectionCert                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	InspectionCert string `gorm:"column:InspectionCert;type:varchar;size:255;" json:"inspection_cert"`
+	InspectionCert null.String `gorm:"column:InspectionCert;type:varchar;size:255;" json:"inspection_cert"`
 	//[ 9] Information                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Information string `gorm:"column:Information;type:text;size:65535;" json:"information"`
+	Information null.String `gorm:"column:Information;type:text;size:65535;" json:"information"`
 	//[10] Notes                                          text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
-	Notes string `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
+	Notes null.String `gorm:"column:Notes;type:text;size:65535;" json:"notes"`
 	//[11] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[12] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -95,7 +95,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "ColumnID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "column_id",
 			ProtobufFieldName:  "column_id",
 			ProtobufType:       "int64",
@@ -137,7 +137,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "SerialNumber",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "serial_number",
 			ProtobufFieldName:  "serial_number",
 			ProtobufType:       "int32",
@@ -158,7 +158,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Model",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "model",
 			ProtobufFieldName:  "model",
 			ProtobufType:       "string",
@@ -179,7 +179,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Type",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "type",
 			ProtobufFieldName:  "type",
 			ProtobufType:       "string",
@@ -200,7 +200,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "Status",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "status",
 			ProtobufFieldName:  "status",
 			ProtobufType:       "string",
@@ -221,7 +221,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "date",
 			ColumnLength:       -1,
 			GoFieldName:        "CommisionDate",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "commision_date",
 			ProtobufFieldName:  "commision_date",
 			ProtobufType:       "google.protobuf.Timestamp",
@@ -242,7 +242,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "date",
 			ColumnLength:       -1,
 			GoFieldName:        "LastInspectionDate",
-			GoFieldType:        "time.Time",
+			GoFieldType:        "null.Time",
 			JSONFieldName:      "last_inspection_date",
 			ProtobufFieldName:  "last_inspection_date",
 			ProtobufType:       "google.protobuf.Timestamp",
@@ -263,7 +263,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "InspectionCert",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "inspection_cert",
 			ProtobufFieldName:  "inspection_cert",
 			ProtobufType:       "string",
@@ -284,7 +284,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Information",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "information",
 			ProtobufFieldName:  "information",
 			ProtobufType:       "string",
@@ -305,7 +305,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "text",
 			ColumnLength:       65535,
 			GoFieldName:        "Notes",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "notes",
 			ProtobufFieldName:  "notes",
 			ProtobufType:       "string",

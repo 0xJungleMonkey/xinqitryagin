@@ -123,7 +123,7 @@ func GetActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageattachments [post]
-// echo '{"id": 40,"name": "IbcQMbpBDTlGPEArbJQQmfTFU","record_type": "MaKZRSELluFmsLFnpyeNNInlt","record_id": 2,"blob_id": 87,"created_at": "2190-08-15T02:21:38.797778311-04:00"}' | http POST "http://localhost:8080/activestorageattachments" X-Api-User:user123
+// echo '{"id": 95,"name": "mxVOkmcqTKanSGYsdITDnUQCe","record_type": "RsnGbgIamPhEDiSoRvnFmSSgH","record_id": 78,"blob_id": 74,"created_at": "2175-02-23T08:08:44.832239258-05:00"}' | http POST "http://localhost:8080/activestorageattachments" X-Api-User:user123
 func AddActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activestorageattachments := &model.ActiveStorageAttachments{}
@@ -171,7 +171,7 @@ func AddActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps http
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageattachments/{argID} [put]
-// echo '{"id": 40,"name": "IbcQMbpBDTlGPEArbJQQmfTFU","record_type": "MaKZRSELluFmsLFnpyeNNInlt","record_id": 2,"blob_id": 87,"created_at": "2190-08-15T02:21:38.797778311-04:00"}' | http PUT "http://localhost:8080/activestorageattachments/1"  X-Api-User:user123
+// echo '{"id": 95,"name": "mxVOkmcqTKanSGYsdITDnUQCe","record_type": "RsnGbgIamPhEDiSoRvnFmSSgH","record_id": 78,"blob_id": 74,"created_at": "2175-02-23T08:08:44.832239258-05:00"}' | http PUT "http://localhost:8080/activestorageattachments/1"  X-Api-User:user123
 func UpdateActiveStorageAttachments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

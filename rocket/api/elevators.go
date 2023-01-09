@@ -123,7 +123,7 @@ func GetElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators [post]
-// echo '{"column_id": 67,"id": 48,"serial_number": 7,"model": "ShugyGPTneSydRNnWEOSEvJwi","type": "SRdwpNBxeKKZVYWUITpsYQCuX","status": "WtBUedpxBVIFlFJEnQTxhscck","commision_date": "2168-12-10T22:58:12.763405188-05:00","last_inspection_date": "2117-05-07T09:46:58.132113095-04:00","inspection_cert": "yoYsJaHpAkYvbdNsJWBikytBB","information": "hSrgKnjtDtkNqAuaSOxDUNfac","notes": "UfcXFNUxFCiKTAVNLXNytpetd","created_at": "2068-12-15T00:19:46.862163752-05:00","updated_at": "2253-04-21T11:07:45.190158297-04:00"}' | http POST "http://localhost:8080/elevators" X-Api-User:user123
+// echo '{"column_id": 60,"id": 83,"serial_number": 0,"model": "tsxyNuGukqybVroZfYRvoIZrv","type": "nMecqycwwRvxaqEyfhBPYVJIs","status": "wFfpFIYfvsDvtOwNSDSTpQjgg","commision_date": "2122-04-04T08:37:18.972803188-04:00","last_inspection_date": "2226-10-03T11:12:08.69314046-04:00","inspection_cert": "iMoxfiCQvDSPBlWXNJechfsOq","information": "rrRKhblwnAQpjkuZjfZecYlJc","notes": "iwMLRUvRKyVrCdWRpCsvAmBLZ","created_at": "2071-09-21T15:19:23.652481199-04:00","updated_at": "2126-06-30T04:24:39.760038557-04:00"}' | http POST "http://localhost:8080/elevators" X-Api-User:user123
 func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	elevators := &model.Elevators{}
@@ -171,7 +171,7 @@ func AddElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /elevators/{argID} [put]
-// echo '{"column_id": 67,"id": 48,"serial_number": 7,"model": "ShugyGPTneSydRNnWEOSEvJwi","type": "SRdwpNBxeKKZVYWUITpsYQCuX","status": "WtBUedpxBVIFlFJEnQTxhscck","commision_date": "2168-12-10T22:58:12.763405188-05:00","last_inspection_date": "2117-05-07T09:46:58.132113095-04:00","inspection_cert": "yoYsJaHpAkYvbdNsJWBikytBB","information": "hSrgKnjtDtkNqAuaSOxDUNfac","notes": "UfcXFNUxFCiKTAVNLXNytpetd","created_at": "2068-12-15T00:19:46.862163752-05:00","updated_at": "2253-04-21T11:07:45.190158297-04:00"}' | http PUT "http://localhost:8080/elevators/1"  X-Api-User:user123
+// echo '{"column_id": 60,"id": 83,"serial_number": 0,"model": "tsxyNuGukqybVroZfYRvoIZrv","type": "nMecqycwwRvxaqEyfhBPYVJIs","status": "wFfpFIYfvsDvtOwNSDSTpQjgg","commision_date": "2122-04-04T08:37:18.972803188-04:00","last_inspection_date": "2226-10-03T11:12:08.69314046-04:00","inspection_cert": "iMoxfiCQvDSPBlWXNJechfsOq","information": "rrRKhblwnAQpjkuZjfZecYlJc","notes": "iwMLRUvRKyVrCdWRpCsvAmBLZ","created_at": "2071-09-21T15:19:23.652481199-04:00","updated_at": "2126-06-30T04:24:39.760038557-04:00"}' | http PUT "http://localhost:8080/elevators/1"  X-Api-User:user123
 func UpdateElevators(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

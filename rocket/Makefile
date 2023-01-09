@@ -150,7 +150,7 @@ tools: ## install dependent tools for code analysis
 regen: ## regenerate generated code
 	gen \
      --sqltype=mysql \
-     --connstr='doadmin:AVNS_nQrjtn8ilVHqYs6xIim@tcp(dbaas-db-7154856-do-user-13260059-0.b.db.ondigitalocean.com:25060)/rocket_development?' \
+     --connstr='doadmin:AVNS_nQrjtn8ilVHqYs6xIim@tcp(dbaas-db-7154856-do-user-13260059-0.b.db.ondigitalocean.com:25060)/rocket_development?parseTime=true' \
      --database=rocket_development \
      --templateDir=./templates \
      --model=model \

@@ -123,7 +123,7 @@ func GetAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers [post]
-// echo '{"id": 18,"email": "IlilALlglhXPXCgqeXYkhAfFI","encrypted_password": "PbRcmrrLXgCTsAdnHIXjXQQey","reset_password_token": "plwicApMrNpaRoRpjEnAMCulg","reset_password_sent_at": "2069-03-26T17:18:05.041137398-04:00","remember_created_at": "2314-02-13T01:36:54.382880052-05:00","created_at": "2294-12-02T12:25:51.287070111-05:00","updated_at": "2125-11-10T13:26:52.108394433-05:00"}' | http POST "http://localhost:8080/adminusers" X-Api-User:user123
+// echo '{"id": 99,"email": "pxoKEgJRFHETIIQANCJtblDAp","encrypted_password": "RQxKfTbSDSWyTQMeGOWwUBkWv","reset_password_token": "yFkrvNBKxOUHCCcVAhTQsnLmp","reset_password_sent_at": "2310-01-12T20:36:07.187190547-05:00","remember_created_at": "2292-10-22T03:43:58.146073278-04:00","created_at": "2299-01-06T20:17:23.596949402-05:00","updated_at": "2198-02-02T14:45:44.244426385-05:00"}' | http POST "http://localhost:8080/adminusers" X-Api-User:user123
 func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	adminusers := &model.AdminUsers{}
@@ -171,7 +171,7 @@ func AddAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /adminusers/{argID} [put]
-// echo '{"id": 18,"email": "IlilALlglhXPXCgqeXYkhAfFI","encrypted_password": "PbRcmrrLXgCTsAdnHIXjXQQey","reset_password_token": "plwicApMrNpaRoRpjEnAMCulg","reset_password_sent_at": "2069-03-26T17:18:05.041137398-04:00","remember_created_at": "2314-02-13T01:36:54.382880052-05:00","created_at": "2294-12-02T12:25:51.287070111-05:00","updated_at": "2125-11-10T13:26:52.108394433-05:00"}' | http PUT "http://localhost:8080/adminusers/1"  X-Api-User:user123
+// echo '{"id": 99,"email": "pxoKEgJRFHETIIQANCJtblDAp","encrypted_password": "RQxKfTbSDSWyTQMeGOWwUBkWv","reset_password_token": "yFkrvNBKxOUHCCcVAhTQsnLmp","reset_password_sent_at": "2310-01-12T20:36:07.187190547-05:00","remember_created_at": "2292-10-22T03:43:58.146073278-04:00","created_at": "2299-01-06T20:17:23.596949402-05:00","updated_at": "2198-02-02T14:45:44.244426385-05:00"}' | http PUT "http://localhost:8080/adminusers/1"  X-Api-User:user123
 func UpdateAdminUsers(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

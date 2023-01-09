@@ -41,7 +41,7 @@ CREATE TABLE `buildings` (
 
 JSON Sample
 -------------------------------------
-{    "customer_id": 84,    "address_id": 69,    "id": 35,    "full_name_of_building_admin": "xQOHZKXqDuOUNlBPfVwgXfinM",    "email_of_admin_of_building": "eRbPrKXbxxNBBZfmBWwrirwmI",    "phone_num_of_building_admin": 45,    "full_name_of_tech_contact_for_building": "bFoVEClufqWeoaiuxNQsRYmEK",    "tech_contact_email_for_building": "xhXvaBxNZyUyiWqlCEBmeYgRx",    "tech_contact_phone_for_building": 73,    "created_at": "2168-01-02T23:41:54.743188052-05:00",    "updated_at": "2207-12-05T10:47:51.931699991-05:00"}
+{    "customer_id": 96,    "address_id": 9,    "id": 93,    "full_name_of_building_admin": "mgkQYwlPtVgkqFrdsZTEnbBmA",    "email_of_admin_of_building": "ZmsZSFUHoXQZENvELYahvRbbJ",    "phone_num_of_building_admin": 57,    "full_name_of_tech_contact_for_building": "EcKhZUSbFfVVIuqpismxvJYnf",    "tech_contact_email_for_building": "unjXQgXqapCeRpRLghyZlrPeV",    "tech_contact_phone_for_building": 30,    "created_at": "2258-02-22T00:25:59.833505938-05:00",    "updated_at": "2133-07-17T15:31:31.76297619-04:00"}
 
 
 
@@ -50,23 +50,23 @@ JSON Sample
 // Buildings struct is a row record of the buildings table in the rocket_development database
 type Buildings struct {
 	//[ 0] customer_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CustomerID int `gorm:"column:customer_id;type:bigint;" json:"customer_id"`
+	CustomerID null.Int `gorm:"column:customer_id;type:bigint;" json:"customer_id"`
 	//[ 1] address_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	AddressID int `gorm:"column:address_id;type:bigint;" json:"address_id"`
+	AddressID null.Int `gorm:"column:address_id;type:bigint;" json:"address_id"`
 	//[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 3] FullNameOfBuildingAdmin                        varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FullNameOfBuildingAdmin string `gorm:"column:FullNameOfBuildingAdmin;type:varchar;size:255;" json:"full_name_of_building_admin"`
+	FullNameOfBuildingAdmin null.String `gorm:"column:FullNameOfBuildingAdmin;type:varchar;size:255;" json:"full_name_of_building_admin"`
 	//[ 4] EmailOfAdminOfBuilding                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	EmailOfAdminOfBuilding string `gorm:"column:EmailOfAdminOfBuilding;type:varchar;size:255;" json:"email_of_admin_of_building"`
+	EmailOfAdminOfBuilding null.String `gorm:"column:EmailOfAdminOfBuilding;type:varchar;size:255;" json:"email_of_admin_of_building"`
 	//[ 5] PhoneNumOfBuildingAdmin                        int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	PhoneNumOfBuildingAdmin int `gorm:"column:PhoneNumOfBuildingAdmin;type:int;" json:"phone_num_of_building_admin"`
+	PhoneNumOfBuildingAdmin null.Int `gorm:"column:PhoneNumOfBuildingAdmin;type:int;" json:"phone_num_of_building_admin"`
 	//[ 6] FullNameOfTechContactForBuilding               varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	FullNameOfTechContactForBuilding string `gorm:"column:FullNameOfTechContactForBuilding;type:varchar;size:255;" json:"full_name_of_tech_contact_for_building"`
+	FullNameOfTechContactForBuilding null.String `gorm:"column:FullNameOfTechContactForBuilding;type:varchar;size:255;" json:"full_name_of_tech_contact_for_building"`
 	//[ 7] TechContactEmailForBuilding                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
-	TechContactEmailForBuilding string `gorm:"column:TechContactEmailForBuilding;type:varchar;size:255;" json:"tech_contact_email_for_building"`
+	TechContactEmailForBuilding null.String `gorm:"column:TechContactEmailForBuilding;type:varchar;size:255;" json:"tech_contact_email_for_building"`
 	//[ 8] TechContactPhoneForBuilding                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	TechContactPhoneForBuilding int `gorm:"column:TechContactPhoneForBuilding;type:int;" json:"tech_contact_phone_for_building"`
+	TechContactPhoneForBuilding null.Int `gorm:"column:TechContactPhoneForBuilding;type:int;" json:"tech_contact_phone_for_building"`
 	//[ 9] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[10] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -91,7 +91,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CustomerID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "customer_id",
 			ProtobufFieldName:  "customer_id",
 			ProtobufType:       "int64",
@@ -112,7 +112,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "AddressID",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "address_id",
 			ProtobufFieldName:  "address_id",
 			ProtobufType:       "int64",
@@ -154,7 +154,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FullNameOfBuildingAdmin",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "full_name_of_building_admin",
 			ProtobufFieldName:  "full_name_of_building_admin",
 			ProtobufType:       "string",
@@ -175,7 +175,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "EmailOfAdminOfBuilding",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "email_of_admin_of_building",
 			ProtobufFieldName:  "email_of_admin_of_building",
 			ProtobufType:       "string",
@@ -196,7 +196,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "PhoneNumOfBuildingAdmin",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "phone_num_of_building_admin",
 			ProtobufFieldName:  "phone_num_of_building_admin",
 			ProtobufType:       "int32",
@@ -217,7 +217,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "FullNameOfTechContactForBuilding",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "full_name_of_tech_contact_for_building",
 			ProtobufFieldName:  "full_name_of_tech_contact_for_building",
 			ProtobufType:       "string",
@@ -238,7 +238,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "varchar",
 			ColumnLength:       255,
 			GoFieldName:        "TechContactEmailForBuilding",
-			GoFieldType:        "string",
+			GoFieldType:        "null.String",
 			JSONFieldName:      "tech_contact_email_for_building",
 			ProtobufFieldName:  "tech_contact_email_for_building",
 			ProtobufType:       "string",
@@ -259,7 +259,7 @@ var buildingsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "TechContactPhoneForBuilding",
-			GoFieldType:        "int",
+			GoFieldType:        "null.Int",
 			JSONFieldName:      "tech_contact_phone_for_building",
 			ProtobufFieldName:  "tech_contact_phone_for_building",
 			ProtobufType:       "int32",

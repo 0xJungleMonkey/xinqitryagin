@@ -123,7 +123,7 @@ func GetActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activeadmincomments [post]
-// echo '{"id": 16,"namespace": "PnHkNYudMbHnuyaGPgDFLpOnW","body": "rjhZGoQckxUMTrpHAlquygPcf","resource_type": "HNKqpnFEGBwIKyFUCdsQQZGLC","resource_id": 79,"author_type": "ggllNuHnNxkLNTmtWgknTHIOS","author_id": 5,"created_at": "2091-10-08T14:11:29.083243716-04:00","updated_at": "2312-02-06T16:24:38.170800095-05:00"}' | http POST "http://localhost:8080/activeadmincomments" X-Api-User:user123
+// echo '{"id": 49,"namespace": "QeGEqINdDKQrSGbWiSWyiBEkL","body": "veljaWZyLZbGaJPTtEYmvQBoZ","resource_type": "HYwkbfrZyQSbNJrwCyghIrOhH","resource_id": 25,"author_type": "eLiLoFbPWLmyYsFTdDpYPHISF","author_id": 41,"created_at": "2310-09-19T13:49:50.00975822-04:00","updated_at": "2144-07-12T04:40:31.164906144-04:00"}' | http POST "http://localhost:8080/activeadmincomments" X-Api-User:user123
 func AddActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activeadmincomments := &model.ActiveAdminComments{}
@@ -171,7 +171,7 @@ func AddActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httproute
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activeadmincomments/{argID} [put]
-// echo '{"id": 16,"namespace": "PnHkNYudMbHnuyaGPgDFLpOnW","body": "rjhZGoQckxUMTrpHAlquygPcf","resource_type": "HNKqpnFEGBwIKyFUCdsQQZGLC","resource_id": 79,"author_type": "ggllNuHnNxkLNTmtWgknTHIOS","author_id": 5,"created_at": "2091-10-08T14:11:29.083243716-04:00","updated_at": "2312-02-06T16:24:38.170800095-05:00"}' | http PUT "http://localhost:8080/activeadmincomments/1"  X-Api-User:user123
+// echo '{"id": 49,"namespace": "QeGEqINdDKQrSGbWiSWyiBEkL","body": "veljaWZyLZbGaJPTtEYmvQBoZ","resource_type": "HYwkbfrZyQSbNJrwCyghIrOhH","resource_id": 25,"author_type": "eLiLoFbPWLmyYsFTdDpYPHISF","author_id": 41,"created_at": "2310-09-19T13:49:50.00975822-04:00","updated_at": "2144-07-12T04:40:31.164906144-04:00"}' | http PUT "http://localhost:8080/activeadmincomments/1"  X-Api-User:user123
 func UpdateActiveAdminComments(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

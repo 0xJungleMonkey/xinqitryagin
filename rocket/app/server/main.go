@@ -15,7 +15,6 @@ import (
 
 	"github.com/droundy/goopt"
 	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 	swaggerFiles "github.com/swaggo/files"     // swagger embed files
 	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
 
@@ -93,7 +92,6 @@ func main() {
 `, BuildDate, BuildNumber, LatestCommit, RuntimeVer, BuiltOnOs)
 	goopt.Parse(nil)
 
-	db, err := gorm.Open("mysql", "doadmin:AVNS_nQrjtn8ilVHqYs6xIim@tcp(dbaas-db-7154856-do-user-13260059-0.b.db.ondigitalocean.com:25060)/rocket_development?")
 	if err != nil {
 		log.Fatalf("Got error when connect database, the error is '%v'", err)
 	}

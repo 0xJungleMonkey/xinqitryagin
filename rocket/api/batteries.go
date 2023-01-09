@@ -123,7 +123,7 @@ func GetBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /batteries [post]
-// echo '{"employee_id": 5,"building_id": 55,"id": 96,"type": "TghWZfDcVEQwpQqeOuPWuiswo","status": "gNsqnBwMLFwtUJaNeLmFGRiWg","commission_date": "2055-07-20T14:52:13.733091611-04:00","last_inspection_date": "2139-11-30T08:11:43.479907759-05:00","operations_cert": "bfAGtoMPNKdJDHIFGCNQeUMcY","information": "uTaCLmHosbHaBMKRHlWDxZemk","notes": "wprKksnbraZXMqthbWiUFJFiM","created_at": "2228-11-12T16:57:16.615003887-05:00","updated_at": "2188-03-30T18:33:29.152735497-04:00"}' | http POST "http://localhost:8080/batteries" X-Api-User:user123
+// echo '{"employee_id": 47,"building_id": 52,"id": 85,"type": "psWHseRwuqWBnqlZMixuTFGgG","status": "xrpBRHmrBmZYIjkPimblHuURA","commission_date": "2309-07-25T05:30:09.554624717-04:00","last_inspection_date": "2031-04-05T20:22:07.554888989-04:00","operations_cert": "qvAndllqtumLnJTinOYtZmEAr","information": "KhiaVoklJVXcTPMlmeLAeCXjR","notes": "DLmbqbJHjfOJyHDfwsOdaXxEY","created_at": "2137-06-24T19:14:55.093189018-04:00","updated_at": "2085-07-15T06:49:48.389975171-04:00"}' | http POST "http://localhost:8080/batteries" X-Api-User:user123
 func AddBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	batteries := &model.Batteries{}
@@ -171,7 +171,7 @@ func AddBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) 
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /batteries/{argID} [put]
-// echo '{"employee_id": 5,"building_id": 55,"id": 96,"type": "TghWZfDcVEQwpQqeOuPWuiswo","status": "gNsqnBwMLFwtUJaNeLmFGRiWg","commission_date": "2055-07-20T14:52:13.733091611-04:00","last_inspection_date": "2139-11-30T08:11:43.479907759-05:00","operations_cert": "bfAGtoMPNKdJDHIFGCNQeUMcY","information": "uTaCLmHosbHaBMKRHlWDxZemk","notes": "wprKksnbraZXMqthbWiUFJFiM","created_at": "2228-11-12T16:57:16.615003887-05:00","updated_at": "2188-03-30T18:33:29.152735497-04:00"}' | http PUT "http://localhost:8080/batteries/1"  X-Api-User:user123
+// echo '{"employee_id": 47,"building_id": 52,"id": 85,"type": "psWHseRwuqWBnqlZMixuTFGgG","status": "xrpBRHmrBmZYIjkPimblHuURA","commission_date": "2309-07-25T05:30:09.554624717-04:00","last_inspection_date": "2031-04-05T20:22:07.554888989-04:00","operations_cert": "qvAndllqtumLnJTinOYtZmEAr","information": "KhiaVoklJVXcTPMlmeLAeCXjR","notes": "DLmbqbJHjfOJyHDfwsOdaXxEY","created_at": "2137-06-24T19:14:55.093189018-04:00","updated_at": "2085-07-15T06:49:48.389975171-04:00"}' | http PUT "http://localhost:8080/batteries/1"  X-Api-User:user123
 func UpdateBatteries(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

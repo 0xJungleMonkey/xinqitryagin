@@ -123,7 +123,7 @@ func GetActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageblobs [post]
-// echo '{"id": 75,"key": "ZvulZIimmtWpkPekhDPeqMjFw","filename": "XNXprdymQgyMRrHZLhuaCKBxT","content_type": "tkYgVrinwPNbicuLrlXpglHmG","metadata": "FmiRnKbllsDYiXaDfYTHfsXET","byte_size": 50,"checksum": "XOHofMVrlYXSfDPGwpwlZVCmB","created_at": "2168-09-19T04:24:14.944233757-04:00"}' | http POST "http://localhost:8080/activestorageblobs" X-Api-User:user123
+// echo '{"id": 94,"key": "aKyrVGbTSgUxgqFkJtsqUsuvK","filename": "pgpJMMUyxOeidbbWynVCObFXE","content_type": "hQleGlLICFpdfpyUKcLPdXqwp","metadata": "GfGyrHaXaqyDPOPLqkWvXntBd","byte_size": 22,"checksum": "iVSVYlhmPwjotnUBRkLeYGmLi","created_at": "2148-11-12T14:36:57.165949653-05:00"}' | http POST "http://localhost:8080/activestorageblobs" X-Api-User:user123
 func AddActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	activestorageblobs := &model.ActiveStorageBlobs{}
@@ -171,7 +171,7 @@ func AddActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /activestorageblobs/{argID} [put]
-// echo '{"id": 75,"key": "ZvulZIimmtWpkPekhDPeqMjFw","filename": "XNXprdymQgyMRrHZLhuaCKBxT","content_type": "tkYgVrinwPNbicuLrlXpglHmG","metadata": "FmiRnKbllsDYiXaDfYTHfsXET","byte_size": 50,"checksum": "XOHofMVrlYXSfDPGwpwlZVCmB","created_at": "2168-09-19T04:24:14.944233757-04:00"}' | http PUT "http://localhost:8080/activestorageblobs/1"  X-Api-User:user123
+// echo '{"id": 94,"key": "aKyrVGbTSgUxgqFkJtsqUsuvK","filename": "pgpJMMUyxOeidbbWynVCObFXE","content_type": "hQleGlLICFpdfpyUKcLPdXqwp","metadata": "GfGyrHaXaqyDPOPLqkWvXntBd","byte_size": 22,"checksum": "iVSVYlhmPwjotnUBRkLeYGmLi","created_at": "2148-11-12T14:36:57.165949653-05:00"}' | http PUT "http://localhost:8080/activestorageblobs/1"  X-Api-User:user123
 func UpdateActiveStorageBlobs(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 

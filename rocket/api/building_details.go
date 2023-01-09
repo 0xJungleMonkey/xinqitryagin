@@ -123,7 +123,7 @@ func GetBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildingdetails [post]
-// echo '{"building_id": 30,"id": 82,"information_key": "ugLAANfwWegmlpokdmRgkuyTR","value": "duubqeXDTiMlKQPAkGwCfmajT","created_at": "2149-07-28T11:03:09.458872688-04:00","updated_at": "2263-02-27T02:52:23.471045066-05:00"}' | http POST "http://localhost:8080/buildingdetails" X-Api-User:user123
+// echo '{"building_id": 78,"id": 40,"information_key": "vDyVFhbuuoscyyuvGHsxWuHpV","value": "EsErKjVpytOeEoyhmVhprfAAG","created_at": "2265-03-08T10:39:27.773812921-05:00","updated_at": "2309-01-31T10:58:44.985119194-05:00"}' | http POST "http://localhost:8080/buildingdetails" X-Api-User:user123
 func AddBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 	buildingdetails := &model.BuildingDetails{}
@@ -171,7 +171,7 @@ func AddBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Pa
 // @Failure 400 {object} api.HTTPError
 // @Failure 404 {object} api.HTTPError
 // @Router /buildingdetails/{argID} [put]
-// echo '{"building_id": 30,"id": 82,"information_key": "ugLAANfwWegmlpokdmRgkuyTR","value": "duubqeXDTiMlKQPAkGwCfmajT","created_at": "2149-07-28T11:03:09.458872688-04:00","updated_at": "2263-02-27T02:52:23.471045066-05:00"}' | http PUT "http://localhost:8080/buildingdetails/1"  X-Api-User:user123
+// echo '{"building_id": 78,"id": 40,"information_key": "vDyVFhbuuoscyyuvGHsxWuHpV","value": "EsErKjVpytOeEoyhmVhprfAAG","created_at": "2265-03-08T10:39:27.773812921-05:00","updated_at": "2309-01-31T10:58:44.985119194-05:00"}' | http PUT "http://localhost:8080/buildingdetails/1"  X-Api-User:user123
 func UpdateBuildingDetails(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	ctx := initializeContext(r)
 
