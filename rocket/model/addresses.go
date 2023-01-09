@@ -73,9 +73,9 @@ type Addresses struct {
 	//[11] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	UpdatedAt time.Time `gorm:"column:updated_at;type:datetime;" json:"updated_at"`
 	//[12] latitude                                       float                null: true   primary: false  isArray: false  auto: false  col: float           len: -1      default: []
-	Latitude null.Float `gorm:"column:latitude;type:float;" json:"latitude"`
+	Latitude float64 `gorm:"column:latitude;type:float;" json:"latitude"`
 	//[13] longitude                                      float                null: true   primary: false  isArray: false  auto: false  col: float           len: -1      default: []
-	Longitude null.Float `gorm:"column:longitude;type:float;" json:"longitude"`
+	Longitude float64 `gorm:"column:longitude;type:float;" json:"longitude"`
 }
 
 var addressesTableInfo = &TableInfo{
@@ -348,7 +348,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "float",
 			ColumnLength:       -1,
 			GoFieldName:        "Latitude",
-			GoFieldType:        "null.Float",
+			GoFieldType:        "float64",
 			JSONFieldName:      "latitude",
 			ProtobufFieldName:  "latitude",
 			ProtobufType:       "float",
@@ -369,7 +369,7 @@ var addressesTableInfo = &TableInfo{
 			ColumnType:         "float",
 			ColumnLength:       -1,
 			GoFieldName:        "Longitude",
-			GoFieldType:        "null.Float",
+			GoFieldType:        "float64",
 			JSONFieldName:      "longitude",
 			ProtobufFieldName:  "longitude",
 			ProtobufType:       "float",
