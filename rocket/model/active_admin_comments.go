@@ -55,11 +55,11 @@ type ActiveAdminComments struct {
 	//[ 3] resource_type                                  varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	ResourceType string `gorm:"column:resource_type;type:varchar;size:255;" json:"resource_type"`
 	//[ 4] resource_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	ResourceID null.Int `gorm:"column:resource_id;type:bigint;" json:"resource_id"`
+	ResourceID int64 `gorm:"column:resource_id;type:bigint;" json:"resource_id"`
 	//[ 5] author_type                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	AuthorType string `gorm:"column:author_type;type:varchar;size:255;" json:"author_type"`
 	//[ 6] author_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	AuthorID null.Int `gorm:"column:author_id;type:bigint;" json:"author_id"`
+	AuthorID int64 `gorm:"column:author_id;type:bigint;" json:"author_id"`
 	//[ 7] created_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	CreatedAt time.Time `gorm:"column:created_at;type:datetime;" json:"created_at"`
 	//[ 8] updated_at                                     datetime             null: false  primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -168,7 +168,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "ResourceID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "resource_id",
 			ProtobufFieldName:  "resource_id",
 			ProtobufType:       "int64",
@@ -210,7 +210,7 @@ var active_admin_commentsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "AuthorID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "author_id",
 			ProtobufFieldName:  "author_id",
 			ProtobufType:       "int64",

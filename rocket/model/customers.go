@@ -55,9 +55,9 @@ JSON Sample
 // Customers struct is a row record of the customers table in the rocket_development database
 type Customers struct {
 	//[ 0] address_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	AddressID null.Int `gorm:"column:address_id;type:bigint;" json:"address_id"`
+	AddressID int64 `gorm:"column:address_id;type:bigint;" json:"address_id"`
 	//[ 1] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	UserID null.Int `gorm:"column:user_id;type:bigint;" json:"user_id"`
+	UserID int64 `gorm:"column:user_id;type:bigint;" json:"user_id"`
 	//[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 3] CustomerCreationDate                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -106,7 +106,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "AddressID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "address_id",
 			ProtobufFieldName:  "address_id",
 			ProtobufType:       "int64",
@@ -127,7 +127,7 @@ var customersTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "UserID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "user_id",
 			ProtobufFieldName:  "user_id",
 			ProtobufType:       "int64",

@@ -50,11 +50,11 @@ JSON Sample
 // Elevators struct is a row record of the elevators table in the rocket_development database
 type Elevators struct {
 	//[ 0] column_id                                      bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	ColumnID null.Int `gorm:"column:column_id;type:bigint;" json:"column_id"`
+	ColumnID int64 `gorm:"column:column_id;type:bigint;" json:"column_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] SerialNumber                                   int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	SerialNumber null.Int `gorm:"column:SerialNumber;type:int;" json:"serial_number"`
+	SerialNumber int64 `gorm:"column:SerialNumber;type:int;" json:"serial_number"`
 	//[ 3] Model                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Model string `gorm:"column:Model;type:varchar;size:255;" json:"model"`
 	//[ 4] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -95,7 +95,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "ColumnID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "column_id",
 			ProtobufFieldName:  "column_id",
 			ProtobufType:       "int64",
@@ -137,7 +137,7 @@ var elevatorsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "SerialNumber",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "serial_number",
 			ProtobufFieldName:  "serial_number",
 			ProtobufType:       "int32",

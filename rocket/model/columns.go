@@ -46,13 +46,13 @@ JSON Sample
 // Columns struct is a row record of the columns table in the rocket_development database
 type Columns struct {
 	//[ 0] battery_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	BatteryID null.Int `gorm:"column:battery_id;type:bigint;" json:"battery_id"`
+	BatteryID int64 `gorm:"column:battery_id;type:bigint;" json:"battery_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Type string `gorm:"column:Type;type:varchar;size:255;" json:"type"`
 	//[ 3] NumOfFloorsServed                              int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	NumOfFloorsServed null.Int `gorm:"column:NumOfFloorsServed;type:int;" json:"num_of_floors_served"`
+	NumOfFloorsServed int64 `gorm:"column:NumOfFloorsServed;type:int;" json:"num_of_floors_served"`
 	//[ 4] Status                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Status string `gorm:"column:Status;type:varchar;size:255;" json:"status"`
 	//[ 5] Information                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
@@ -83,7 +83,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "BatteryID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "battery_id",
 			ProtobufFieldName:  "battery_id",
 			ProtobufType:       "int64",
@@ -146,7 +146,7 @@ var columnsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "NumOfFloorsServed",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "num_of_floors_served",
 			ProtobufFieldName:  "num_of_floors_served",
 			ProtobufType:       "int32",

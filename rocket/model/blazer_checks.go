@@ -51,9 +51,9 @@ type BlazerChecks struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
+	CreatorID int64 `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
+	QueryID int64 `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] state                                          varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	State string `gorm:"column:state;type:varchar;size:255;" json:"state"`
 	//[ 4] schedule                                       varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -113,7 +113,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatorID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "creator_id",
 			ProtobufFieldName:  "creator_id",
 			ProtobufType:       "int64",
@@ -134,7 +134,7 @@ var blazer_checksTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "QueryID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "query_id",
 			ProtobufFieldName:  "query_id",
 			ProtobufType:       "int64",

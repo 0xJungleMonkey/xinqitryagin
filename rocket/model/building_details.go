@@ -43,7 +43,7 @@ JSON Sample
 // BuildingDetails struct is a row record of the building_details table in the rocket_development database
 type BuildingDetails struct {
 	//[ 0] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	BuildingID null.Int `gorm:"column:building_id;type:bigint;" json:"building_id"`
+	BuildingID int64 `gorm:"column:building_id;type:bigint;" json:"building_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] InformationKey                                 varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -74,7 +74,7 @@ var building_detailsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "BuildingID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "building_id",
 			ProtobufFieldName:  "building_id",
 			ProtobufType:       "int64",

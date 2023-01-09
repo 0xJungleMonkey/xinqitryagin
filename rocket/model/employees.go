@@ -45,7 +45,7 @@ JSON Sample
 // Employees struct is a row record of the employees table in the rocket_development database
 type Employees struct {
 	//[ 0] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	UserID null.Int `gorm:"column:user_id;type:bigint;" json:"user_id"`
+	UserID int64 `gorm:"column:user_id;type:bigint;" json:"user_id"`
 	//[ 1] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 2] first_name                                     varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -80,7 +80,7 @@ var employeesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "UserID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "user_id",
 			ProtobufFieldName:  "user_id",
 			ProtobufType:       "int64",

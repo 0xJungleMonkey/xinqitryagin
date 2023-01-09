@@ -45,9 +45,9 @@ type BlazerAudits struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] user_id                                        bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	UserID null.Int `gorm:"column:user_id;type:bigint;" json:"user_id"`
+	UserID int64 `gorm:"column:user_id;type:bigint;" json:"user_id"`
 	//[ 2] query_id                                       bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	QueryID null.Int `gorm:"column:query_id;type:bigint;" json:"query_id"`
+	QueryID int64 `gorm:"column:query_id;type:bigint;" json:"query_id"`
 	//[ 3] statement                                      text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
 	Statement string `gorm:"column:statement;type:text;size:65535;" json:"statement"`
 	//[ 4] data_source                                    varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -95,7 +95,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "UserID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "user_id",
 			ProtobufFieldName:  "user_id",
 			ProtobufType:       "int64",
@@ -116,7 +116,7 @@ var blazer_auditsTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "QueryID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "query_id",
 			ProtobufFieldName:  "query_id",
 			ProtobufType:       "int64",

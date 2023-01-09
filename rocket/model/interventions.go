@@ -54,17 +54,17 @@ type Interventions struct {
 	//[ 1] author                                         varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Author string `gorm:"column:author;type:varchar;size:255;" json:"author"`
 	//[ 2] customer_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	CustomerID null.Int `gorm:"column:customer_id;type:int;" json:"customer_id"`
+	CustomerID int64 `gorm:"column:customer_id;type:int;" json:"customer_id"`
 	//[ 3] building_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	BuildingID null.Int `gorm:"column:building_id;type:int;" json:"building_id"`
+	BuildingID int64 `gorm:"column:building_id;type:int;" json:"building_id"`
 	//[ 4] battery_id                                     int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	BatteryID null.Int `gorm:"column:battery_id;type:int;" json:"battery_id"`
+	BatteryID int64 `gorm:"column:battery_id;type:int;" json:"battery_id"`
 	//[ 5] column_id                                      int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	ColumnID null.Int `gorm:"column:column_id;type:int;" json:"column_id"`
+	ColumnID int64 `gorm:"column:column_id;type:int;" json:"column_id"`
 	//[ 6] elevator_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	ElevatorID null.Int `gorm:"column:elevator_id;type:int;" json:"elevator_id"`
+	ElevatorID int64 `gorm:"column:elevator_id;type:int;" json:"elevator_id"`
 	//[ 7] employee_id                                    int                  null: true   primary: false  isArray: false  auto: false  col: int             len: -1      default: []
-	EmployeeID null.Int `gorm:"column:employee_id;type:int;" json:"employee_id"`
+	EmployeeID int64 `gorm:"column:employee_id;type:int;" json:"employee_id"`
 	//[ 8] start_datetime                                 datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
 	StartDatetime null.Time `gorm:"column:start_datetime;type:datetime;" json:"start_datetime"`
 	//[ 9] end_datetime                                   datetime             null: true   primary: false  isArray: false  auto: false  col: datetime        len: -1      default: []
@@ -141,7 +141,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "CustomerID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "customer_id",
 			ProtobufFieldName:  "customer_id",
 			ProtobufType:       "int32",
@@ -162,7 +162,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "BuildingID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "building_id",
 			ProtobufFieldName:  "building_id",
 			ProtobufType:       "int32",
@@ -183,7 +183,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "BatteryID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "battery_id",
 			ProtobufFieldName:  "battery_id",
 			ProtobufType:       "int32",
@@ -204,7 +204,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "ColumnID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "column_id",
 			ProtobufFieldName:  "column_id",
 			ProtobufType:       "int32",
@@ -225,7 +225,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "ElevatorID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "elevator_id",
 			ProtobufFieldName:  "elevator_id",
 			ProtobufType:       "int32",
@@ -246,7 +246,7 @@ var interventionsTableInfo = &TableInfo{
 			ColumnType:         "int",
 			ColumnLength:       -1,
 			GoFieldName:        "EmployeeID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "employee_id",
 			ProtobufFieldName:  "employee_id",
 			ProtobufType:       "int32",

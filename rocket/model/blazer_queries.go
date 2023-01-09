@@ -47,7 +47,7 @@ type BlazerQueries struct {
 	//[ 0] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 1] creator_id                                     bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	CreatorID null.Int `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
+	CreatorID int64 `gorm:"column:creator_id;type:bigint;" json:"creator_id"`
 	//[ 2] name                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
 	Name string `gorm:"column:name;type:varchar;size:255;" json:"name"`
 	//[ 3] description                                    text(65535)          null: true   primary: false  isArray: false  auto: false  col: text            len: 65535   default: []
@@ -103,7 +103,7 @@ var blazer_queriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "CreatorID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "creator_id",
 			ProtobufFieldName:  "creator_id",
 			ProtobufType:       "int64",

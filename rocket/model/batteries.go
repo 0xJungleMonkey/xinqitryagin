@@ -51,9 +51,9 @@ JSON Sample
 // Batteries struct is a row record of the batteries table in the rocket_development database
 type Batteries struct {
 	//[ 0] employee_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	EmployeeID null.Int `gorm:"column:employee_id;type:bigint;" json:"employee_id"`
+	EmployeeID int64 `gorm:"column:employee_id;type:bigint;" json:"employee_id"`
 	//[ 1] building_id                                    bigint               null: true   primary: false  isArray: false  auto: false  col: bigint          len: -1      default: []
-	BuildingID null.Int `gorm:"column:building_id;type:bigint;" json:"building_id"`
+	BuildingID int64 `gorm:"column:building_id;type:bigint;" json:"building_id"`
 	//[ 2] id                                             bigint               null: false  primary: true   isArray: false  auto: true   col: bigint          len: -1      default: []
 	ID int64 `gorm:"primary_key;AUTO_INCREMENT;column:id;type:bigint;" json:"id"`
 	//[ 3] Type                                           varchar(255)         null: true   primary: false  isArray: false  auto: false  col: varchar         len: 255     default: []
@@ -94,7 +94,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "EmployeeID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "employee_id",
 			ProtobufFieldName:  "employee_id",
 			ProtobufType:       "int64",
@@ -115,7 +115,7 @@ var batteriesTableInfo = &TableInfo{
 			ColumnType:         "bigint",
 			ColumnLength:       -1,
 			GoFieldName:        "BuildingID",
-			GoFieldType:        "null.Int",
+			GoFieldType:        "int64",
 			JSONFieldName:      "building_id",
 			ProtobufFieldName:  "building_id",
 			ProtobufType:       "int64",
