@@ -12,6 +12,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	"gorm.io/gorm"
 
 	"github.com/droundy/goopt"
 	"github.com/gin-gonic/gin"
@@ -91,7 +92,7 @@ func main() {
   Built on OS     : %s
 `, BuildDate, BuildNumber, LatestCommit, RuntimeVer, BuiltOnOs)
 	goopt.Parse(nil)
-
+	db, err := gorm.Open("mysql", "doadmin:AVNS_nQrjtn8ilVHqYs6xIim@tcp(dbaas-db-7154856-do-user-13260059-0.b.db.ondigitalocean.com:25060)/rocket_development?parseTime=true")
 	if err != nil {
 		log.Fatalf("Got error when connect database, the error is '%v'", err)
 	}
